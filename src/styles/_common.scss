@@ -26,6 +26,10 @@ body {
   background-color: $color-black;
   color: $color-white;
 }
+
+.m_hide{display:block !important;}
+.m_show{display:none !important;}
+
 // 섹션 상단 라인 
 .section-top-line {
   // inner_1760 과 함께 사용
@@ -91,6 +95,9 @@ body {
 }
 
 @media all and (max-width:768px) {
+  .m_hide{display:none !important;}
+  .m_show{display:block !important;}
+
   //section-top-line
   .section-top-line {
     // inner_1760 과 함께 사용
