@@ -48,18 +48,23 @@ i {
 }
 
 
-main.width-full {
+main {
   position: relative;
   @include vw-pc(max-width, 1920);
+}
+
+section {
+  @include vw-pc(max-width, 1760);
   margin: 0 auto;
 }
 
-.inner_1760 {
-  @include vw-pc(max-width, 1760)
+section.width-full {
+  @include vw-pc(max-width, 1920);
 }
 
 .inner_1240 {
-  @include vw-pc(max-width, 1240)
+  @include vw-pc(max-width, 1240);
+  margin: 0 auto;
 }
 
 .border-top  {
@@ -79,45 +84,6 @@ main.width-full {
   line-height: 1;
   @include vw-pc(letter-spacing, 16);
   color: $color-red;
-}
-
-.main-portfolio {
-  &--title {
-    font-family: $kr;
-    @include vw-pc(font-size, 42);
-    font-weight: 700;
-  }
-
-  &--desc {
-    @include vw-pc(width, 260);
-
-    dt {
-      display: inline-block;
-      width: fit-content;
-      font-family: $en;
-      @include vw-pc(font-size, 30);
-      @include vw-pc(line-height, 50);
-      font-weight: 600;
-      color: $color-white;
-    }
-
-    dd {
-      display: inline-block;
-      margin-left: 0;
-      width: fit-content;
-      color: $color-white;
-    }
-
-    .en {
-      @include vw-pc(font-size, 30);
-      font-weight: 600;
-    }
-
-    .kr {
-      @include vw-pc(font-size, 28);
-      font-weight: 500;
-    }
-  }
 }
 
 //  section - title
@@ -190,7 +156,7 @@ main.width-full {
   }
 
   main.width-full, .inner_1760, .inner_1240  {
-    // @include vw-mo(padding, 0 48);
+    @include vw-mo(padding, 0 48);
     max-width: 100%;
   }
 
@@ -200,7 +166,7 @@ main.width-full {
   }
   
   .sub {
-    @include vw-mo(font-size, 28);
+    @include vw-mo(font-size, 40);
     @include vw-mo(letter-spacing, 16);
   }
 }
