@@ -169,4 +169,33 @@ section.width-full {
     @include vw-mo(font-size, 40);
     @include vw-mo(letter-spacing, 16);
   }
+
+  //  section - title
+  .sec_title {
+    @include vw-mo(font-size, 60);
+    @include vw-mo(line-height, 90);
+  }
+
+  .sec_desc {
+    @include vw-mo(font-size, 40);
+    @include vw-mo(line-height, 60);
+    font-family: $kr;
+    color: $color-white;
+  }
+
+  .sec_link {
+    @include vw-mo(font-size, 32);
+  }
+
+  .sec_btn_n {
+    @include vw-mo(font-size, 36);
+  }
+
+  .sec_btn {
+    @include vw-mo(height, 101);
+    @include vw-mo(border-radius, 50);
+    @include vw-mo(padding, 0 85);
+    @include vw-mo(font-size, 32);
+    @include vw-mo(line-height, 101);
+  }
 }
