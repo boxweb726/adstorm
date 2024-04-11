@@ -46,12 +46,6 @@ strong,
 em,
 i {font-style:normal; vertical-align:baseline;}
 
-.sec_project_wrap {
-    :focus {outline: dashed 2px #2189ff !important;}
-}
-
-em,
-i {font-style:normal;}
  *{ box-sizing: border-box;}
 
 .img_box{position:relative; width:100%; font-size:0;}
@@ -126,8 +120,4 @@ section.width-full{max-width: 1920px;}
     .btn_common.btn_toggle {@include vw-mo(padding-bottom, 5);@include vw-mo(padding-right, 28);}
     .btn_common.btn_toggle::after {top:22%; @include vw-mo(right, 4); @include vw-mo(width, 8); @include vw-mo(height, 8); @include vw-mo(border-width, 2);}
     .btn_common.btn_toggle.on::after {top:29%;}
-
-    .sec_project_wrap {
-        :focus {outline: -webkit-focus-ring-color auto 1px !important;}
-    }
 }
