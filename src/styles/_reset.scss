@@ -1,116 +1,133 @@
-/***
-    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
-    GitHub page: https://github.com/elad2412/the-new-css-reset
-***/
 
-/*
-    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-    - The "symbol *" part is to solve Firefox SVG sprite bug
-    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
- */
-*:where(
-    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
-  ) {
-  all: unset;
-  display: revert;
+// reset prd server
+.en {vertical-align:baseline;}
+.btn-box,
+.btn-box ~ .btn-box {margin:0;}
+
+@media (max-width: 1440px) and (min-width: 1101px){
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video , dd a {font-size:inherit;}
 }
 
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@media (max-width: 1100px) and (min-width: 801px) {
+  html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
 }
 
-/* Fix mobile Safari increase font-size on landscape mode */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+@media (max-width: 800px) {
+  html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
 }
 
-/* Reapply the pointer cursor for anchor tags */
+@media all and (max-width:414px) {
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
+}
+
+// reset prd server
+
+.m_hide{display:block !important;}
+.m_show{display:none !important;}
+
+main {min-width:320px; margin:0 auto; font-family:'SamsungOneKorean',Dotum,'돋움','Apple SD Gothic Neo',arial; line-height: 1;}
+
+
+article,
+section,
+nav,
+aside,
+header,
+footer {display:block; position:relative}
+
 a,
-button {
-  cursor: revert;
+a:hover,
+a:focus,
+a:active {text-decoration:none; color:inherit;}
+
+p,
+span,
+strong,
+em,
+i {font-style:normal; vertical-align:baseline;}
+
+.sec_project_wrap {
+    :focus {outline: dashed 2px #2189ff !important;}
 }
 
-/* Remove list styles (bullets/numbers) */
-ol,
-ul,
-menu,
-summary {
-  list-style: none;
+em,
+i {font-style:normal;}
+ *{ box-sizing: border-box;}
+
+.img_box{position:relative; width:100%; font-size:0;}
+.img_box img{width:100%;}
+
+main,
+section,
+section.width-full,
+.inner_1240{position:relative; width: 100%; margin: 0 auto;}
+
+main{max-width: 1920px;}
+section{max-width: 1760px;}
+section.width-full{max-width: 1920px;}
+.inner_1240{max-width: 1240px;}
+
+.clearfix:after {display:block; content:''; clear:both;}
+
+.hidden,
+.blind {position: absolute !important; top: auto !important; left: auto !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; text-indent: 0px !important;}
+.blind::before {display: block; width: 0; height: 0; content: '\00a0'; font-size: 0;}
+.alert_msg {display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
+
+//button
+.btn_common {position:relative; display:inline-flex; align-items:center; justify-content:center; font-weight:700; text-align:center;}
+.btn_common.type_arrow {@include vw-pc(padding-right, 12);}
+.btn_common.type_arrow::after {content:''; position:absolute; @include vw-pc(top, 6); @include vw-pc(right, 3); @include vw-pc(width, 5); @include vw-pc(height, 5); border-right:1px solid #000; border-bottom:1px solid #000; transform:rotate(-45deg);}
+.btn_common.type_round {border:2px solid #000; background-color:#fff; transition:border-color .3s, background-color .3s, color .3s;}
+.btn_common.type_round:hover {background-color:#000; color:#fff; transition:border-color .3s, background-color .3s, color .3s;}
+.btn_common.type_round.black_bg {background-color:#000; color:#fff;}
+.btn_common.type_round.black_bg:hover {background-color:transparent; color:#000;}
+
+.btn_common.btn_toggle {@include vw-pc(padding-bottom, 5); border-bottom:1px solid #000; @include vw-pc(padding-right, 15);}
+.btn_common.btn_toggle::after {content:''; position:absolute; top:14%; @include vw-pc(right, 3); @include vw-pc(width, 6); @include vw-pc(height, 6); border-right:2px solid #000; border-bottom:2px solid #000; transform:rotate(45deg);}
+.btn_common.btn_toggle.on::after {top:29%; transform:rotate(-135deg);}
+
+//tab
+.tab_contents .tab_content{display:none;}
+.tab_contents .tab_content.on{display:block;}
+
+.dimm{display:none;position:fixed; top:0; left:0; right:0; bottom:0; background-color:#000; opacity:0.7; }
+
+@media all and (min-width:769px) and (max-width:1920px) {
+
+    section{max-width: 100%;}
 }
 
-/* For images to not be able to exceed their container */
-img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
+@media all and (min-width:769px) and (max-width:1440px) {
+
+    main, section.width-full{max-width: 100%;}
+    section{max-width: 91.7vw;}
+    .inner_1240{max-width: 83.3333vw;}
 }
 
-/* removes spacing between cells in tables */
-table {
-  border-collapse: collapse;
-}
+@media all and (max-width:768px) {
 
-/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input,
-textarea {
-  -webkit-user-select: auto;
-}
+    .m_hide{display:none !important;}
+    .m_show{display:block !important;}
 
-/* revert the 'white-space' property for textarea elements on Safari */
-textarea {
-  white-space: revert;
-}
+    main, section.width-full{max-width:100%;}
 
-/* minimum style to allow to style meter element */
-meter {
-  -webkit-appearance: revert;
-  appearance: revert;
-}
+    section,
+    .inner_1240{max-width: 100%;}
 
-/* preformatted text - use only for this feature */
-:where(pre) {
-  all: revert;
-  box-sizing: border-box;
-}
+    .alert_msg {top: 0;left: 0;width: 100%;background: #8a51d3;height: 4.5625vw; font-size: 3.2vw; line-height: 4.5625vw;}
 
-/* reset default text opacity of input placeholder */
-::placeholder {
-  color: unset;
-}
+    //button
+    .btn_common.type_under {@include vw-mo(padding-bottom, 5);}
+    .btn_common.type_arrow {@include vw-mo(padding-right, 15);}
+    .btn_common.type_arrow::after {@include vw-mo(top, 8); @include vw-mo(right, 2); @include vw-mo(width, 8); @include vw-mo(height, 8);}
+    .btn_common.type_round {@include vw-mo(border-width, 2);}
 
-/* fix the feature of 'hidden' attribute.
-   display:revert; revert to element instead of attribute */
-:where([hidden]) {
-  display: none;
-}
+    .btn_common.btn_toggle {@include vw-mo(padding-bottom, 5);@include vw-mo(padding-right, 28);}
+    .btn_common.btn_toggle::after {top:22%; @include vw-mo(right, 4); @include vw-mo(width, 8); @include vw-mo(height, 8); @include vw-mo(border-width, 2);}
+    .btn_common.btn_toggle.on::after {top:29%;}
 
-/* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly.
-   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable='false'])) {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
-  overflow-wrap: break-word;
-  -webkit-line-break: after-white-space;
-  -webkit-user-select: auto;
-}
-
-/* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable='true']) {
-  -webkit-user-drag: element;
-}
-
-/* Revert Modal native behavior */
-:where(dialog:modal) {
-  all: revert;
-  box-sizing: border-box;
-}
-
-/* Remove details summary webkit styles */
-::-webkit-details-marker {
-  display: none;
+    .sec_project_wrap {
+        :focus {outline: -webkit-focus-ring-color auto 1px !important;}
+    }
 }

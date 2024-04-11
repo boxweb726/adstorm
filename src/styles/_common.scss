@@ -22,59 +22,17 @@ $color-red: #f84525;
 $color-gray: #bbb;
 $color-deep-gray: #363534;
 
-.m_hide {
-  display: block !important;
-}
-
-.m_show {
-  display: none !important;
-}
-
 body {
   background-color: $color-black;
   color: $color-white;
 }
-
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
-em,
-i {
-  font-style: normal;
-}
-
-
-main {
-  position: relative;
-  @include vw-pc(max-width, 1920);
-}
-
-section {
-  @include vw-pc(max-width, 1760);
-  margin: 0 auto;
-}
-
-section.width-full {
-  @include vw-pc(max-width, 1920);
-}
-
-.inner_1240 {
-  @include vw-pc(max-width, 1240);
-  margin: 0 auto;
-}
-
-.border-top  {
+// 섹션 상단 라인 
+.section-top-line {
   // inner_1760 과 함께 사용
   border-top: 1px sold #60605f;
 }
-
-.title {
+// 페이지 타이틀
+.page_title {
   font-family: $en;
   color: $color-white;
   @include vw-pc(font-size, 120);
@@ -103,21 +61,21 @@ section.width-full {
   font-family: $kr;
   color: $color-white;
 }
-
+// text 버튼을 감싼 div
 .sec_link {
   @include vw-pc(font-size, 22);
   font-family: $kr;
   color: $color-gray;
   font-weight: 400;
 }
-
+// section text 버튼
 .sec_btn_n {
   @include vw-pc(font-size, 24);
   font-family: $en;
   color: $color-gray;
   text-decoration: none;
 }
-
+// section button
 .sec_btn {
   @include vw-pc(height, 65);
   @include vw-pc(border-radius, 32);
@@ -132,63 +90,20 @@ section.width-full {
   cursor: pointer;
 }
 
-
-@media all and (min-width:769px) and (max-width:1920px) {
-
-  main {
-    max-width: 100%;
-  }
-}
-
-@media all and (min-width:769px) and (max-width:1240px) {
-  .inner_1240 {
-    margin: 0 auton;
-    max-width: 83.3333vw;
-  }
-}
-
 @media all and (max-width:768px) {
-
-  .m_hide {
-    display: none !important;
+  //section-top-line
+  .section-top-line {
+    // inner_1760 과 함께 사용
+    border-top: 1px sold #60605f;
   }
 
-  .m_show {
-    display: block !important;
-  }
-
-  main, .inner_1760, .inner_1240  {
-    @include vw-mo(padding, 0 48);
-    max-width: 100%;
-  }
-
-  section.width-full {
-    max-width: 100%;
-  }
-
-  .title {
+  // 페이지 타이틀
+  .page_title {
     @include vw-mo(font-size, 96);
     font-weight: 600;
   }
   
-  .sub {
-    @include vw-mo(font-size, 40);
-    @include vw-mo(letter-spacing, 16);
-  }
-
-  //  section - title
-  .sec_title {
-    @include vw-mo(font-size, 60);
-    @include vw-mo(line-height, 90);
-  }
-
-  .sec_desc {
-    @include vw-mo(font-size, 40);
-    @include vw-mo(line-height, 60);
-    font-family: $kr;
-    color: $color-white;
-  }
-
+  // text 버튼을 감싼 div
   .sec_link {
     @include vw-mo(font-size, 32);
   }
