@@ -6,9 +6,6 @@
   border-top: 1px solid #60605f;
   background-color: #1f1e1d;
 
-  .m_show {display: none !important;}
-  .m_hide {display: block !important;}
-
   .bs_logo {
     @include vw-pc(width, 135);
   }
@@ -39,9 +36,6 @@
     @include vw-mo(height, 100);
     @include vw-mo(padding, 40 48);
     border-top: 2px solid #60605f;
-
-    .m_show {display: block !important;}
-    .m_hide {display: none !important;}
 
     .bs_logo {
       width: 0;

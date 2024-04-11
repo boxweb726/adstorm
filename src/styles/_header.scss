@@ -4,14 +4,6 @@
   align-items: center;
   @include vw-pc(padding, 80 89 80 80);
 
-  .m_show {
-    display: none !important;
-  }
-
-  .m_hide {
-    display: block !important;
-  }
-
   .bs_logo {
     &.m_hide {
       @include vw-pc(width, 186);
@@ -43,14 +35,6 @@
 @media screen and (max-width: 768px) {
   .sec_nav {
     @include vw-mo(padding, 60 48);
-
-    .m_show {
-      display: block !important;
-    }
-
-    .m_hide {
-      display: none !important;
-    }
 
     .bs_logo {
       &.m_show {
