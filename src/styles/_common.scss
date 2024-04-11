@@ -1,1 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Outfit&display=swap');
 @import './reset';
+
+// font
+$en: "Outfit", sans-serif;
+$kr: "Noto Sans KR", sans-serif;
+// lang
+.en {
+  font-family: $en;
+}
+
+.kr {
+  font-family: $kr;
+}
+
+// color
+$color-black: #1f1e1d;
+$color-white: #fff;
+$color-red: #f84525;
+$color-gray: #bbb;
+$color-deep-gray: #363534;
+
+.m_hide {
+  display: block !important;
+}
+
+.m_show {
+  display: none !important;
+}
+
+body {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+
+main.width-full {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.inner_1760 {
+  max-width: 1760px;
+}
+
+.inner_1240 {
+  max-width: 1240px;
+}
+
+.border-top  {
+  // inner_1760 과 함께 사용
+  border-top: 1px sold #60605f;
+}
+
+.title {
+  font-family: $en;
+  color: $color-white;
+  font-size: 120px;
+  font-weight: 600;
+}
+
+.sub {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 16px;
+  color: $color-red;
+}
+
+.main-portfolio {
+  &--title {
+    font-family: $kr;
+    font-size: 42px;
+    font-weight: 700;
+  }
+
+  &--desc {
+    width: 260px;
+
+    dt {
+      display: inline-block;
+      width: fit-content;
+      font-family: $en;
+      font-size: 30px;
+      line-height: 50px;
+      font-weight: 600;
+      color: $color-white;
+    }
+
+    dd {
+      display: inline-block;
+      margin-left: 0;
+      width: fit-content;
+      color: $color-white;
+    }
+
+    .en {
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .kr {
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+}
+
+//  section - title
+ .sec_title {
+  font-family: $kr;
+  font-size: 54px;
+  line-height: 90px;
+  color: $color-white;
+  font-weight: 700;
+}
+
+.sec_desc {
+  font-size: 22px;
+  line-height: 38px;
+  font-family: $kr;
+  color: $color-white;
+}
+
+.sec_link {
+  font-size: 22px;
+  font-family: $kr;
+  color: $color-gray;
+  font-weight: 400;
+}
+
+.sec_btn_n {
+  font-size: 24px;
+  font-family: $en;
+  color: $color-gray;
+  text-decoration: none;
+}
+
+.sec_btn {
+  height: 65px;
+  border-radius: 32px;
+  border-width: 0;
+  padding: 0 60px;
+  font-family: $kr;
+  font-size: 24px;
+  line-height: 65px;
+  font-weight: 700;
+  color: $color-white;
+  background-color: $color-deep-gray;
+  cursor: pointer;
+}
+
+
+@media all and (min-width:769px) and (max-width:1920px) {
+
+  main.width-full {
+    max-width: 100%;
+  }
+}
+
+@media all and (min-width:769px) and (max-width:1240px) {
+  .inner_1240 {
+    margin: 0 auton;
+    max-width: 83.3333vw;
+  }
+}
+
+@media all and (max-width:768px) {
+
+  .m_hide {
+    display: none !important;
+  }
+
+  .m_show {
+    display: block !important;
+  }
+
+  main.width-full, .inner_1760, .inner_1240  {
+    // @include vw-mo(padding, 0 48);
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 96px;
+    font-weight: 600;
+  }
+  
+  .sub {
+    font-size: 28px;
+    letter-spacing: 16px;
+  }
+}
