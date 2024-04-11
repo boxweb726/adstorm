@@ -56,6 +56,64 @@ section,
 section.width-full,
 .inner_1240{position:relative; width: 100%; margin: 0 auto;}
 
+header,
+nav,
+section,
+footer,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+div,
+article,
+aside,
+canvas,
+figure,
+figcaption,
+span,
+table,
+tbody,
+th,
+td,
+strong,
+form,
+input,
+textarea,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+i,
+audio,
+video {margin: 0; padding: 0; font-style: none;}
+
+ul,
+ol,
+li {list-style: none;}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 main{max-width: 1920px;}
 section{max-width: 1760px;}
 section.width-full{max-width: 1920px;}
