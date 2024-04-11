@@ -133,7 +133,7 @@ section.width-full {
 
 @media all and (min-width:769px) and (max-width:1920px) {
 
-  main.width-full {
+  main {
     max-width: 100%;
   }
 }
@@ -155,8 +155,12 @@ section.width-full {
     display: block !important;
   }
 
-  main.width-full, .inner_1760, .inner_1240  {
+  main, .inner_1760, .inner_1240  {
     @include vw-mo(padding, 0 48);
+    max-width: 100%;
+  }
+
+  section.width-full {
     max-width: 100%;
   }
 
