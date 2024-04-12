@@ -202,3 +202,104 @@ $mo-min-wid : 360;
 	$result: calc($pixel * 100 / $mo-min-wid) * 1vw;
 	@return $result;
 }
+
+// margin, padding
+@for $i from 1 through 60 {
+	.mt-#{$i * 5} {
+		margin-top: $i * 5px;
+	}
+}
+@for $i from 1 through 60 {
+	.mb-#{$i * 5} {
+		margin-bottom: $i * 5px;
+	}
+}
+@for $i from 1 through 60 {
+	.my-#{$i * 5} {
+		margin: 0 $i * 5px;
+	}
+}
+
+@for $i from 1 through 60 {
+	.pt-#{$i * 5} {
+		padding-top: $i * 5px;
+	}
+}
+@for $i from 1 through 60 {
+	.pb-#{$i * 5} {
+		padding-bottom: $i * 5px;
+	}
+}
+@for $i from 1 through 60 {
+	.py-#{$i * 5} {
+		padding: 0 $i * 5px;
+	}
+}
+
+@media screen and (max-width: 1920px) {
+	@for $i from 1 through 60 {
+		.mt-#{$i * 5} {
+			margin-top: $i * 0.2604vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.mb-#{$i * 5} {
+			margin-bottom: $i * 0.2604vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.my-#{$i * 5} {
+			margin: 0 $i * 0.2604vw;
+		}
+	}
+	
+	@for $i from 1 through 60 {
+		.pt-#{$i * 5} {
+			padding-top: $i * 0.2604vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.pb-#{$i * 5} {
+			padding-bottom: $i * 0.2604vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.py-#{$i * 5} {
+			padding: 0 $i * 0.2604vw;
+		}
+	}
+}
+
+@media screen and (max-width: 720px) {
+	@for $i from 1 through 60 {
+		.mt-#{$i * 5} {
+			margin-top: $i * 0.6944vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.mb-#{$i * 5} {
+			margin-bottom: $i * 0.6944vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.my-#{$i * 5} {
+			margin: 0 $i * 0.6944vw;
+		}
+	}
+	
+	@for $i from 1 through 60 {
+		.pt-#{$i * 5} {
+			padding-top: $i * 0.6944vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.pb-#{$i * 5} {
+			padding-bottom: $i * 0.6944vw;
+		}
+	}
+	@for $i from 1 through 60 {
+		.py-#{$i * 5} {
+			padding: 0 $i * 0.6944vw;
+		}
+	}
+}
