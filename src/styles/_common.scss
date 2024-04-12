@@ -56,7 +56,7 @@ section.width-full{
   content: '\00a0'; 
   font-size: 0;
 }
-
+// + 공통버튼
 .btn_plus {
   &::before {
     @include vw-pc(height, 2);
@@ -65,10 +65,12 @@ section.width-full{
     @include vw-pc(width, 2);
   } 
 }
+// 포트폴리오페이지 +
 .btn_plus.plus_port {
   @include vw-pc(width, 80);
   @include vw-pc(height, 80);
 }
+// 리크루트페이지 +
 .btn_plus.plus_recruit {
   @include vw-pc(width, 60);
   @include vw-pc(height, 60); 
@@ -86,8 +88,9 @@ section.width-full{
   @include vw-pc(font-size, 120);
   font-weight: 600;
 }
-
+// 각 영역 시작부분 붉은색 타이틀
 .sub {
+  font-family: $en;
   @include vw-pc(font-size, 28);
   line-height: 1;
   @include vw-pc(letter-spacing, 16);
@@ -136,16 +139,24 @@ section.width-full{
     @include vw-mo(font-size, 96);
     font-weight: 600;
   }
+  // 각 영역 시작부분 붉은색 타이틀
+  .sub {
+    @include vw-mo(font-size, 40);
+    @include vw-mo(letter-spacing, 16);
+  }
+
 
   // + 버튼
   .btn_plus {
     &::before {@include vw-mo(height, 4);}
     &::after {@include vw-mo(width, 4);} 
   }
+  // 포트폴리오 페이지 +
   .btn_plus.plus_port {
     @include vw-mo(width, 140);
     @include vw-mo(height, 140);
   }
+  // 리쿠르트 페이지 +
   .btn_plus.plus_recruit {
     @include vw-mo(width, 60);
     @include vw-mo(height, 60); 
