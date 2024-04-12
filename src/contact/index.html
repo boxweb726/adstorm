@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite.js Vanilla Template</title>
+    <link rel="stylesheet" href="../styles/index.scss" />
+  </head>
+  <body>
+    <div class="wrapper">
+      {{> header }}
+      <!-- header.html -->
+      <main>
+        <section class="contact">
+          <div class="inner-1240">
+            <div class="contact__title mb-145">
+              <p class="page_title en">Contact.</p>
+            </div>
+            <div class="contact__wrap mb-120">
+              <ul class="contact__info">
+                <li class="contact__division">
+                  <strong class="contact__sub mb-40 en">Address</strong>
+                  <span class="contact__desc kr">서울시 강남구 강남대로 146길25, 1층 1호</span>
+                </li>
+                <li class="contact__division">
+                  <strong class="contact__sub mb-40 en">Mail</strong>
+                  <span class="contact__desc en"><a href="mailto:project@bstones.co.kr">project@bstones.co.kr</a></span>
+                </li>
+                <li class="contact__division">
+                  <strong class="contact__sub mb-40 en">Tel</strong>
+                  <span class="contact__desc en">02-511-9160</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="width-full map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1330.5032651500167!2d127.0203810054663!3d37.519994627601434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca35195ecf2bf%3A0xd717b4e318acf3cb!2z67mE7Iqk7Yak7Iqk!5e0!3m2!1sko!2sus!4v1712900835450!5m2!1sko!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+      </main>
+      {{> footer }}
+      <!-- footer.html -->
+    </div>
+    <script type="module" src="../js/index.js" defer></script>
+  </body>
+</html>

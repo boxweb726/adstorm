@@ -10,10 +10,10 @@ body {
   color: $color-white;
 }
 
-.m_hide{
+.m-hide{
   display:block !important;
 }
-.m_show{
+.m-show{
   display:none !important;
 }
 
@@ -28,7 +28,7 @@ section.width-full{
   max-width: 1920px; 
   margin: 0 auto;
 }
-.inner_1240{
+.inner-1240{
   max-width: 1240px; 
   margin: 0 auto;
 }
@@ -57,7 +57,7 @@ section.width-full{
   font-size: 0;
 }
 // + 공통버튼
-.btn_plus {
+.btn-plus {
   &::before {
     @include vw-pc(height, 2);
   }
@@ -66,7 +66,7 @@ section.width-full{
   } 
 }
 // 포트폴리오페이지 +
-.btn_plus.plus_port {
+.btn-plus.plus-port {
   @include vw-pc(width, 80);
   @include vw-pc(height, 80);
 }
@@ -82,10 +82,11 @@ section.width-full{
   border-top: 1px sold #60605f;
 }
 // 페이지 타이틀
-.page_title {
+.page-title {
   font-family: $en;
   color: $color-white;
   @include vw-pc(font-size, 120);
+  line-height: 1;
   font-weight: 600;
 }
 // 각 영역 시작부분 붉은색 타이틀
@@ -98,7 +99,7 @@ section.width-full{
 }
 
 //  section - title
- .sec_title {
+ .sec-title {
   font-family: $kr;
   @include vw-pc(font-size, 54);
   @include vw-pc(line-height, 90);
@@ -106,7 +107,7 @@ section.width-full{
   font-weight: 700;
 }
 
-.sec_desc {
+.sec-desc {
   @include vw-pc(font-size, 22);
   @include vw-pc(line-height, 38);
   font-family: $kr;
@@ -117,16 +118,16 @@ section.width-full{
 @media all and (min-width:769px) and (max-width:1440px) {
   main, section.width-full{max-width: 100%;}
   section{max-width: 91.7vw;}
-  .inner_1240{max-width: 83.3333vw;}
+  .inner-1240{max-width: 83.3333vw;}
 }
 
 @media all and (max-width:768px) {
-  .m_hide{display:none !important;}
-  .m_show{display:block !important;}
+  .m-hide{display:none !important;}
+  .m-show{display:block !important;}
 
-  main, section.width-full{max-width:100%;}
+  main, section.width-full{max-width:100%; width: inherit;}
   section,
-  .inner_1240{max-width: 100%;}
+  .inner-1240{@include vw-mo(width, 624);}
 
   //section-top-line
   .section-top-line {
@@ -135,7 +136,7 @@ section.width-full{
   }
 
   // 페이지 타이틀
-  .page_title {
+  .page-title {
     @include vw-mo(font-size, 96);
     font-weight: 600;
   }
@@ -147,17 +148,17 @@ section.width-full{
 
 
   // + 버튼
-  .btn_plus {
+  .btn-plus {
     &::before {@include vw-mo(height, 4);}
     &::after {@include vw-mo(width, 4);} 
   }
   // 포트폴리오 페이지 +
-  .btn_plus.plus_port {
+  .btn-plus.plus-port {
     @include vw-mo(width, 140);
     @include vw-mo(height, 140);
   }
   // 리쿠르트 페이지 +
-  .btn_plus.plus_recruit {
+  .btn-plus.plus-recruit {
     @include vw-mo(width, 60);
     @include vw-mo(height, 60); 
   }
