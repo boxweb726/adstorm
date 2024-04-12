@@ -11,26 +11,22 @@ export default defineConfig(() => {
     appType: 'mpa',
     publicDir: 'public',
     root: path.resolve(__dirname, 'src'),
-    resolve: {
-      alias: [
-        {
-          find: '~pages',
-          replacement: path.resolve(__dirname, '../../'),
-        },
-        {
-          find: '~page',
-          replacement: path.resolve(__dirname, './src/page'),
-        },
-        {
-          find: '~js',
-          replacement: path.resolve(__dirname, './js'),
-        },
-        {
-          find: '~css',
-          replacement: path.resolve(__dirname, './css'),
-        },
-      ],
-    },
+    // resolve: {
+    //   alias: [
+    //     {
+    //       find: '~pages',
+    //       replacement: path.resolve(__dirname, './pages'),
+    //     },
+    //     {
+    //       find: '~js',
+    //       replacement: path.resolve(__dirname, './js'),
+    //     },
+    //     {
+    //       find: '~styles',
+    //       replacement: path.resolve(__dirname, './styles'),
+    //     },
+    //   ],
+    // },
     build: {
       outDir: '../dist',
       assetsInlineLimit: 0,
@@ -47,12 +43,10 @@ export default defineConfig(() => {
         },
         output: {
           assetFileNames: (assetInfo) => {
-            console.log(assetInfo);
             let result = 'assets/[name][extname]';
             if (assetInfo.name.split('.')[1] === 'css') {
               result = 'styles/[name][extname]';
             }
-            console.log(result);
             return result;
           },
           chunkFileNames: 'js/[name].js',
