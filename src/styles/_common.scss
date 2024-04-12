@@ -77,21 +77,19 @@ section.width-full{
 }
 
 // 섹션 상단 라인 
-.section-top-line {
+.sec-top-line {
   // inner_1760 과 함께 사용
   border-top: 1px sold #60605f;
 }
 // 페이지 타이틀
 .page-title {
-  font-family: $en;
   color: $color-white;
-  @include vw-pc(font-size, 120);
-  line-height: 1;
+  @include vw-pc(font-size, 130);
+  @include vw-pc(line-height, 135);
   font-weight: 600;
 }
 // 각 영역 시작부분 붉은색 타이틀
 .sub {
-  font-family: $en;
   @include vw-pc(font-size, 28);
   line-height: 1;
   @include vw-pc(letter-spacing, 16);
@@ -100,7 +98,6 @@ section.width-full{
 
 //  section - title
  .sec-title {
-  font-family: $kr;
   @include vw-pc(font-size, 54);
   @include vw-pc(line-height, 90);
   color: $color-white;
@@ -110,7 +107,6 @@ section.width-full{
 .sec-desc {
   @include vw-pc(font-size, 22);
   @include vw-pc(line-height, 38);
-  font-family: $kr;
   color: $color-white;
 }
 
@@ -138,6 +134,7 @@ section.width-full{
   // 페이지 타이틀
   .page-title {
     @include vw-mo(font-size, 96);
+    @include vw-mo(line-height, 112);
     font-weight: 600;
   }
   // 각 영역 시작부분 붉은색 타이틀

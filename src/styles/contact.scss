@@ -1,6 +1,4 @@
 @import './common';
-@import './header';
-@import './footer';
 
 
 .contact {
@@ -12,7 +10,7 @@
   &__info {
     display: flex; 
     flex-wrap: wrap; 
-    @include vw-pc(gap, 90 20);
+    @include vw-pc(gap, 81 20);
   }
   &__division {
     @include vw-pc(width, 505);
@@ -35,6 +33,7 @@
     @include vw-pc(font-size, 22); 
     line-height: 1; 
     color: $color-white;
+    text-transform:uppercase;
   }
 
   a {
