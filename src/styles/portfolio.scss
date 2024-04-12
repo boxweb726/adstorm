@@ -4,12 +4,86 @@
   &__title {}
 
   &__tab {
-    display: flex; @include vw-pc(gap, 130); @include vw-pc(margin-bottom, 40);
-    &__item {@include vw-pc(height, 50)}
+    display: flex; 
+    @include vw-pc(gap, 130); 
+    @include vw-pc(margin-bottom, 40);
+    &__item {
+      @include vw-pc(height, 50)
+    }
     &__txt {
-      display: block; height: 100%; @include vw-pc(border-bottom, 3 solid transparent); @include vw-pc(font-size, 30); @include vw-pc(line-height, 50); color: #888; font-weight: 500;
-      &.active {@include vw-pc(border-bottom, 3 solid $color-red); color: $color-white;}
+      display: block; 
+      height: 100%; 
+      @include vw-pc(border-bottom, 3 solid transparent); 
+      @include vw-pc(font-size, 30); 
+      @include vw-pc(line-height, 50); 
+      color: #888; 
+      font-weight: 500;
+
+      &.active {
+        @include vw-pc(border-bottom, 3 solid $color-red); 
+        color: $color-white;
+      }
     }
   }
 
+  &__cont {
+    display: flex;
+    flex-wrap: wrap;
+    @include vw-pc(gap, 20);
+    
+    &__item {
+      position: relative;
+      @include vw-pc(width, 400);
+      @include vw-pc(height, 500);
+    }
+  
+
+    &__link {
+
+    }
+
+    &__text {
+      display: block;
+      position: absolute;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: .5s ease-in-out all;
+    }
+
+    &__text:hover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include vw-pc(gap, 20);
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(248, 69, 37, .9);
+    }
+
+    &__title {
+      display: none;
+      @include vw-pc(font-size, 42); 
+      line-height: 1;
+      color: $color-white;  
+      font-weight: 700;
+      transition: .5s ease-in-out all;
+    }
+    &__text:hover .list__cont__title {display: block;}
+    
+    &__data {
+      display: none;
+      @include vw-pc(font-size, 26); 
+      line-height: 1;
+      color: $color-white;  
+      font-weight: 400;
+      transition: .5s ease-in-out all;
+    }
+    &__text:hover .list__cont__data {display: block;}
+  }
 }
