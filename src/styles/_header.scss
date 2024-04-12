@@ -4,12 +4,12 @@
   align-items: center;
   @include vw-pc(padding, 80 89 80 80);
 
-  .bs_logo {
+  .logo {
     @include vw-pc(width, 186);
   }
 
-  .bs_nav {
-    &__list {
+  .nav {
+    &_list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -17,7 +17,7 @@
       @include vw-pc(width, 785);
     }
 
-    &__txt {
+    &_txt {
       @include vw-pc(font-size, 28);
       @include vw-pc(line-height, 34);
       font-weight: bold;
@@ -34,42 +34,21 @@
   .header {
     @include vw-mo(padding, 60 48);
 
-    .bs_logo {
+    .logo {
       @include vw-mo(width, 198);
     }
 
-    .bs_nav {
-      display: none;
-
-      &.on {
-        display: block;
-        @include vw-mo(height, 1280);
-        @include vw-mo(padding, 60 48 0 48);
-        background-color: #f84525;
-      }
-
-      &__list {}
-
-      &__txt {
-        @include vw-mo(font-size, 80);
-        @include vw-mo(line-height, 60);
-      }
-    }
-
-
-
-
-    .mobile_btn {
+    .nav_button {
       position: absolute;
       @include vw-mo(top, 60);
       @include vw-mo(right, 48);
     }
 
-    input[id="hamburger"] {
+    #menu {
       display: none;
     }
 
-    input[id="hamburger"]+label {
+    .nav_icon {
       display: block;
       @include vw-mo(width, 40);
       @include vw-mo(height, 28);
@@ -77,7 +56,7 @@
       cursor: pointer;
     }
 
-    input[id="hamburger"]+label span {
+    .nav_icon span {
       display: block;
       position: absolute;
       width: 100%;
@@ -86,42 +65,42 @@
       transition: all 0.35s;
     }
 
-    input[id="hamburger"]+label span:nth-child(1) {
+    .nav_icon span:nth-child(1) {
       top: 0;
     }
 
-    input[id="hamburger"]+label span:nth-child(2) {
+    .nav_icon span:nth-child(2) {
       top: 50%;
       transform: translateY(-50%);
     }
 
-    input[id="hamburger"]+label span:nth-child(3) {
+    .nav_icon span:nth-child(3) {
       bottom: 0;
     }
 
-    input[id="hamburger"]:checked+label {
+    #menu:checked + .nav_icon {
       z-index: 99;
     }
 
-    input[id="hamburger"]:checked+label span {
+    #menu:checked + .nav_icon span {
       background: #fff;
     }
 
-    input[id="hamburger"]:checked+label span:nth-child(1) {
+    #menu:checked + .nav_icon span:nth-child(1) {
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
     }
 
-    input[id="hamburger"]:checked+label span:nth-child(2) {
+    #menu:checked + .nav_icon span:nth-child(2) {
       opacity: 0;
     }
 
-    input[id="hamburger"]:checked+label span:nth-child(3) {
+    #menu:checked + .nav_icon span:nth-child(3) {
       bottom: 50%;
       transform: translateY(50%) rotate(-45deg);
     }
 
-    div[class="sidebar"] {
+    .nav {
       width: 100%;
       height: 100%;
       background: #f84525;
@@ -132,46 +111,26 @@
       transition: all 0.35s;
     }
 
-    input[id="hamburger"]:checked+label+div {
+    #menu:checked + .nav_icon + .nav {
       left: 0;
     }
 
-    .nav_mobile {
+    .nav_list {
       position: absolute;
       top: 119px;
       width: 100%;
     }
 
-    .sidebar .nav_mobile li {
+    .nav_item {
       @include vw-mo(font-size, 80);
       @include vw-mo(line-height, 60);
       padding-top: 20px;
       padding-bottom: 20px;
     }
 
-    .sidebar a {
-      // padding: 0;
-      // text-decoration: none;
-      // display: block;
-    }
-
-    .sidebar li a {
+    .nav li a {
       display: block;
       transition: all 0.4s;
     }
-
-    .sidebar li a:hover,
-    .sidebar ul li:hover a {
-      // text-decoration: none;
-      // color: #eee;
-      // padding: 0;
-      // margin: 0;
-      // border: 0px;
-    }
-
-
-
-
-
   }
 }

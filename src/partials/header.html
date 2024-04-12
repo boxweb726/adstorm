@@ -1,58 +1,34 @@
-<header class="header bs_sticky en">
-  <a href="javascript:;" class="bs_logo">
+<header class="header sticky en">
+  <a href="javascript:;" class="logo m_hide">
+    <img src="../assets/images/header/bs_logo_pc.png" alt="">
+  </a>
+  <a href="javascript:;" class="logo m_show">
     <img src="../assets/images/header/bs_logo_mo.png" alt="">
   </a>
 
-  <div class="m_show">
-
-    <div class="mobile_btn">
-      <input type="checkbox" id="hamburger" />
-      <label for="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <div class="sidebar">
-        <ul class="nav_mobile">
-          <li><a href="#">메뉴1</a></li>
-          <li><a href="#">메뉴2</a></li>
-          <li><a href="#">메뉴3</a></li>
-          <li><a href="#">메뉴4</a></li>
-        </ul>
-      </div>
-    </div>
-
-
+  <div class="nav_button m_show">
+    <input type="checkbox" id="menu">
+    <label for="menu" class="nav_icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
   </div>
 
-  <!-- <nav class="bs_nav">
-    <ul class="bs_nav__list">
-      <li class="bs_nav__item">
-        <a href="javascript:;" class="bs_nav__txt">
-          <strong class="bs_nav__title">ABOUT</strong>
-        </a>
-      </li>
-      <li class="bs_nav__item">
-        <a href="javascript:;" class="bs_nav__txt">
-          <strong class="bs_nav__title">PORTFOLIO</strong>
-        </a>
-      </li>
-      <li class="bs_nav__item">
-        <a href="javascript:;" class="bs_nav__txt">
-          <strong class="bs_nav__title">RECRUIT</strong>
-        </a>
-      </li>
-      <li class="bs_nav__item">
-        <a href="javascript:;" class="bs_nav__txt">
-          <strong class="bs_nav__title">CONTACT</strong>
-        </a>
-      </li>
+  <nav class="nav">
+    <ul class="nav_list">
+      <li class="nav_item"><a href="javascript:;" class="nav_txt">ABOUT</a></li>
+      <li class="nav_item"><a href="javascript:;" class="nav_txt">PORTFOLIO</a></li>
+      <li class="nav_item"><a href="javascript:;" class="nav_txt">RECRUIT</a></li>
+      <li class="nav_item"><a href="javascript:;" class="nav_txt">CONTACT</a></li>
     </ul>
-  </nav>   -->
+  </nav>
 </header>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 <script>
-
+  $(".nav_txt").click(function(){
+    $(".nav_txt").removeClass("on");
+    $(this).addClass("on");
+  });
 </script>
