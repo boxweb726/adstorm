@@ -10,70 +10,79 @@ body {
   color: $color-white;
 }
 
-.m-hide{
-  display:block !important;
-}
-.m-show{
-  display:none !important;
+.m-hide {
+  display: block !important;
 }
 
-main{
+.m-show {
+  display: none !important;
+}
+
+main {
   max-width: 1920px;
 }
-section{
-  max-width: 1760px; 
+
+section {
+  max-width: 1760px;
   margin: 0 auto;
 }
-section.width-full{
-  max-width: 1920px; 
+
+section.width-full {
+  max-width: 1920px;
   margin: 0 auto;
 }
-.inner-1240{
-  max-width: 1240px; 
+
+.inner-1240 {
+  max-width: 1240px;
   margin: 0 auto;
 }
 
 .hidden,
 .blind {
-  position: absolute !important; 
-  top: auto !important; 
-  left: auto !important; 
-  width: 1px !important; 
-  height: 1px !important; 
-  padding: 0 !important; 
-  margin: -1px !important; 
-  overflow: hidden !important; 
-  clip: rect(0, 0, 0, 0) !important; 
-  white-space: nowrap !important; 
-  border: 0 !important; 
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
   text-indent: 0px !important;
 }
+
 .hidden::before,
 .blind::before {
-  display: block; 
-  width: 0; 
-  height: 0; 
-  content: '\00a0'; 
+  display: block;
+  width: 0;
+  height: 0;
+  content: '\00a0';
   font-size: 0;
 }
+
 // + 공통버튼
 .btn-plus {
   &::before {
     @include vw-pc(height, 2);
   }
+
   &::after {
     @include vw-pc(width, 2);
-  } 
+  }
 }
+
 // 포트폴리오페이지 +
 .btn-plus.plus-port {
   @include vw-pc(width, 80);
   @include vw-pc(height, 80);
 }
+
 // 리크루트페이지 +
 .btn_plus.plus_recruit {
   @include vw-pc(width, 60);
-  @include vw-pc(height, 60); 
+  @include vw-pc(height, 60);
 }
 
 // 섹션 상단 라인 
@@ -81,6 +90,7 @@ section.width-full{
   // inner_1760 과 함께 사용
   border-top: 1px sold #60605f;
 }
+
 // 페이지 타이틀
 .page-title {
   color: $color-white;
@@ -88,6 +98,7 @@ section.width-full{
   @include vw-pc(line-height, 135);
   font-weight: 600;
 }
+
 // 각 영역 시작부분 붉은색 타이틀
 .sub {
   @include vw-pc(font-size, 28);
@@ -97,7 +108,7 @@ section.width-full{
 }
 
 //  section - title
- .sec-title {
+.sec-title {
   @include vw-pc(font-size, 54);
   @include vw-pc(line-height, 90);
   color: $color-white;
@@ -111,19 +122,41 @@ section.width-full{
 }
 
 
-@media all and (min-width:769px) and (max-width:1440px) {
-  main, section.width-full{max-width: 100%;}
-  section{max-width: 91.7vw;}
-  .inner-1240{max-width: 83.3333vw;}
+@media all and (min-width: 769px) and (max-width: 1440px) {
+
+  main,
+  section.width-full {
+    max-width: 100%;
+  }
+
+  section {
+    max-width: 91.7vw;
+  }
+
+  .inner-1240 {
+    max-width: 83.3333vw;
+  }
 }
 
-@media all and (max-width:768px) {
-  .m-hide{display:none !important;}
-  .m-show{display:block !important;}
+@media all and (max-width: 768px) {
+  .m-hide {
+    display: none !important;
+  }
 
-  main, section.width-full{max-width:100%; width: inherit;}
+  .m-show {
+    display: block !important;
+  }
+
+  main,
+  section.width-full {
+    max-width: 100%;
+    width: inherit;
+  }
+
   section,
-  .inner-1240{@include vw-mo(width, 624);}
+  .inner-1240 {
+    @include vw-mo(width, 624);
+  }
 
   //section-top-line
   .section-top-line {
@@ -137,6 +170,7 @@ section.width-full{
     @include vw-mo(line-height, 112);
     font-weight: 600;
   }
+
   // 각 영역 시작부분 붉은색 타이틀
   .sub {
     @include vw-mo(font-size, 40);
@@ -146,17 +180,24 @@ section.width-full{
 
   // + 버튼
   .btn-plus {
-    &::before {@include vw-mo(height, 4);}
-    &::after {@include vw-mo(width, 4);} 
+    &::before {
+      @include vw-mo(height, 4);
+    }
+
+    &::after {
+      @include vw-mo(width, 4);
+    }
   }
+
   // 포트폴리오 페이지 +
   .btn-plus.plus-port {
     @include vw-mo(width, 140);
     @include vw-mo(height, 140);
   }
+
   // 리쿠르트 페이지 +
   .btn-plus.plus-recruit {
     @include vw-mo(width, 60);
-    @include vw-mo(height, 60); 
+    @include vw-mo(height, 60);
   }
 }

@@ -2,3 +2,12 @@
 @import './header';
 @import './footer';
 @import './contact';
+
+
+.main {
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+  }
+}

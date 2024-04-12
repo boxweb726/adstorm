@@ -1,22 +1,15 @@
 <header class="header sticky en">
-  <a href="javascript:;" class="logo m-hide">
-    <img src="../assets/images/header/bs_logo_pc.png" alt="">
-  </a>
-  <a href="javascript:;" class="logo m-show">
-    <img src="../assets/images/header/bs_logo_mo.png" alt="">
-  </a>
+  <h1 class="logo">
+    <a href="javascript:;" class="m-hide">
+      <img src="../assets/bs_header_logo_pc.png" alt="">
+    </a>
+    <a href="javascript:;" class="m-show">
+      <img src="../assets/bs_header_logo_mo.png" alt="">
+    </a>
+  </h1>
 
-  <!-- <div class="nav_button m-show">
-    <input type="checkbox" id="menu">
-    <label for="menu" class="nav_icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div> -->
-
-  <div class="nav_button m-show">
-    <a href="javascript:;" class="nav_icon">
+  <div class="nav-button m-show">
+    <a href="javascript:;" class="nav-icon">
       <span></span>
       <span></span>
       <span></span>
@@ -24,11 +17,11 @@
   </div>
 
   <nav class="nav">
-    <ul class="nav_list">
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">ABOUT</a></li>
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">PORTFOLIO</a></li>
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">RECRUIT</a></li>
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">CONTACT</a></li>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="javascript:;" class="nav-txt">ABOUT</a></li>
+      <li class="nav-item"><a href="javascript:;" class="nav-txt">PORTFOLIO</a></li>
+      <li class="nav-item"><a href="javascript:;" class="nav-txt">RECRUIT</a></li>
+      <li class="nav-item"><a href="javascript:;" class="nav-txt">CONTACT</a></li>
     </ul>
   </nav>
 </header>
@@ -36,13 +29,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-    $(".nav_txt").click(function(){
-      $(".nav_txt").removeClass("on");
+    $(".nav-txt").click(function(){
+      $(".nav-txt").removeClass("on");
       $(this).addClass("on");
     });
 
-    $(".nav_icon").click(function(){
-      $(".nav_icon, .nav").toggleClass("on");
+    $(".nav-icon").click(function(){
+      $(".nav-icon, .nav").toggleClass("on");
     });
   });
 </script>
