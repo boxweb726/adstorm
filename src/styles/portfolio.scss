@@ -86,4 +86,15 @@
     }
     &__text:hover .list__cont__data {display: block;}
   }
+
+  &__btn__wrap {
+    width: 100%;
+    @include vw-pc(height, 80);
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    @include vw-pc(width, 80);
+    height: 100%;
+  }
 }

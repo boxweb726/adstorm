@@ -65,14 +65,31 @@ section.width-full {
 
 // + 공통버튼
 .btn-plus {
+  width: 100%;
+  height: 100%;
+  position: relative;
   &::before {
+    position: absolute;
+    display: block;
+    content: '';
     width: 100%;
     @include vw-pc(height, 2);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-red;
   }
 
   &::after {
+    position: absolute;
+    display: block;
+    content: '';
     height: 100%;
     @include vw-pc(width, 2);
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: $color-red;
   }
 }
 
