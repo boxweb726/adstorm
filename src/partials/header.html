@@ -1,18 +1,26 @@
 <header class="header sticky en">
-  <a href="javascript:;" class="logo m_hide">
+  <a href="javascript:;" class="logo m-hide">
     <img src="../assets/images/header/bs_logo_pc.png" alt="">
   </a>
-  <a href="javascript:;" class="logo m_show">
+  <a href="javascript:;" class="logo m-show">
     <img src="../assets/images/header/bs_logo_mo.png" alt="">
   </a>
 
-  <div class="nav_button m_show">
+  <!-- <div class="nav_button m-show">
     <input type="checkbox" id="menu">
     <label for="menu" class="nav_icon">
       <span></span>
       <span></span>
       <span></span>
     </label>
+  </div> -->
+
+  <div class="nav_button m-show">
+    <a href="javascript:;" class="nav_icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
   </div>
 
   <nav class="nav">
@@ -27,8 +35,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-  $(".nav_txt").click(function(){
-    $(".nav_txt").removeClass("on");
-    $(this).addClass("on");
+  $(document).ready(function(){
+    $(".nav_txt").click(function(){
+      $(".nav_txt").removeClass("on");
+      $(this).addClass("on");
+    });
+
+    $(".nav_icon").click(function(){
+      $(".nav_icon, .nav").toggleClass("on");
+    });
   });
 </script>

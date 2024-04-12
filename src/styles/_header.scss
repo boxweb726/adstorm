@@ -13,7 +13,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
       @include vw-pc(width, 785);
     }
 
@@ -36,6 +35,7 @@
 
     .logo {
       @include vw-mo(width, 198);
+      z-index: 100;
     }
 
     .nav_button {
@@ -44,16 +44,16 @@
       @include vw-mo(right, 48);
     }
 
-    #menu {
-      display: none;
-    }
-
     .nav_icon {
       display: block;
       @include vw-mo(width, 40);
       @include vw-mo(height, 28);
       position: relative;
       cursor: pointer;
+
+      &.on {
+        z-index: 100;
+      }
     }
 
     .nav_icon span {
@@ -78,59 +78,51 @@
       bottom: 0;
     }
 
-    #menu:checked + .nav_icon {
-      z-index: 99;
-    }
-
-    #menu:checked + .nav_icon span {
-      background: #fff;
-    }
-
-    #menu:checked + .nav_icon span:nth-child(1) {
+    .nav_icon.on span:nth-child(1) {
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
     }
 
-    #menu:checked + .nav_icon span:nth-child(2) {
+    .nav_icon.on span:nth-child(2) {
       opacity: 0;
     }
 
-    #menu:checked + .nav_icon span:nth-child(3) {
+    .nav_icon.on span:nth-child(3) {
       bottom: 50%;
       transform: translateY(50%) rotate(-45deg);
     }
 
     .nav {
+      display: none;
       width: 100%;
       height: 100%;
       background: #f84525;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: -100%;
       z-index: 98;
       transition: all 0.35s;
-    }
 
-    #menu:checked + .nav_icon + .nav {
-      left: 0;
+      &.on {
+        display: block;
+        left: 0;
+      }
     }
 
     .nav_list {
+      display: flex;
+      flex-direction: column;
       position: absolute;
-      top: 119px;
-      width: 100%;
+      @include vw-mo(top, 250);
+      @include vw-mo(left, 50);
+      // width: 100%;
     }
-
-    .nav_item {
-      @include vw-mo(font-size, 80);
-      @include vw-mo(line-height, 60);
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-
-    .nav li a {
+    
+    .nav_txt {
       display: block;
       transition: all 0.4s;
+      @include vw-mo(font-size, 80);
+      @include vw-mo(line-height, 121);
     }
   }
 }
