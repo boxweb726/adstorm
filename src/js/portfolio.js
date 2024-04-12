@@ -1,5 +1,5 @@
 import dataList from '../data.json';
-import List from './List';
+import List from './module/List';
 
 const portfolioList = new List({
   data: dataList.result,

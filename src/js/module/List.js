@@ -1,18 +1,16 @@
 /* eslint-disable no-console */
 export default class List {
-  constructor({ data, id, html }) {
+  constructor({ data, id, html, on }) {
     this.data = data;
     this.target = document.getElementById(id);
     this.html = html;
-
-    console.log(this.target);
+    this.event = on;
 
     this.init();
   }
 
   setExp() {
     const regExp = /\*{3}\w+\*{3}/g;
-
     this.regExp = this.html.match(regExp);
   }
 
@@ -21,7 +19,6 @@ export default class List {
 
     this.regExp.forEach((exp) => {
       const name = exp.replaceAll('***', '');
-      console.log(exp, item[name]);
       itemHtml.replace(exp, item[name]);
     });
 
@@ -38,7 +35,5 @@ export default class List {
     });
 
     this.target.innerHTML = listHtml;
-
-    // this.target.innerHTML = `${this.data.title} : ${this.data.date}`;
   }
 }

@@ -15,6 +15,10 @@ export default defineConfig(() => {
     resolve: {
       alias: [
         {
+          find: '~pages',
+          replacement: path.resolve(__dirname, '../../'),
+        },
+        {
           find: '~js',
           replacement: path.resolve(__dirname, './js'),
         },
