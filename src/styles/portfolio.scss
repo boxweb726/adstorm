@@ -1,3 +1,15 @@
 @import './common';
-@import './header';
-@import './footer';
+
+.list {
+  &__title {}
+
+  &__tab {
+    display: flex; @include vw-pc(gap, 130); @include vw-pc(margin-bottom, 40);
+    &__item {@include vw-pc(height, 50)}
+    &__txt {
+      display: block; height: 100%; @include vw-pc(border-bottom, 3 solid transparent); @include vw-pc(font-size, 30); @include vw-pc(line-height, 50); color: #888; font-weight: 500;
+      &.active {@include vw-pc(border-bottom, 3 solid $color-red); color: $color-white;}
+    }
+  }
+
+}

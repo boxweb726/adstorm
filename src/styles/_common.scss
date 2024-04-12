@@ -18,22 +18,23 @@ body {
   display: none !important;
 }
 
-main {
-  max-width: 1920px;
+.wrapper {
+  max-width: 1920px; 
+  margin: 0 auto;
 }
 
 section {
-  max-width: 1760px;
+  @include vw-max(max-width, 1760);
   margin: 0 auto;
 }
 
 section.width-full {
-  max-width: 1920px;
+  max-width: none;
   margin: 0 auto;
 }
 
 .inner-1240 {
-  max-width: 1240px;
+  @include vw-max(max-width, 1240);
   margin: 0 auto;
 }
 
@@ -65,25 +66,18 @@ section.width-full {
 // + 공통버튼
 .btn-plus {
   &::before {
+    width: 100%;
     @include vw-pc(height, 2);
   }
 
   &::after {
+    height: 100%;
     @include vw-pc(width, 2);
   }
 }
 
-// 포트폴리오페이지 +
-.btn-plus.plus-port {
-  @include vw-pc(width, 80);
-  @include vw-pc(height, 80);
-}
-
-// 리크루트페이지 +
-.btn_plus.plus_recruit {
-  @include vw-pc(width, 60);
-  @include vw-pc(height, 60);
-}
+.img_box{position:relative; width:100%; font-size:0;}
+.img_box img{width:100%;}
 
 // 섹션 상단 라인 
 .sec-top-line {
@@ -122,22 +116,6 @@ section.width-full {
 }
 
 
-@media all and (min-width: 769px) and (max-width: 1440px) {
-
-  main,
-  section.width-full {
-    max-width: 100%;
-  }
-
-  section {
-    max-width: 91.7vw;
-  }
-
-  .inner-1240 {
-    max-width: 83.3333vw;
-  }
-}
-
 @media all and (max-width: 768px) {
   .m-hide {
     display: none !important;
@@ -147,13 +125,10 @@ section.width-full {
     display: block !important;
   }
 
-  main,
-  section.width-full {
-    max-width: 100%;
-    width: inherit;
+  section {
+    max-width: none;
   }
 
-  section,
   .inner-1240 {
     @include vw-mo(width, 624);
   }
@@ -187,17 +162,5 @@ section.width-full {
     &::after {
       @include vw-mo(width, 4);
     }
-  }
-
-  // 포트폴리오 페이지 +
-  .btn-plus.plus-port {
-    @include vw-mo(width, 140);
-    @include vw-mo(height, 140);
-  }
-
-  // 리쿠르트 페이지 +
-  .btn-plus.plus-recruit {
-    @include vw-mo(width, 60);
-    @include vw-mo(height, 60);
   }
 }
