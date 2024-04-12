@@ -32,7 +32,8 @@
         "endOfLine": "auto"
       }
     ],
-    "no-console": "error",
+    "no-unused-vars": "off",
+    "no-console": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {

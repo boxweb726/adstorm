@@ -3,8 +3,8 @@ import List from './module/List';
 
 const portfolioList = new List({
   data: dataList.result,
-  el: 'portfolio-list',
-  html: '***title*** : ***date***',
+  id: 'portfolio-list',
+  render(data) {
+    return `<li>${data.title} : ${data.date}</li>`;
+  },
 });
-
-portfolioList.init();
