@@ -4,7 +4,7 @@
   align-items: center;
   @include vw-pc(padding, 80 89 80 80);
 
-  &_logo {
+  &__logo {
     @include vw-pc(width, 186);
     @include vw-pc(height, 34);
     margin: 0;
@@ -12,18 +12,20 @@
   }
 
   .nav {
-    &_list {
+    &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       @include vw-pc(width, 785);
     }
 
-    &_txt {
+    &__txt {
       @include vw-pc(font-size, 28);
       @include vw-pc(line-height, 34);
+      @include vw-pc(letter-spacing, 1.5);
       font-weight: bold;
       color: #fff;
+      text-transform: uppercase;
 
       &.on {
         color: #f84525;
@@ -36,13 +38,13 @@
   .header {
     @include vw-mo(padding, 60 48);
 
-    &_logo {
+    &__logo {
       @include vw-mo(width, 198);
       @include vw-mo(height, 36);
       z-index: 100;
     }
 
-    .nav_button {
+    .btn_nav {
       position: absolute;
       display: block;
       @include vw-mo(top, 60);
@@ -56,7 +58,7 @@
       }
     }
 
-    .nav_button span {
+    .btn_nav span {
       display: block;
       position: absolute;
       width: 100%;
@@ -65,29 +67,29 @@
       transition: all 0.35s;
     }
 
-    .nav_button span:nth-child(1) {
+    .btn_nav span:nth-child(1) {
       top: 0;
     }
 
-    .nav_button span:nth-child(2) {
+    .btn_nav span:nth-child(2) {
       top: 50%;
       transform: translateY(-50%);
     }
 
-    .nav_button span:nth-child(3) {
+    .btn_nav span:nth-child(3) {
       bottom: 0;
     }
 
-    .nav_button.on span:nth-child(1) {
+    .btn_nav.on span:nth-child(1) {
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
     }
 
-    .nav_button.on span:nth-child(2) {
+    .btn_nav.on span:nth-child(2) {
       opacity: 0;
     }
 
-    .nav_button.on span:nth-child(3) {
+    .btn_nav.on span:nth-child(3) {
       bottom: 50%;
       transform: translateY(50%) rotate(-45deg);
     }
@@ -107,21 +109,22 @@
         display: block;
         left: 0;
       }
-    }
 
-    .nav_list {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      @include vw-mo(top, 250);
-      @include vw-mo(left, 50);
-    }
-    
-    .nav_txt {
-      display: block;
-      transition: all 0.4s;
-      @include vw-mo(font-size, 80);
-      @include vw-mo(line-height, 121);
+      &__list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        @include vw-mo(top, 340);
+        @include vw-mo(left, 70);
+      }
+
+      &__txt {
+        display: block;
+        text-transform: none;
+        @include vw-mo(font-size, 80);
+        @include vw-mo(line-height, 112);
+        @include vw-mo(letter-spacing, 2.5);
+      }
     }
   }
 }
