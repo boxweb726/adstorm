@@ -24,3 +24,39 @@
     @include vw-pc(top, 622);
   }
 }
+
+.we-do {
+  &__wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include vw-pc(gap, 300);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    @include vw-pc(gap, 230);
+
+    .img-box {
+      @include vw-pc(width, 505);
+    }
+    &__text-box {
+      z-index: 1;
+    }
+    &__title {
+      @include vw-pc(margin-left, -230);
+      @include vw-pc(font-size, 140);
+      @include vw-pc(line-height, 147);
+      font-weight: 500;
+      color: $color-white;
+    }
+    &__desc {
+      @include vw-pc(font-size, 22);
+      @include vw-pc(line-height, 38);
+      font-weight: 300;
+      color: $color-white;
+      opacity: .9;
+    }
+  }
+}
