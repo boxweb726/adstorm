@@ -1,23 +1,23 @@
 <header class="header sticky en">
-  <h1 class="header_logo">
+  <h1 class="header__logo">
     <a href="javascript:;">
-      <img src="../assets/bs_header_logo_pc.png" class="m-hide" alt="">
-      <img src="../assets/bs_header_logo_mo.png" class="m-show" alt="">
+      <img src="../assets/header_logo_pc.png" class="m-hide" alt="">
+      <img src="../assets/header_logo_mo.png" class="m-show" alt="">
     </a>
   </h1>
 
-  <a href="javascript:;" class="nav_button m-show">
+  <a href="javascript:;" class="btn_nav m-show">
     <span></span>
     <span></span>
     <span></span>
   </a>
 
   <nav class="nav">
-    <ul class="nav_list">
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">ABOUT</a></li>
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">PORTFOLIO</a></li>
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">RECRUIT</a></li>
-      <li class="nav_item"><a href="javascript:;" class="nav_txt">CONTACT</a></li>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="../" class="nav__txt">About</a></li>
+      <li class="nav__item"><a href="../" class="nav__txt">Portfolio</a></li>
+      <li class="nav__item"><a href="../" class="nav__txt">Recruit</a></li>
+      <li class="nav__item"><a href="../" class="nav__txt">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -25,13 +25,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-    $(".nav_txt").click(function(){
-      $(".nav_txt").removeClass("on");
+    $(".nav__txt").click(function(){
+      $(".nav__txt").removeClass("on");
       $(this).addClass("on");
     });
 
-    $(".nav_button").click(function(){
-      $(".nav_button, .nav").toggleClass("on");
+    $(".btn_nav").click(function(){
+      $(".btn_nav, .nav").toggleClass("on");
     });
   });
 </script>

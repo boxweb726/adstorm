@@ -7,7 +7,7 @@
   border-top: 1px solid #60605f;
 
   .footer {
-    &_logo {
+    &__logo {
       @include vw-pc(width, 135);
       margin: 0;
       padding: 0;
@@ -16,19 +16,19 @@
       top: 0;
     }
 
-    &_list {
+    &__list {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    &_contact {
+    &__contact {
       @include vw-pc(font-size, 20);
       @include vw-pc(margin-right, 40);
       color: #f84525;
     }
   
-    &_tel {
+    &__tel {
       @include vw-pc(font-size, 20);
       color: #bbb;
     }
@@ -44,21 +44,21 @@
     align-items: center;
 
     .footer {
-      &_logo {
+      &__logo {
         width: 0;
       }
 
-      &_list {
+      &__list {
         @include vw-mo(width, 624);
       }
   
-      &_contact {
+      &__contact {
         @include vw-mo(font-size, 24);
         @include vw-mo(line-height, 18);
           color: #f84525;
       }
     
-      &_tel {
+      &__tel {
         @include vw-mo(font-size, 20);
         @include vw-mo(line-height, 18);
       }
