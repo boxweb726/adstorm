@@ -1,69 +1,75 @@
 @import './common';
 
+.bs-contact {
+  .info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    @include vw-max(gap, 80 243);
+  
+    &__division {
+      @include vw-pc(width, 505);
 
-
-.info {
-  display: flex; 
-  flex-wrap: wrap; 
-  @include vw-pc(gap, 81 20);
-  &__division {
-    @include vw-pc(width, 505);
-    &:nth-of-type(1) {
-      @include vw-pc(width, 715);
+      &:nth-of-type(3) {
+        grid-column: 2/2;
+        grid-row: 2/2;
+      }
     }
-    &:nth-of-type(3) {
-      @include vw-pc(margin-left, 735);
+  
+    &__sub {
+      display: block; 
+      @include vw-max(font-size, 30); 
+      line-height: 1; 
+      color: $color-red; 
+      font-weight: 500;
+    }
+
+    &__desc {
+      display: block; 
+      @include vw-max(font-size, 22); 
+      line-height: 1; 
+      color: $color-white;
+      text-transform:uppercase;
+    }
+  
+    a {
+      color: $color-white; 
+      font-weight: 300;
     }
   }
-  &__sub {
-    display: block; 
-    @include vw-pc(font-size, 30); 
-    line-height: 1; 
-    color: $color-red; 
-    font-weight: 500;
-  }
-  &__desc {
-    display: block; 
-    @include vw-pc(font-size, 22); 
-    line-height: 1; 
-    color: $color-white;
-    text-transform:uppercase;
-  }
 
-  a {
-    color: $color-white; 
-    font-weight: 300;
+  .map {
+    @include vw-max(height, 700);
   }
 }
 
 
 
-.map {
-  @include vw-pc(height, 700);
-}
+
 
 
 @media all and (max-width:768px) {
-  .info {
-    &__division {
-      width: 100%;
-      &:nth-of-type(1) {
+  .bs-contact {
+    .info {
+      display: flex;
+      flex-direction: column;
+      @include vw-mo(gap, 65);
+
+      &__division {
         width: 100%;
       }
-      &:nth-of-type(3) {
-        margin-left: 0;
+
+      &__sub {
+        @include vw-mo(font-size, 40); 
+      }
+      
+      &__desc {
+        @include vw-mo(font-size, 32); 
       }
     }
-    &__sub {
-      @include vw-mo(font-size, 40); 
-    }
-    &__desc {
-      @include vw-mo(font-size, 32); 
-    }
-  }
-  
-  .map {
-    @include vw-mo(height, 600);
-  }
 
+    .map {
+      @include vw-mo(height, 600);
+    }
+  }
 }
