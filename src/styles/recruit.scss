@@ -7,6 +7,12 @@
 }
 
 .list {
+
+  &.edit {
+    @include vw-pc(padding-left, 15);
+    @include vw-pc(padding-right, 12);
+    @include vw-pc(margin-left, 8)
+  }
   &__link {
     position: relative;
     width: 100%;
@@ -50,6 +56,12 @@
   }
   
   .list {
+    &.edit {
+      @include vw-mo(padding-left, 6);
+      @include vw-mo(padding-right, 18);
+      @include vw-mo(margin-left, 8)
+    }
+    
     &__link {
       @include vw-mo(height, 222);
     }
