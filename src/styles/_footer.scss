@@ -9,11 +9,7 @@
   .footer {
     &__logo {
       @include vw-pc(width, 135);
-      margin: 0;
-      padding: 0;
       position: relative;
-      left: 0;
-      top: 0;
     }
 
     &__list {

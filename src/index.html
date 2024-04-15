@@ -12,77 +12,80 @@
       {{> header }}
       <!-- header.html -->
 
-      <main class="main">
-        <section class="main__visual">
-          <!-- 메인 카피 -->
-          <div class="title-box inner-1240">
-            <h2 class="main__title en">
-              Beyond<br class="m-show"> the creativity,<br>
-              Strive to<br class="m-show"> be sensational<br>
-              <span class="main__highlight">Bstones</span>
-            </h2>
+      <main class="home">
+        <section class="home__visual">
+
+          <div class="inner-1240">
+            <!-- 메인 카피 -->
+            <div class="title-box">
+              <h2 class="home__title en">
+                Beyond<br class="m-show"> the creativity,<br>
+                Strive to<br class="m-show"> be sensational<br>
+                <span class="home__highlight">Bstones</span>
+              </h2>
+            </div>
+
+            <div class="home__deco img_box">
+              <img src="./assets/main_deco_pc.png" alt="" class="m-hide">
+              <img src="./assets/main_deco_mo.png" alt="" class="m-show">
+            </div>
           </div>
 
-          <div class="main__deco img_box">
-            <img src="./assets/main_deco_pc.png" alt="" class="m-hide">
-            <img src="./assets/main_deco_mo.png" alt="" class="m-show">
-          </div>
-  
           <!-- 영상 비주얼 -->
-          <div class="main__video img_box">
-            <a href="">
-              <img src="./assets/main_video_pc.jpg" alt="" class="m-hide">
-              <img src="./assets/main_video_mo.jpg" alt="" class="m-show">
-            </a>
-          </div>
+          <a href="javascript:;" class="home__video img_box">
+            <img src="./assets/main_video_pc.jpg" alt="" class="m-hide">
+            <img src="./assets/main_video_mo.jpg" alt="" class="m-show">
+          </a>
         </section>
 
         <!-- Portfolio -->
-        <section class="main__portfolio inner-1240">
-          <h3 class="main__sub">
-            <a href="/portfolio/" class="sub">Portfolio ></a>
-          </h3>
-
-          <div class="swiper" id="main-portfolio">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-hide">
-                <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-show">
+        <section class="home__portfolio">
+          <div class="inner-1240">
+            <h3 class="home__sub">
+              <a href="/portfolio/" class="sub">Portfolio ></a>
+            </h3>
+  
+            <div class="swiper" id="main-portfolio">
+              <div class="swiper-wrapper">
+                <div class="portfolio-list img_box">
+                  <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-hide">
+                  <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-show">
+                </div>
+                <div class="portfolio-list img_box">
+                  <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-hide">
+                  <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-show">
+                </div>
+                <div class="portfolio-list img_box">
+                  <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-hide">
+                  <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-show">
+                </div>
               </div>
-              <div class="swiper-slide">
-                <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-hide">
-                <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-show">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-hide">
-                <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-show">
-              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
           </div>
         </section>
 
         <!-- Recruit -->
-        <section class="main__recruit inner-1240">
-          <h3 class="main__sub en">
-            <a href="/recruit/" class="sub">Recruit</a>
-          </h3>
-          <h4 class="main__text kr">당신을 기다립니다.</h4>
-          <p class="main__desc kr">
-            비스톤스와 함께 할 당신을 기다립니다.<br>
-            지금 비스톤스를 만나보세요! 
-          </p>
-          <p class="main__info en">
-            <span class="kr">문의 메일</span> : PROJECT@BSTONES.CO.KR
-          </p>
-  
-          <!-- 비스톤스 지원 랜딩 버튼 -->
-          <a href="/contact/" class="btn_join kr">비스톤스 지원하기</a>
-  
-          <!-- 돌아가는 원 -->
-          <div class="main__ani">
-            <div class="img_box infinite_rotating_logo">
+        <section class="sec-border-top home__recruit">
+          <div class="inner-1240">
+            <h3 class="home__sub en">
+              <a href="/recruit/" class="sub">Recruit</a>
+            </h3>
+            <h4 class="home__text kr">당신을 기다립니다.</h4>
+            <p class="home__desc kr">
+              비스톤스와 함께 할 당신을 기다립니다.<br>
+              지금 비스톤스를 만나보세요! 
+            </p>
+            <p class="home__info en">
+              <span class="kr">문의 메일</span> : PROJECT@BSTONES.CO.KR
+            </p>
+    
+            <!-- 비스톤스 지원 랜딩 버튼 -->
+            <a href="/contact/" class="btn_join kr">비스톤스 지원하기</a>
+    
+            <!-- 돌아가는 원 -->
+            <div class="home__ani infinite_rotating img_box">
               <img src="./assets/main_rotate_pc.png" alt="">
               <img src="./assets/main_rotate_mo.png" alt="">
             </div>

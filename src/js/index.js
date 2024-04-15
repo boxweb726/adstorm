@@ -14,8 +14,6 @@ import List from './module/List';
 // main 포트폴리오 영역 스와이퍼
 const swiper = new Swiper('#main-portfolio', {
   slidesPerView: 'auto',
-  centeredSlides: true,
-  spaceBetween: 40,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
