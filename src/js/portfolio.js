@@ -1,3 +1,5 @@
+import Swiper from 'swiper';
+import 'swiper/css';
 import dataList from '../data.json';
 import List from './module/List';
 
@@ -8,3 +10,7 @@ import List from './module/List';
 //     return `<li>${data.title} : ${data.date}</li>`;
 //   },
 // });
+
+const tabSwiper = new Swiper('#portfolioTab', {
+  slidesPerView: 'auto',
+});
