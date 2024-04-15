@@ -105,6 +105,7 @@
       z-index: 98;
 
       &.on {
+        position: fixed;
         display: block;
         left: 0;
       }

@@ -36,19 +36,53 @@
   }
 
   &__portfolio {
-    @include vw-pc(margin, 160 auto 156);
+    @include vw-pc(margin, 160 auto 274);
     
     .main__sub {
       @include vw-pc(margin-bottom, 76);
+    }
+
+    /* 포트폴리오 스와이퍼 구간 */
+    .swiper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-wrapper {
+    }
+
+    .swiper-slide {
+      @include vw-pc(width, 505);
+      @include vw-pc(height, 600);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      @include vw-pc(width, 88);
+      @include vw-pc(height, 88);
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_prev_pc.png);
+    }
+
+    .swiper-button-next {
+      background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_next_pc.png);
     }
   }
 
   &__recruit {
     position: relative;
-    @include vw-pc(margin, 120 auto);
+    @include vw-pc(padding-bottom, 120);
+    border-top: 1px solid #60605f;
 
     .main__sub {
-      @include vw-pc(margin-bottom, 81);
+      @include vw-pc(margin, 120 0 81);
     }
   }
 
@@ -71,7 +105,7 @@
 
   &__ani {
     position: absolute;
-    @include vw-pc(top, 181);
+    @include vw-pc(top, 301);
     right: 0;
 
     &::after {
