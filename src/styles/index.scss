@@ -44,6 +44,7 @@
   }
 
   &__recruit {
+    position: relative;
     @include vw-pc(margin, 120 auto);
 
     .main__sub {
@@ -69,40 +70,57 @@
   }
 
   &__ani {
-    #spinner {
-      margin: 0 auto;
-      width: 100px;
-      height: 100px;
-      border: 15px solid rgba(163, 151, 198, 0.2);
-      border-top: 15px solid rgba(163, 151, 198, 1);
+    position: absolute;
+    @include vw-pc(top, 181);
+    right: 0;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 46%;
+      left: 51%;
+      transform: translateX(-50%);
+      @include vw-pc(width, 24);
+      @include vw-pc(height, 24);
       border-radius: 50%;
-  }
-  /* 아래는 기본 래퍼 설정 */
-  #wrapper {
-      margin: 0 auto;
-      padding: 30px;
-      max-width: 1170px;
-  }
+      background-color: #f84525;
+    }
+
+    .infinite_rotating_logo {
+      animation: rotate_image 10s linear infinite;
+      transform-origin: 50% 50%;
+    }
+    
+    @keyframes rotate_image {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 
+  .btn_join {
+    display: block;
+    text-align: center;
+    align-items: center;
+    @include vw-pc(width, 250);
+    @include vw-pc(font-size, 24);
+    @include vw-pc(line-height, 65);
+    @include vw-pc(letter-spacing, -1);
+    @include vw-pc(border-radius, 32);
+    color: #fff;
+    background-color: #363534;
+    font-weight: bold;
+  }
 }
 
-.btn_join {
-  display: block;
-  text-align: center;
-  align-items: center;
-  @include vw-pc(width, 250);
-  @include vw-pc(font-size, 24);
-  @include vw-pc(line-height, 65);
-  @include vw-pc(letter-spacing, -1);
-  @include vw-pc(border-radius, 32);
-  color: #fff;
-  background-color: #363534;
-  font-weight: bold;
-}
 
 @media screen and (max-width: 768px) {
   .main {
+    .title-box {
+      @include vw-mo(margin, 94 48 512);
+    }
+
     &__title {
       position: relative;
       @include vw-mo(font-size, 96);
@@ -127,6 +145,55 @@
     &__video {
       width: 100%;
       @include vw-mo(height, 1280);
+    }
+
+    &__portfolio {
+      @include vw-mo(margin, 101 48 103);
+    }
+  
+    &__recruit {
+      position: relative;
+      @include vw-mo(margin, 120 48 414);
+    }
+    
+    &__sub {
+      @include vw-mo(margin-bottom, 81);
+    }
+
+    &__text {
+      @include vw-mo(font-size, 60);
+      @include vw-mo(margin-bottom, 50);
+    }
+  
+    &__desc {
+      @include vw-mo(font-size, 40);
+      @include vw-mo(line-height, 60);
+      @include vw-mo(margin-bottom, 41);
+      @include vw-mo(letter-spacing, -1);
+    }
+  
+    &__info {
+      @include vw-mo(font-size, 36);
+      @include vw-mo(margin-bottom, 99);
+      color: #bbb;
+    }
+
+    &__ani {
+      @include vw-mo(top, 660);
+  
+      &::after {
+        transform: translateX(-50%);
+        @include vw-mo(width, 24);
+        @include vw-mo(height, 24);
+      }
+    }
+
+    .btn_join {
+      @include vw-mo(width, 400);
+      @include vw-mo(font-size, 32);
+      @include vw-mo(line-height, 101);
+      @include vw-mo(letter-spacing, -1);
+      @include vw-mo(border-radius, 50);
     }
   }
 }
