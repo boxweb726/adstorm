@@ -5,14 +5,16 @@
 
 .main {
   .title-box {
-    @include vw-pc(max-width, 1240);
-    margin: 0 auto;
+    position: relative;
+    @include vw-pc(margin, 196 auto 332);
+    z-index: 50;
+    word-break: break-all;
   }
 
   &__title {
-    position: relative;
     @include vw-pc(font-size, 120);
-    @include vw-pc(line-height, 135);
+    @include vw-pc(line-height, 119.7);
+    @include vw-pc(letter-spacing, -2);
   }
 
   &__highlight {
@@ -22,9 +24,10 @@
   &__deco {
     position: absolute;
     @include vw-pc(right, 309);
-    @include vw-pc(top, 426);
+    @include vw-pc(top, 440);
     @include vw-pc(width, 360);
     @include vw-pc(height, 360);
+    z-index: 5;
   }
 
   &__video {
@@ -33,12 +36,69 @@
   }
 
   &__portfolio {
-
+    @include vw-pc(margin, 160 auto 156);
+    
+    .main__sub {
+      @include vw-pc(margin-bottom, 76);
+    }
   }
 
   &__recruit {
+    @include vw-pc(margin, 120 auto);
 
+    .main__sub {
+      @include vw-pc(margin-bottom, 81);
+    }
   }
+
+  &__text {
+    @include vw-pc(font-size, 54);
+    @include vw-pc(margin-bottom, 45);
+  }
+
+  &__desc {
+    @include vw-pc(font-size, 22);
+    @include vw-pc(line-height, 48);
+    @include vw-pc(margin-bottom, 40);
+  }
+
+  &__info {
+    @include vw-pc(font-size, 24);
+    @include vw-pc(margin-bottom, 60);
+    color: #bbb;
+  }
+
+  &__ani {
+    #spinner {
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      border: 15px solid rgba(163, 151, 198, 0.2);
+      border-top: 15px solid rgba(163, 151, 198, 1);
+      border-radius: 50%;
+  }
+  /* 아래는 기본 래퍼 설정 */
+  #wrapper {
+      margin: 0 auto;
+      padding: 30px;
+      max-width: 1170px;
+  }
+  }
+
+}
+
+.btn_join {
+  display: block;
+  text-align: center;
+  align-items: center;
+  @include vw-pc(width, 250);
+  @include vw-pc(font-size, 24);
+  @include vw-pc(line-height, 65);
+  @include vw-pc(letter-spacing, -1);
+  @include vw-pc(border-radius, 32);
+  color: #fff;
+  background-color: #363534;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
