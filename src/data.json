@@ -6,7 +6,7 @@
       "date": "2025.01",
       "brand": "삼성전자",
       "type": "Event",
-      "category": "ui/ux"
+      "category": "promotion"
     },
     {
       "id": "002",
@@ -14,7 +14,7 @@
       "date": "2026.01",
       "brand": "삼성전자",
       "type": "Event",
-      "category": "ui/ux"
+      "category": "promotion"
     },
     {
       "id": "003",
@@ -22,7 +22,7 @@
       "date": "2027.01",
       "brand": "삼성전자",
       "type": "Event",
-      "category": "ui/ux"
+      "category": "management"
     },
     {
       "id": "004",
@@ -30,7 +30,7 @@
       "date": "2028.01",
       "brand": "삼성전자",
       "type": "Event",
-      "category": "ui/ux"
+      "category": "management"
     },
     {
       "id": "005",
@@ -38,7 +38,7 @@
       "date": "2029.01",
       "brand": "삼성전자",
       "type": "Event",
-      "category": "ui/ux"
+      "category": "development"
     },
     {
       "id": "006",
@@ -46,7 +46,7 @@
       "date": "2030.01",
       "brand": "삼성전자",
       "type": "Event",
-      "category": "ui/ux"
+      "category": "sns-banner"
     }
   ]
 }
