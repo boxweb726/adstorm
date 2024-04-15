@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import './reset';
 @import './mixin';
 @import './variable';
@@ -99,7 +100,7 @@ section.width-full {
 // 섹션 상단 라인 
 .sec-top-line {
   // inner_1760 과 함께 사용
-  border-top: 1px sold #60605f;
+  border-top: 1px solid #60605f;
 }
 
 // 페이지 타이틀
@@ -129,6 +130,7 @@ section.width-full {
 .sec-desc {
   @include vw-pc(font-size, 22);
   @include vw-pc(line-height, 38);
+  letter-spacing: -.035em;
   color: $color-white;
 }
 
@@ -164,12 +166,17 @@ section.width-full {
     font-weight: 600;
   }
 
+  .sec-desc {
+    @include vw-mo(font-size, 32);
+    @include vw-mo(line-height, 48);
+    opacity: .9;
+  }
+
   // 각 영역 시작부분 붉은색 타이틀
   .sub {
     @include vw-mo(font-size, 40);
     @include vw-mo(letter-spacing, 16);
   }
-
 
   // + 버튼
   .btn-plus {

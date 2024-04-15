@@ -19,7 +19,7 @@ $color-red: #f84525;
 $color-gray: #bbb;
 $color-deep-gray: #363534;
 
-.btn_plus {
+.btn-plus {
   position: relative; 
   display: inline-block;
   &::before {
@@ -42,24 +42,6 @@ $color-deep-gray: #363534;
   }  
 }
 
-.plus_port {
-  &::before {
-    background-color: $color-red;
-  }
-  &::after {
-    background-color: $color-red;
-  } 
-}
-
-.plus_recruit {
-  &::before {
-    background-color: $color-white;
-  }
-  &::after {
-    background-color: $color-white;
-  } 
-}
-
 @media all and (max-width:768px) {
-
+  
 }
