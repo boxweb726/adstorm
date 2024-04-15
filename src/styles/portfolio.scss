@@ -1,32 +1,28 @@
 @import './common';
 
-.list {
-  &__title {}
+.tab {
+  display: flex; 
+  @include vw-pc(gap, 130); 
+  @include vw-pc(margin-bottom, 40);
+  &__item {
+    @include vw-pc(height, 50)
+  }
+  &__txt {
+    display: block; 
+    height: 100%; 
+    @include vw-pc(border-bottom, 3 solid transparent); 
+    @include vw-pc(font-size, 30); 
+    @include vw-pc(line-height, 50); 
+    color: #888; 
+    font-weight: 500;
 
-  &__tab {
-    display: flex; 
-    @include vw-pc(gap, 130); 
-    @include vw-pc(margin-bottom, 40);
-    &__item {
-      @include vw-pc(height, 50)
-    }
-    &__txt {
-      display: block; 
-      height: 100%; 
-      @include vw-pc(border-bottom, 3 solid transparent); 
-      @include vw-pc(font-size, 30); 
-      @include vw-pc(line-height, 50); 
-      color: #888; 
-      font-weight: 500;
-
-      &.active {
-        @include vw-pc(border-bottom, 3 solid $color-red); 
-        color: $color-white;
-      }
+    &.active {
+      @include vw-pc(border-bottom, 3 solid $color-red); 
+      color: $color-white;
     }
   }
-
-  &__cont {
+}
+.list {
     display: flex;
     flex-wrap: wrap;
     @include vw-pc(gap, 20);
@@ -37,7 +33,6 @@
       @include vw-pc(height, 500);
     }
   
-
     &__link {
 
     }
@@ -74,7 +69,7 @@
       font-weight: 700;
       transition: .5s ease-in-out all;
     }
-    &__text:hover .list__cont__title {display: block;}
+    &__text:hover .list__title {display: block;}
     
     &__data {
       display: none;
@@ -84,17 +79,59 @@
       font-weight: 400;
       transition: .5s ease-in-out all;
     }
-    &__text:hover .list__cont__data {display: block;}
+    &__text:hover .list__data {display: block;}
+  
+    &__btn {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      @include vw-pc(width, 80);
+      @include vw-pc(height, 80);
+    }
   }
 
-  &__btn__wrap {
-    width: 100%;
-    @include vw-pc(height, 80);
+  @media all and (max-width:768px) {
+    .tab {
+      display: flex; 
+      @include vw-mo(gap, 70); 
+      @include vw-mo(margin-bottom, 40);
+      overflow: hidden;
+      &__item {
+        @include vw-mo(height, 59)
+      }
+      &__txt {
+        @include vw-mo(border-bottom, 4 solid transparent); 
+        @include vw-mo(font-size, 36); 
+        @include vw-mo(line-height, 59);
+    
+        &.active {
+          @include vw-mo(border-bottom, 4 solid $color-red); 
+        }
+      }
+    }
+    .list {
+        @include vw-mo(gap, 24);
+        
+        &__item {
+          @include vw-mo(width, 300);
+          @include vw-mo(height, 370);
+        }
+      
+        &__text:hover {
+          @include vw-mo(gap, 20);
+        }
+    
+        &__title {
+          @include vw-mo(font-size, 42);
+        }
+
+        &__data {
+          @include vw-mo(font-size, 26); 
+        }
+        
+        &__btn {
+          @include vw-mo(width, 140);
+          @include vw-mo(height, 140);
+        }
+      }
   }
-  &__btn {
-    display: block;
-    margin: 0 auto;
-    @include vw-pc(width, 80);
-    height: 100%;
-  }
-}

@@ -93,8 +93,8 @@ section.width-full {
   }
 }
 
-.img_box{position:relative; width:100%; font-size:0;}
-.img_box img{width:100%;}
+.img-box{position:relative; width:100%; font-size:0;}
+.img-box img{width:100%;}
 
 // 섹션 상단 라인 
 .sec-top-line {
@@ -148,6 +148,7 @@ section.width-full {
 
   .inner-1240 {
     @include vw-mo(width, 624);
+    max-width: fit-content;
   }
 
   //section-top-line

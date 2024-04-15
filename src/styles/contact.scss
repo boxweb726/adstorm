@@ -1,12 +1,11 @@
 @import './common';
 
 
-.contact {
-  &__info {
-    display: flex; 
-    flex-wrap: wrap; 
-    @include vw-pc(gap, 81 20);
-  }
+
+.info {
+  display: flex; 
+  flex-wrap: wrap; 
+  @include vw-pc(gap, 81 20);
   &__division {
     @include vw-pc(width, 505);
     &:nth-of-type(1) {
@@ -37,16 +36,15 @@
   }
 }
 
+
+
 .map {
   @include vw-pc(height, 700);
 }
 
 
 @media all and (max-width:768px) {
-  .contact {
-    &__info {
-      @include vw-mo(gap, 60);
-    }
+  .info {
     &__division {
       width: 100%;
       &:nth-of-type(1) {
