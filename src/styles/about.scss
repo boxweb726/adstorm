@@ -1,3 +1,26 @@
 @import './common';
-@import './header';
-@import './footer';
+
+.page {
+  &__box {
+    position: relative;
+    @include vw-pc(height, 885);
+  }
+
+  &__sub {
+    @include vw-pc(font-size, 130);
+    @include vw-pc(font-size, 135);
+  }
+  &__desc {
+    position: absolute;
+    @include vw-pc(left, 735);
+    @include vw-pc(top, 485);
+    @include vw-pc(font-size, 22);
+    @include vw-pc(line-height, 38);
+    font-weight: 300;
+    letter-spacing: -.025em;
+    opacity: .9;
+  }
+  &__desc--2nd {
+    @include vw-pc(top, 622);
+  }
+}

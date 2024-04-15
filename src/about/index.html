@@ -1,6 +1,45 @@
-<section>
-  <h1></h1>
-  <p></p>
+<!doctype html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/about.scss" />
+  </head>
+  <body>
+    <div class="wrapper">
+      {{> header }}
+      <!-- header.html -->
+      <main>
+        <section class="page">
+          <div class="inner-1240">
+            <div class="page__box pc-pt-125">
+              <h2 class="page-title color-red en">Hello!</h2>
+              <p class="page__sub en">We are Bstones.</p>
+              <p class="page__desc">2007년 설립된 비스톤스는 <br>기획, 디자인, 개발/퍼블리싱 사업부를 중심으로 <br>구성된 디지털 콘텐츠 에이전시입니다.</p>
+              <p class="page__desc page__desc--2nd">2022년, 비스톤스는 크리에이티브에 대한 열정을 <br>가진 100여 명의 스텝과 함께 하고 있습니다.</p>
+            </div>
+            <!--// title 영역 -->
+          </div>
+        </section>
+        <section class="we-do sec-top-line">
+          <div class="inner-1240 pc-pt-160">
+            <h3 class="sub pc-pb-80">What we do</h3>
 
-  
-</section>
+            <div class="we-do__item">
+              <div class="img-box">
+                <img src="../assets/about_img01_pc.jpg" alt="" class="m-hide">
+                <img src="../assets/about_img01_mo.jpg" alt="" class="m-show">
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer }}
+      <!-- footer.html -->
+    </div>
+
+    <script type="module" src="../js/about.js"></script>
+  </body>
+</html>
