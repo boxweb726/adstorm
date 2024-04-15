@@ -36,6 +36,7 @@ section.width-full {
 
 .inner-1240 {
   @include vw-max(max-width, 1240);
+  @include vw-max(width, 1240);
   margin: 0 auto;
 }
 
@@ -130,7 +131,7 @@ section.width-full {
 .sec-desc {
   @include vw-pc(font-size, 22);
   @include vw-pc(line-height, 38);
-  letter-spacing: -.035em;
+  letter-spacing: -.1em;
   color: $color-white;
 }
 
