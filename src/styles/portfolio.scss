@@ -2,7 +2,7 @@
 
 .tab {
   display: flex; 
-  @include vw-pc(gap, 130); 
+  justify-content: space-between;
   @include vw-pc(margin-bottom, 40);
   &__item {
     @include vw-pc(height, 50)
@@ -15,6 +15,7 @@
     @include vw-pc(line-height, 50); 
     color: #888; 
     font-weight: 500;
+    text-transform: uppercase;
 
     &.active {
       @include vw-pc(border-bottom, 3 solid $color-red); 
@@ -91,11 +92,14 @@
   }
 
   @media all and (max-width:768px) {
+    section {
+      overflow: hidden;
+    }
     .tab {
       display: flex; 
       @include vw-mo(gap, 70); 
+      justify-content: flex-start;
       @include vw-mo(margin-bottom, 40);
-      overflow: hidden;
       &__item {
         @include vw-mo(height, 59)
       }
