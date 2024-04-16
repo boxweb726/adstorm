@@ -2,16 +2,20 @@
 
 .bs-recruit {
   .page-sub {
-    @include vw-max(font-size, 90);
     line-height: 1;
+    letter-spacing: 0;
     color: $color-red;
+    @include vw-max(font-size, 90);
+  }
+
+  .sec-desc {
+    letter-spacing: -.04em;
   }
 
   .list {
     &.edit {
       @include vw-max(padding-left, 15);
       @include vw-max(padding-right, 12);
-      @include vw-max(margin-left, 8)
     }
 
     &__link {
@@ -35,26 +39,26 @@
     }
 
     &__txt {
-      @include vw-max(font-size, 60);
       line-height: 1;
-      background-color: $color-black;
       color: $color-white;
+      font-family: $en;
       font-weight: 500;
       transition: all .5s; 
+      @include vw-max(font-size, 60);
     }
 
     &__desc {
-      @include vw-max(font-size, 22);
       line-height: 1;
       color: $color-gray;
       font-weight: 500;
       transition: all .5s; 
+      @include vw-max(font-size, 22);
     }
   
     .plus-recruit {
       position: absolute;
       @include vw-max(top, 33);
-      right: 0;
+      @include vw-max(right, 10);
       @include vw-max(width, 60);
       @include vw-max(height, 60);
       &::before, &::after {background-color: $color-white;}
@@ -97,33 +101,3 @@
       }
     } 
   }
-
-
-@-ms-keyframes spin { 
-  from { 
-      -ms-transform: rotate(0deg); 
-  } to { 
-      -ms-transform: rotate(360deg); 
-  }
-}
-@-moz-keyframes spin { 
-  from { 
-      -moz-transform: rotate(0deg); 
-  } to { 
-      -moz-transform: rotate(360deg); 
-  }
-}
-@-webkit-keyframes spin { 
-  from { 
-      -webkit-transform: rotate(0deg); 
-  } to { 
-      -webkit-transform: rotate(360deg); 
-  }
-}
-@keyframes spin { 
-  from { 
-      transform: rotate(0deg); 
-  } to { 
-      transform: rotate(360deg); 
-  }
-}

@@ -64,7 +64,7 @@ section.width-full {
   font-size: 0;
 }
 
-.img-box{
+.img-box {
   display: block;
   position:relative; 
   width:100%; 
@@ -130,7 +130,7 @@ section.width-full {
   }
 
   .inner-1240 {
-    max-width: fit-content;
+    max-width: none;
     @include vw-mo(width, 624);
   }
 
