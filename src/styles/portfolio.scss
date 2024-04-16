@@ -10,16 +10,19 @@
     &__txt {
       display: block; 
       height: 100%; 
-      @include vw-max(border-bottom, 3 solid transparent); 
-      @include vw-max(font-size, 30); 
-      @include vw-max(line-height, 50); 
       color: #888; 
       font-weight: 500;
       text-transform: uppercase;
+      @include vw-max(border-bottom, 3 solid transparent); 
+      @include vw-max(font-size, 30); 
+      @include vw-max(line-height, 50); 
   
-      &.active, 
-      &:hover {
+      &.active {
+        color: $color-white;
         @include vw-max(border-bottom, 3 solid $color-red); 
+      }
+
+      &:hover {
         color: $color-white;
       }
     }
@@ -37,62 +40,68 @@
       }
     
       &__link {
-  
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        &::after {
+          content: '';
+          display: none;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(248, 69, 37, .9);
+          transition: .3s ease-in;
+        }
+        &:hover::after{
+          display: block;
+        }
+
+        &:hover .list__text{
+          display: flex;
+          transition: .5s ease-in;
+          @include vw-max(gap, 20);
+        }
       }
   
       &__text {
-        display: block;
-        position: absolute;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        transition: .5s ease-in-out all;
-      }
-  
-      &__text:hover {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @include vw-max(gap, 20);
         position: absolute;
-        content: '';
+        top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(248, 69, 37, .9);
+        z-index: 1;
+        // transition: background-color .2s, ease-in;
       }
   
       &__title {
-        display: none;
-        @include vw-max(font-size, 42); 
         line-height: 1;
         color: $color-white;  
         font-weight: 700;
-        transition: .5s ease-in-out all;
+        @include vw-max(font-size, 42); 
       }
-      &__text:hover .list__title {display: block;}
       
       &__data {
-        display: none;
-        @include vw-max(font-size, 26); 
         line-height: 1;
         color: $color-white;  
         font-weight: 400;
-        transition: .5s ease-in-out all;
+        @include vw-max(font-size, 26); 
       }
-      &__text:hover .list__data {display: block;}
     
       &__btn {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        transition: all .5s; 
         @include vw-max(width, 80);
         @include vw-max(height, 80);
       
         &:hover{
-          transition: all .5s; 
           transform: rotate(90deg);
         }
       }
@@ -107,8 +116,8 @@
 
       .tab {
         display: flex; 
-        @include vw-mo(gap, 70); 
         justify-content: flex-start;
+        @include vw-mo(gap, 70); 
         @include vw-mo(margin-bottom, 40);
         &__item {
           @include vw-mo(height, 59)

@@ -9,12 +9,13 @@
       @include vw-max(font-size, 130);
       @include vw-max(line-height, 135);
       font-weight: 600;
+      letter-spacing: -.01em;
     }
 
     &__desc {
       position: absolute;
       @include vw-max(left, 735);
-      @include vw-max(top, 485);
+      @include vw-max(top, 475);
       @include vw-max(font-size, 22);
       @include vw-max(line-height, 38);
       font-weight: 300;
@@ -23,8 +24,13 @@
     }
 
     &__desc--2nd {
-      @include vw-max(top, 622);
+      @include vw-max(top, 610);
     }
+  }
+
+  .sub {
+    @include vw-max(font-size, 24);
+    letter-spacing: .2em;
   }
 
   .about {
@@ -46,6 +52,28 @@
       }
     }
   
+    &__text-box {
+      z-index: 1;
+      order: 1;
+    }
+
+    &__title {
+      @include vw-max(margin-left, 80);
+      @include vw-max(font-size, 140);
+      @include vw-max(line-height, 147);
+      font-weight: 500;
+      color: $color-white;
+    }
+
+    &__desc {
+      @include vw-max(font-size, 22);
+      @include vw-max(line-height, 38);
+      font-weight: 300;
+      color: $color-white;
+      letter-spacing: -.045em;
+      opacity: .9;
+    }
+
     .about__item:nth-of-type(2n-1) {
       .img-box {
         order: 1;
@@ -60,26 +88,11 @@
         }
       }
     }
-  
-    &__text-box {
-      z-index: 1;
-      order: 1;
-    }
 
-    &__title {
-      @include vw-max(margin-left, 120);
-      @include vw-max(font-size, 140);
-      @include vw-max(line-height, 147);
-      font-weight: 500;
-      color: $color-white;
-    }
-
-    &__desc {
-      @include vw-max(font-size, 22);
-      @include vw-max(line-height, 38);
-      font-weight: 300;
-      color: $color-white;
-      opacity: .9;
+    .about__item:nth-of-type(4) {
+      .about__title {
+        @include vw-pc(margin-left, 108);
+      }
     }
   }
 
@@ -114,19 +127,22 @@
   
       &__desc {
         @include vw-mo(left, 0);
-        @include vw-mo(top, 468);
+        @include vw-mo(top, 455);
         @include vw-mo(font-size, 32);
         @include vw-mo(line-height, 48);
       }
   
       &__desc--2nd {
-        @include vw-mo(top, 630);
+        @include vw-mo(top, 620);
       }
     }
   
+    .page-sub {
+      letter-spacing: .2em;
+    }
     .about {
       display: flex;
-      @include vw-mo(gap, 100);
+      @include vw-mo(gap, 95);
     
       &__item {
         display: block;
@@ -138,12 +154,15 @@
       .about__item:nth-of-type(2n-1) {
         .about__text-box {
           .about__title {
-            @include vw-mo(margin-left, 0)
+            @include vw-mo(margin-left, 0);
           }
         }
       }
     
-      
+      &__text-box {
+        @include vw-mo(padding-left, 15);
+        letter-spacing: -.03em;
+      }
   
       &__title {
         @include vw-mo(margin-left, 0);
