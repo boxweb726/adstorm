@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite.js Vanilla Template</title>
     <link rel="stylesheet" href="./styles/index.scss" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -48,26 +49,118 @@
         <section class="bs_home__portfolio">
           <div class="inner-1240">
             <h3 class="bs_home__sub">
-              <a href="/portfolio/" class="sub">Portfolio ></a>
+              <a href="/portfolio/" class="page-sub page-sub--portfolio">Portfolio<span class="sub-arrow"></span></a>
             </h3>
-  
-            <div class="swiper slide" id="main-portfolio">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide portfolio-list img-box">
+
+            <div class="swiper slide portfolio" id="main-portfolio">
+              <div class="swiper-wrapper portfolio__box">
+
+                <div class="swiper-slide portfolio__list img-box">
                   <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-01_mo.jpg" alt="" class="m-show">
+
+                  <!-- 슬라이드 내 텍스트 -->
+                  <div class="portfolio__txt" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="portfolio__title">비스포크</p>
+                    <dl class="portfolio__desc en">
+                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">2022. 05</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info kr">삼성전자</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">Event</dd>
+                    </dl>
+                  </div>
                 </div>
-                <div class="swiper-slide portfolio-list img-box">
+
+                <div class="swiper-slide portfolio__list img-box">
                   <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-02_mo.jpg" alt="" class="m-show">
+
+                  <!-- 슬라이드 내 텍스트 -->
+                  <div class="portfolio__txt" data-aos="fade-up">
+                    <p class="portfolio__title">비스포크</p>
+                    <dl class="portfolio__desc en">
+                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">2022. 05</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info kr">삼성전자</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">Event</dd>
+                    </dl>
+                  </div>
                 </div>
-                <div class="swiper-slide portfolio-list img-box">
+
+                <div class="swiper-slide portfolio__list img-box">
                   <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-hide">
-                  <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-show">
+                  <img src="./assets/main_portfolio_swiper-01_mo.jpg" alt="" class="m-show">
+
+                  <!-- 슬라이드 내 텍스트 -->
+                  <div class="portfolio__txt" data-aos="fade-up">
+                    <p class="portfolio__title">비스포크</p>
+                    <dl class="portfolio__desc en">
+                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">2022. 05</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info kr">삼성전자</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">Event</dd>
+                    </dl>
+                  </div>
                 </div>
-                <div class="swiper-slide portfolio-list img-box">
+
+                <div class="swiper-slide portfolio__list img-box">
+                  <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-hide">
+                  <img src="./assets/main_portfolio_swiper-02_mo.jpg" alt="" class="m-show">
+
+                  <!-- 슬라이드 내 텍스트 -->
+                  <div class="portfolio__txt" data-aos="fade-up">
+                    <p class="portfolio__title">비스포크</p>
+                    <dl class="portfolio__desc en">
+                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">2022. 05</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info kr">삼성전자</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">Event</dd>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__list img-box">
+                  <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-hide">
+                  <img src="./assets/main_portfolio_swiper-01_mo.jpg" alt="" class="m-show">
+
+                  <!-- 슬라이드 내 텍스트 -->
+                  <div class="portfolio__txt" data-aos="fade-up">
+                    <p class="portfolio__title">비스포크</p>
+                    <dl class="portfolio__desc en">
+                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">2022. 05</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info kr">삼성전자</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">Event</dd>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__list img-box">
                   <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-hide">
-                  <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-show">
+                  <img src="./assets/main_portfolio_swiper-02_mo.jpg" alt="" class="m-show">
+
+                  <!-- 슬라이드 내 텍스트 -->
+                  <div class="portfolio__txt" data-aos="fade-up">
+                    <p class="portfolio__title">비스포크</p>
+                    <dl class="portfolio__desc en">
+                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">2022. 05</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info kr">삼성전자</dd>
+                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="portfolio__info">Event</dd>
+                    </dl>
+                  </div>
                 </div>
               </div>
               <div class="swiper-button-next m-hide"></div>
@@ -80,7 +173,7 @@
         <section class="sec-border-top bs_home__recruit">
           <div class="inner-1240">
             <h3 class="bs_home__sub en">
-              <a href="/recruit/" class="sub">Recruit</a>
+              <a href="/recruit/" class="page-sub page-sub--recruit">Recruit</a>
             </h3>
             <h4 class="bs_home__text">당신을 기다립니다.</h4>
             <p class="bs_home__desc">
@@ -108,5 +201,11 @@
     </div>
 
     <script type="module" src="./js/index.js" defer></script>
-  </body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+</body>
 </html>

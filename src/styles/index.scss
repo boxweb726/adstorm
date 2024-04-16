@@ -3,6 +3,7 @@
 @import './footer';
 @import './contact';
 
+
 .bs_home {
   .title-box {
     position: relative;
@@ -18,7 +19,7 @@
   }
 
   &__highlight {
-    color: #f84525;
+    color: $color-red;
   }
 
   &__deco {
@@ -37,12 +38,13 @@
       position: absolute;
       left: 50%;
       top: 50%;
+      transform: translateX(-50%);
       transform: translateY(-50%);
       @include vw-max(width, 160);
+      transition: all 0.5s;
 
       &:hover {
         transform: translateY(-50%) scale(1.2);
-        transition: all 0.5s;
       }
     }
   }
@@ -50,53 +52,121 @@
   &__portfolio {
     @include vw-max(padding, 160 0 274);
     
-    .bs_home__sub {
-      @include vw-max(margin-bottom, 76);
-    }
+    .page-sub--portfolio {
+      @include vw-max(font-size, 28);
 
-    /* 포트폴리오 스와이퍼 구간 */
-    .swiper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-wrapper {
-    }
-
-    .portfolio-list {
-      @include vw-max(width, 505);
-      @include vw-max(height, 600);
-      @include vw-max(margin-right, 40);
-    }
-    
-    .swiper-button-prev,
-    .swiper-button-next {
-      position: absolute;
-      @include vw-max(width, 88);
-      @include vw-max(height, 88);
-
-      &:after {
-        display: none;
+      .sub-arrow {
+        position: relative;
+      }
+      
+      .sub-arrow::after {
+        content: '';
+        display: block;
+        position: absolute;
+        @include vw-max(left, 14);
+        @include vw-max(top, 13);
+        @include vw-max(width, 14);
+        @include vw-max(height, 14);
+        border-top: 3px solid $color-red;
+        border-right: 3px solid $color-red;
+        transform: rotate(45deg);
       }
     }
 
-    .swiper-button-prev {
-      background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_prev_pc.png);
-    }
+    /* 포트폴리오 스와이퍼 구간 */
+    .portfolio {
+      position: relative;
+      // width: fit-content;
+      height: 100%;
+      @include vw-max(padding-bottom, 120);
 
-    .swiper-button-next {
-      background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_next_pc.png);
+      &__box {
+        width: auto;
+      }
+
+      &__list {
+        @include vw-max(width, 505);
+        @include vw-max(height, 600);
+
+        &:not(:last-child) {
+          @include vw-max(margin-right, 40);
+        }
+      }
+      
+      .swiper-slide-active {
+        @include vw-max(margin-right, 230);
+        transition: all 1s ease-in-out;
+
+        .portfolio__txt {
+          position: absolute;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          @include vw-max(width, 255);
+          @include vw-max(right, -190);
+          @include vw-max(top, 310);
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: absolute;
+        @include vw-max(top, 652);
+        @include vw-max(width, 88);
+        @include vw-max(height, 88);
+  
+        &:after {
+          display: none;
+        }
+      }
+  
+      .swiper-button-prev {
+        @include vw-max(left, 1036);
+        background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_prev_pc.png);
+      }
+  
+      .swiper-button-next {
+        @include vw-max(right, 0);
+        background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_next_pc.png);
+      }
+
+      &__txt {
+        display: none;
+      }
+
+      &__title {
+        @include vw-max(font-size, 42);
+        @include vw-max(margin-bottom, 25);
+        font-weight: bold;
+      }
+
+      &__info {
+        display: inline-block;
+        @include vw-max(font-size, 30);
+        @include vw-max(line-height, 50);
+
+        .kr {
+          @include vw-max(font-size, 28);
+        }
+
+        &--typea {
+          font-weight: bold;
+        }
+      }
     }
+  }
+
+  &__sub {
+    @include vw-max(margin-bottom, 77);
   }
 
   &__recruit {
     position: relative;
-    @include vw-max(padding-bottom, 120);
+    @include vw-max(padding, 120 0);
     border-top: 1px solid #60605f;
 
-    .bs_home__sub {
-      @include vw-max(margin, 120 0 81);
+    .page-sub--recruit {
+      @include vw-max(font-size, 28);
     }
   }
 
@@ -115,7 +185,7 @@
     @include vw-max(font-size, 24);
     @include vw-max(line-height, 20);
     @include vw-max(margin-bottom, 60);
-    color: #bbb;
+    color: $color-gray;
   }
 
   &__ani {
@@ -133,7 +203,7 @@
       @include vw-max(width, 24);
       @include vw-max(height, 24);
       border-radius: 50%;
-      background-color: #f84525;
+      background-color: $color-red;
     }
   }
 
@@ -158,8 +228,8 @@
     @include vw-max(line-height, 65);
     @include vw-max(letter-spacing, -1);
     @include vw-max(border-radius, 32);
-    color: #fff;
-    background-color: #363534;
+    color: $color-white;
+    background-color: $color-deep-gray;
     font-weight: bold;
   }
 }
@@ -174,7 +244,7 @@
 
     &__title {
       position: relative;
-      @include vw-mo(font-size, 96);
+      @include vw-mo(font-size, 95);
       @include vw-mo(line-height, 112);
     }
 
@@ -200,11 +270,59 @@
       @include vw-mo(padding, 101 0 103);
       margin: 0;
 
+      .page-sub--portfolio {
+        @include vw-mo(font-size, 40);
+        @include vw-mo(letter-spacing, 10);
+
+        .sub-arrow::after {
+          @include vw-mo(left, 23);
+          @include vw-mo(top, 19);
+          @include vw-mo(width, 19);
+          @include vw-mo(height, 19);
+          transform: rotate(45deg);
+        }
+      }
+
       /* 포트폴리오 스와이퍼 구간 */
-      .portfolio-list {
-        @include vw-mo(width, 516);
-        @include vw-mo(height, 640);
-        @include vw-mo(margin-right, 24);
+      .portfolio {
+        padding: 0;
+        @include vw-mo(padding-bottom, 428);
+
+        &__list {
+          @include vw-mo(width, 516);
+          @include vw-mo(height, 640);
+
+          &:not(:last-child) {
+            @include vw-mo(margin-right, 24);
+          }
+        }
+        
+        .swiper-slide-active {
+          transition: none;
+
+          .portfolio__txt {
+            display: block;
+            position: relative;
+            left: 0;
+            @include vw-mo(top, 60);
+            @include vw-mo(width, 516);
+            text-align: left;
+          }
+        }
+
+        &__title {
+          @include vw-mo(margin-bottom, 50);
+          @include vw-mo(font-size, 60);
+        }
+
+        &__info {
+          @include vw-mo(font-size, 44);
+          @include vw-mo(line-height, 60);
+
+          .kr {
+            @include vw-mo(font-size, 40);
+          }
+        }
       }
     }
   
@@ -212,8 +330,9 @@
       position: relative;
       @include vw-mo(padding, 100 0 414);
 
-      .bs_home__sub {
-        @include vw-max(margin, 0 auto 81);
+      .page-sub--recruit {
+        @include vw-mo(font-size, 40);
+        @include vw-mo(letter-spacing, 10);
       }
     }
 
@@ -233,7 +352,7 @@
       @include vw-mo(font-size, 36);
       @include vw-mo(line-height, 29);
       @include vw-mo(margin-bottom, 99);
-      color: #bbb;
+      color: $color-gray;
     }
 
     &__ani {
