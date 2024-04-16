@@ -3,18 +3,18 @@
 @import './footer';
 @import './contact';
 
-.home {
+.bs_home {
   .title-box {
     position: relative;
-    @include vw-pc(margin, 196 auto 332);
+    @include vw-max(margin, 196 auto 332);
     z-index: 50;
     word-break: break-all;
   }
 
   &__title {
-    @include vw-pc(font-size, 120);
-    @include vw-pc(line-height, 119.7);
-    @include vw-pc(letter-spacing, -2);
+    @include vw-max(font-size, 120);
+    @include vw-max(line-height, 119.7);
+    @include vw-max(letter-spacing, -2);
   }
 
   &__highlight {
@@ -23,10 +23,10 @@
 
   &__deco {
     position: absolute;
-    @include vw-pc(right, 309);
-    @include vw-pc(top, 440);
-    @include vw-pc(width, 360);
-    @include vw-pc(height, 360);
+    @include vw-max(right, 309);
+    @include vw-max(top, 440);
+    @include vw-max(width, 360);
+    @include vw-max(height, 360);
     z-index: 5;
   }
 
@@ -35,26 +35,23 @@
 
     &__btn {
       position: absolute;
-      @include vw-pc(left, 800);
-      @include vw-pc(top, 364);
-      // left: 50%;
-      // transform: translateX(-50%);
-      // top: 50%;
-      // transform: translateY(-50%);
-      @include vw-pc(width, 160);
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      @include vw-max(width, 160);
 
       &:hover {
-        transform: scale(1.2);
-        transition-duration: 0.5s;
+        transform: translateY(-50%) scale(1.2);
+        transition: all 0.5s;
       }
     }
   }
 
   &__portfolio {
-    @include vw-pc(margin, 160 auto 274);
+    @include vw-max(padding, 160 0 274);
     
-    .home__sub {
-      @include vw-pc(margin-bottom, 76);
+    .bs_home__sub {
+      @include vw-max(margin-bottom, 76);
     }
 
     /* 포트폴리오 스와이퍼 구간 */
@@ -68,16 +65,16 @@
     }
 
     .portfolio-list {
-      @include vw-pc(width, 505);
-      @include vw-pc(height, 600);
-      @include vw-pc(margin-right, 40);
+      @include vw-max(width, 505);
+      @include vw-max(height, 600);
+      @include vw-max(margin-right, 40);
     }
     
     .swiper-button-prev,
     .swiper-button-next {
       position: absolute;
-      @include vw-pc(width, 88);
-      @include vw-pc(height, 88);
+      @include vw-max(width, 88);
+      @include vw-max(height, 88);
 
       &:after {
         display: none;
@@ -95,35 +92,36 @@
 
   &__recruit {
     position: relative;
-    @include vw-pc(padding-bottom, 120);
+    @include vw-max(padding-bottom, 120);
     border-top: 1px solid #60605f;
 
-    .home__sub {
-      @include vw-pc(margin, 120 0 81);
+    .bs_home__sub {
+      @include vw-max(margin, 120 0 81);
     }
   }
 
   &__text {
-    @include vw-pc(font-size, 54);
-    @include vw-pc(margin-bottom, 45);
+    @include vw-max(font-size, 54);
+    @include vw-max(margin-bottom, 45);
   }
 
   &__desc {
-    @include vw-pc(font-size, 22);
-    @include vw-pc(line-height, 48);
-    @include vw-pc(margin-bottom, 40);
+    @include vw-max(font-size, 22);
+    @include vw-max(line-height, 29.5);
+    @include vw-max(margin-bottom, 40);
   }
 
   &__info {
-    @include vw-pc(font-size, 24);
-    @include vw-pc(margin-bottom, 60);
+    @include vw-max(font-size, 24);
+    @include vw-max(line-height, 20);
+    @include vw-max(margin-bottom, 60);
     color: #bbb;
   }
 
   &__ani {
     position: absolute;
-    @include vw-pc(top, 301);
-    @include vw-pc(right, 260);
+    @include vw-max(top, 301);
+    @include vw-max(right, 260);
 
     &::after {
       display: block;
@@ -132,15 +130,15 @@
       top: 46%;
       left: 51%;
       transform: translateX(-50%);
-      @include vw-pc(width, 24);
-      @include vw-pc(height, 24);
+      @include vw-max(width, 24);
+      @include vw-max(height, 24);
       border-radius: 50%;
       background-color: #f84525;
     }
   }
 
   .infinite_rotating {
-    @include vw-pc(width, 234);
+    @include vw-max(width, 234);
     animation: rotate_image 10s linear infinite;
     transform-origin: 50% 50%;
   }
@@ -155,11 +153,11 @@
     display: block;
     text-align: center;
     align-items: center;
-    @include vw-pc(width, 250);
-    @include vw-pc(font-size, 24);
-    @include vw-pc(line-height, 65);
-    @include vw-pc(letter-spacing, -1);
-    @include vw-pc(border-radius, 32);
+    @include vw-max(width, 250);
+    @include vw-max(font-size, 24);
+    @include vw-max(line-height, 65);
+    @include vw-max(letter-spacing, -1);
+    @include vw-max(border-radius, 32);
     color: #fff;
     background-color: #363534;
     font-weight: bold;
@@ -168,7 +166,7 @@
 
 
 @media screen and (max-width: 768px) {
-  .home {
+  .bs_home {
     .title-box {
       @include vw-mo(padding, 94 0 512);
       margin: 0;
@@ -203,12 +201,6 @@
       margin: 0;
 
       /* 포트폴리오 스와이퍼 구간 */
-      .swiper {
-      }
-
-      .swiper-wrapper {
-      }
-
       .portfolio-list {
         @include vw-mo(width, 516);
         @include vw-mo(height, 640);
@@ -220,8 +212,8 @@
       position: relative;
       @include vw-mo(padding, 100 0 414);
 
-      .home__sub {
-        @include vw-pc(margin, 0 auto 81);
+      .bs_home__sub {
+        @include vw-max(margin, 0 auto 81);
       }
     }
 
@@ -239,6 +231,7 @@
   
     &__info {
       @include vw-mo(font-size, 36);
+      @include vw-mo(line-height, 29);
       @include vw-mo(margin-bottom, 99);
       color: #bbb;
     }

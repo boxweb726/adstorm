@@ -4,6 +4,7 @@
     display: flex; 
     justify-content: space-between;
     @include vw-max(margin-bottom, 40);
+
     &__item {
       @include vw-max(height, 50)
     }
@@ -101,6 +102,7 @@
         @include vw-max(width, 80);
         @include vw-max(height, 80);
       
+        transition: all .5s; 
         &:hover{
           transform: rotate(90deg);
         }

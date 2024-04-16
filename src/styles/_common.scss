@@ -3,8 +3,6 @@
 @import './reset';
 @import './mixin';
 @import './variable';
-@import './header';
-@import './footer';
 
 body {
   background-color: $color-black;
@@ -192,3 +190,6 @@ section.width-full {
     }
   }
 }
+
+@import './header';
+@import './footer';

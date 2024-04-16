@@ -1,6 +1,4 @@
-// @import './common';
-
-.footer {
+.sec_footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +32,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .footer {
+  .sec_footer {
     @include vw-mo(height, 100);
     @include vw-mo(padding, 40 48);
     margin: 0;

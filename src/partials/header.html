@@ -1,21 +1,21 @@
-<header class="header sticky en">
+<header class="sec_header sticky en">
   <a href="/" class="header__logo img-box">
     <img src="../assets/header_logo_pc.png" class="m-hide" alt="">
     <img src="../assets/header_logo_mo.png" class="m-show" alt="">
   </a>
 
-  <a href="javascript:;" class="btn_nav m-show">
+  <a href="javascript:;" class="btn_menu m-show">
     <span></span>
     <span></span>
     <span></span>
   </a>
 
-  <nav class="nav">
-    <ul class="nav__list">
-      <li class="nav__item"><a href="/about/" class="nav__txt">About</a></li>
-      <li class="nav__item"><a href="/portfolio/" class="nav__txt">Portfolio</a></li>
-      <li class="nav__item"><a href="/recruit/" class="nav__txt">Recruit</a></li>
-      <li class="nav__item"><a href="/contact/" class="nav__txt">Contact</a></li>
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item"><a href="/about/" class="menu__txt">About</a></li>
+      <li class="menu__item"><a href="/portfolio/" class="menu__txt">Portfolio</a></li>
+      <li class="menu__item"><a href="/recruit/" class="menu__txt">Recruit</a></li>
+      <li class="menu__item"><a href="/contact/" class="menu__txt">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -23,13 +23,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-    $(".nav__txt").click(function(){
-      $(".nav__txt").removeClass("on");
+    $(".menu__txt").click(function(){
+      $(".menu__txt").removeClass("on");
       $(this).addClass("on");
     });
 
-    $(".btn_nav").click(function(){
-      $(".btn_nav, .nav").toggleClass("on");
+    $(".btn_menu").click(function(){
+      $(".btn_menu, .menu").toggleClass("on");
     });
   });
 </script>

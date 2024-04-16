@@ -1,129 +1,132 @@
-// @import './common';
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include vw-pc(padding, 80 89 80 80);
-
-  &__logo {
-    @include vw-pc(width, 186);
-    @include vw-pc(height, 34);
-  }
-
-  .nav {
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      @include vw-pc(width, 785);
+.wrapper {
+  .sec_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include vw-max(padding, 80 89 80 80);
+  
+    .header__logo {
+      @include vw-max(width, 186);
+      @include vw-max(height, 34);
     }
-
-    &__txt {
-      @include vw-pc(font-size, 28);
-      @include vw-pc(line-height, 34);
-      @include vw-pc(letter-spacing, 1.5);
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
-
-      &.on {
-        color: #f84525;
+  
+    .menu {
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include vw-max(width, 785);
+      }
+  
+      &__txt {
+        @include vw-max(font-size, 28);
+        @include vw-max(line-height, 34);
+        @include vw-max(letter-spacing, 1.5);
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+  
+        &.on {
+          color: #f84525;
+        }
       }
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .header {
-    @include vw-mo(padding, 60 48);
-
-    &__logo {
-      @include vw-mo(width, 198);
-      @include vw-mo(height, 36);
-      z-index: 100;
-    }
-
-    .btn_nav {
-      position: absolute;
-      display: block;
-      @include vw-mo(top, 60);
-      @include vw-mo(right, 48);
-      @include vw-mo(width, 40);
-      @include vw-mo(height, 28);
-      cursor: pointer;
+  .wrapper {
+    .sec_header {
+      @include vw-mo(padding, 60 48);
   
-      &.on {
+      .header__logo {
+        @include vw-mo(width, 198);
+        @include vw-mo(height, 36);
         z-index: 100;
       }
-    }
-
-    .btn_nav span {
-      display: block;
-      position: absolute;
-      width: 100%;
-      @include vw-mo(height, 5);
-      background: #fff;
-      transition: all 0.35s;
-    }
-
-    .btn_nav span:nth-child(1) {
-      top: 0;
-    }
-
-    .btn_nav span:nth-child(2) {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .btn_nav span:nth-child(3) {
-      bottom: 0;
-    }
-
-    .btn_nav.on span:nth-child(1) {
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
-    }
-
-    .btn_nav.on span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .btn_nav.on span:nth-child(3) {
-      bottom: 50%;
-      transform: translateY(50%) rotate(-45deg);
-    }
-
-    .nav {
-      display: none;
-      width: 100%;
-      height: 100%;
-      background: #f84525;
-      position: absolute;
-      top: 0;
-      left: -100%;
-      z-index: 98;
-
-      &.on {
-        position: fixed;
-        display: block;
-        left: 0;
-      }
-
-      &__list {
-        display: flex;
-        flex-direction: column;
+  
+      .btn_menu {
         position: absolute;
-        @include vw-mo(top, 340);
-        @include vw-mo(left, 70);
-      }
-
-      &__txt {
         display: block;
-        text-transform: none;
-        @include vw-mo(font-size, 80);
-        @include vw-mo(line-height, 112);
-        @include vw-mo(letter-spacing, 2.5);
+        @include vw-mo(top, 60);
+        @include vw-mo(right, 48);
+        @include vw-mo(width, 40);
+        @include vw-mo(height, 28);
+        cursor: pointer;
+    
+        &.on {
+          z-index: 100;
+        }
+      }
+  
+      .btn_menu span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        @include vw-mo(height, 5);
+        background: #fff;
+        transition: all 0.35s;
+      }
+  
+      .btn_menu span:nth-child(1) {
+        top: 0;
+      }
+  
+      .btn_menu span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      .btn_menu span:nth-child(3) {
+        bottom: 0;
+      }
+  
+      .btn_menu.on span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+  
+      .btn_menu.on span:nth-child(2) {
+        opacity: 0;
+      }
+  
+      .btn_menu.on span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+  
+      .menu {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #f84525;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 98;
+  
+        &.on {
+          position: fixed;
+          display: block;
+          left: 0;
+          height: 100vh;
+        }
+  
+        &__list {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          @include vw-mo(top, 340);
+          @include vw-mo(left, 70);
+        }
+  
+        &__txt {
+          display: block;
+          text-transform: none;
+          @include vw-mo(font-size, 80);
+          @include vw-mo(line-height, 112);
+          @include vw-mo(letter-spacing, 2.5);
+        }
       }
     }
   }
