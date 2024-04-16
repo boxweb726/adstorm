@@ -26,8 +26,8 @@ body {
 }
 
 section {
-  @include vw-max(max-width, 1760);
   margin: 0 auto;
+  @include vw-max(max-width, 1760);
 }
 
 section.width-full {
@@ -36,9 +36,9 @@ section.width-full {
 }
 
 .inner-1240 {
+  margin: 0 auto;
   @include vw-max(max-width, 1240);
   @include vw-max(width, 1240);
-  margin: 0 auto;
 }
 
 .hidden,
@@ -76,11 +76,11 @@ section.width-full {
     display: block;
     content: '';
     width: 100%;
-    @include vw-pc(height, 2);
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     background-color: $color-red;
+    @include vw-pc(height, 2);
   }
 
   &::after {
@@ -88,11 +88,11 @@ section.width-full {
     display: block;
     content: '';
     height: 100%;
-    @include vw-pc(width, 2);
     left: 50%;
     top: 0;
     transform: translateX(-50%);
     background-color: $color-red;
+    @include vw-pc(width, 2);
   }
 }
 
@@ -108,32 +108,31 @@ section.width-full {
 // 페이지 타이틀
 .page-title {
   color: $color-white;
+  font-weight: 600;
   @include vw-pc(font-size, 130);
   @include vw-pc(line-height, 135);
-  font-weight: 600;
 }
 
 // 각 영역 시작부분 붉은색 타이틀
-.sub {
-  @include vw-pc(font-size, 28);
-  line-height: 1;
-  @include vw-pc(letter-spacing, 16);
+.page-sub {
   color: $color-red;
+  font-weight: 400;
+  letter-spacing: .25em;
 }
 
 //  section - title
 .sec-title {
-  @include vw-pc(font-size, 54);
-  @include vw-pc(line-height, 90);
   color: $color-white;
   font-weight: 700;
+  @include vw-pc(font-size, 54);
+  @include vw-pc(line-height, 90);
 }
 
 .sec-desc {
-  @include vw-pc(font-size, 22);
-  @include vw-pc(line-height, 38);
   letter-spacing: -.1em;
   color: $color-white;
+  @include vw-pc(font-size, 22);
+  @include vw-pc(line-height, 38);
 }
 
 .color-red {
@@ -154,8 +153,8 @@ section.width-full {
   }
 
   .inner-1240 {
-    @include vw-mo(width, 624);
     max-width: fit-content;
+    @include vw-mo(width, 624);
   }
 
   //section-top-line
@@ -166,20 +165,19 @@ section.width-full {
 
   // 페이지 타이틀
   .page-title {
+    font-weight: 600;
     @include vw-mo(font-size, 96);
     @include vw-mo(line-height, 112);
-    font-weight: 600;
   }
 
   .sec-desc {
+    opacity: .9;
     @include vw-mo(font-size, 32);
     @include vw-mo(line-height, 48);
-    opacity: .9;
   }
 
   // 각 영역 시작부분 붉은색 타이틀
-  .sub {
-    @include vw-mo(font-size, 40);
+  .page-sub {
     @include vw-mo(letter-spacing, 16);
   }
 
