@@ -98,6 +98,7 @@ section.width-full {
 //  section - title
 .sec-title {
   color: $color-white;
+  font-family: $kr;
   font-weight: 700;
   @include vw-pc(font-size, 54);
   @include vw-pc(line-height, 90);
@@ -106,6 +107,7 @@ section.width-full {
 .sec-desc {
   letter-spacing: -.1em;
   color: $color-white;
+  font-family: $kr;
   @include vw-pc(font-size, 22);
   @include vw-pc(line-height, 38);
 }
