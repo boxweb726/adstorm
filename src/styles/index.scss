@@ -38,13 +38,12 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translateX(-50%);
-      transform: translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
       @include vw-max(width, 160);
       transition: all 0.5s;
 
       &:hover {
-        transform: translateY(-50%) scale(1.2);
+        transform: translateX(-50%) translateY(-50%) scale(1.2);
       }
     }
   }
