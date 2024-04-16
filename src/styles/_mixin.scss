@@ -204,104 +204,88 @@ $mo-min-wid : 360;
 }
 
 // margin, padding
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 769px) {
+
+	html, 
+	body {
+		font-size: 5px;
+	}
+
 	@for $i from 1 through 60 {
 		.pc-mt-#{$i * 5} {
-			margin-top: $i * 5px;
+			margin-top: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.pc-mb-#{$i * 5} {
-			margin-bottom: $i * 5px;
+			margin-bottom: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.pc-my-#{$i * 5} {
-			margin: 0 $i * 5px;
+			margin: 0 $i * 1rem;
 		}
 	}
 	
 	@for $i from 1 through 60 {
 		.pc-pt-#{$i * 5} {
-			padding-top: $i * 5px;
+			padding-top: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.pc-pb-#{$i * 5} {
-			padding-bottom: $i * 5px;
+			padding-bottom: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.pc-py-#{$i * 5} {
-			padding: 0 $i * 5px;
+			padding: 0 $i * 1rem;
 		}
 	}
 }
 
 @media screen and (max-width: 1920px) {
-	@for $i from 1 through 60 {
-		.pc-mt-#{$i * 5} {
-			margin-top: $i * 0.2604vw;
-		}
-	}
-	@for $i from 1 through 60 {
-		.pc-mb-#{$i * 5} {
-			margin-bottom: $i * 0.2604vw;
-		}
-	}
-	@for $i from 1 through 60 {
-		.pc-my-#{$i * 5} {
-			margin: 0 $i * 0.2604vw;
-		}
-	}
-	
-	@for $i from 1 through 60 {
-		.pc-pt-#{$i * 5} {
-			padding-top: $i * 0.2604vw;
-		}
-	}
-	@for $i from 1 through 60 {
-		.pc-pb-#{$i * 5} {
-			padding-bottom: $i * 0.2604vw;
-		}
-	}
-	@for $i from 1 through 60 {
-		.pc-py-#{$i * 5} {
-			padding: 0 $i * 0.2604vw;
-		}
+	html, 
+	body {
+		font-size: 0.2604vw;
 	}
 }
 
 @media screen and (max-width: 720px) {
+	html, 
+	body {
+		font-size: 0.6944vw;
+	}
+
 	@for $i from 1 through 60 {
 		.mo-mt-#{$i * 5} {
-			margin-top: $i * 0.6944vw;
+			margin-top: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.mo-mb-#{$i * 5} {
-			margin-bottom: $i * 0.6944vw;
+			margin-bottom: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.mo-my-#{$i * 5} {
-			margin: 0 $i * 0.6944vw;
+			margin: 0 $i * 1rem;
 		}
 	}
 	
 	@for $i from 1 through 60 {
 		.mo-pt-#{$i * 5} {
-			padding-top: $i * 0.6944vw;
+			padding-top: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.mo-pb-#{$i * 5} {
-			padding-bottom: $i * 0.6944vw;
+			padding-bottom: $i * 1rem;
 		}
 	}
 	@for $i from 1 through 60 {
 		.mo-py-#{$i * 5} {
-			padding: 0 $i * 0.6944vw;
+			padding: 0 $i * 1rem;
 		}
 	}
 }
