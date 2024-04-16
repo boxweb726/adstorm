@@ -22,6 +22,8 @@ $color-deep-gray: #363534;
 .btn-plus {
   position: relative; 
   display: inline-block;
+  transition: all .5s; 
+
   &::before {
     position: absolute; 
     content: ''; 
@@ -39,7 +41,11 @@ $color-deep-gray: #363534;
     transform: translateX(-50%); 
     @include vw-pc(width, 2);
     height: 100%;
-  }  
+  }
+
+  &:hover{
+    transform: rotate(90deg);
+  }
 }
 
 @media all and (max-width:768px) {
