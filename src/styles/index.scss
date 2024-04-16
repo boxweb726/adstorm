@@ -31,8 +31,23 @@
   }
 
   &__video {
-    @include vw-pc(width, 1760);
-    @include vw-pc(height, 990);
+    position: relative;
+
+    &__btn {
+      position: absolute;
+      @include vw-pc(left, 800);
+      @include vw-pc(top, 364);
+      // left: 50%;
+      // transform: translateX(-50%);
+      // top: 50%;
+      // transform: translateY(-50%);
+      @include vw-pc(width, 160);
+
+      &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.5s;
+      }
+    }
   }
 
   &__portfolio {
@@ -57,7 +72,7 @@
       @include vw-pc(height, 600);
       @include vw-pc(margin-right, 40);
     }
-
+    
     .swiper-button-prev,
     .swiper-button-next {
       position: absolute;
@@ -122,16 +137,17 @@
       border-radius: 50%;
       background-color: #f84525;
     }
+  }
 
-    .infinite_rotating {
-      animation: rotate_image 10s linear infinite;
-      transform-origin: 50% 50%;
-    }
-    
-    @keyframes rotate_image {
-      100% {
-        transform: rotate(360deg);
-      }
+  .infinite_rotating {
+    @include vw-pc(width, 234);
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes rotate_image {
+    100% {
+      transform: rotate(360deg);
     }
   }
 
@@ -154,7 +170,8 @@
 @media screen and (max-width: 768px) {
   .home {
     .title-box {
-      @include vw-mo(margin, 94 48 512);
+      @include vw-mo(padding, 94 0 512);
+      margin: 0;
     }
 
     &__title {
@@ -173,19 +190,39 @@
     &__video {
       width: 100%;
       @include vw-mo(height, 1280);
+
+      &__btn {
+        @include vw-mo(left, 280);
+        @include vw-mo(top, 560);
+        @include vw-mo(width, 160);
+      }
     }
 
     &__portfolio {
-      @include vw-mo(margin, 101 48 103);
+      @include vw-mo(padding, 101 0 103);
+      margin: 0;
+
+      /* 포트폴리오 스와이퍼 구간 */
+      .swiper {
+      }
+
+      .swiper-wrapper {
+      }
+
+      .portfolio-list {
+        @include vw-mo(width, 516);
+        @include vw-mo(height, 640);
+        @include vw-mo(margin-right, 24);
+      }
     }
   
     &__recruit {
       position: relative;
-      @include vw-mo(margin, 120 48 414);
-    }
-    
-    &__sub {
-      @include vw-mo(margin-bottom, 81);
+      @include vw-mo(padding, 100 0 414);
+
+      .home__sub {
+        @include vw-pc(margin, 0 auto 81);
+      }
     }
 
     &__text {
@@ -195,7 +232,7 @@
   
     &__desc {
       @include vw-mo(font-size, 40);
-      @include vw-mo(line-height, 60);
+      @include vw-mo(line-height, 48);
       @include vw-mo(margin-bottom, 41);
       @include vw-mo(letter-spacing, -1);
     }
@@ -207,13 +244,18 @@
     }
 
     &__ani {
-      @include vw-mo(top, 660);
-  
+      @include vw-mo(top, 762);
+      @include vw-mo(right, 48);
+
       &::after {
         transform: translateX(-50%);
         @include vw-mo(width, 24);
         @include vw-mo(height, 24);
       }
+    }
+
+    .infinite_rotating {
+      @include vw-mo(width, 242);
     }
 
     .btn_join {
