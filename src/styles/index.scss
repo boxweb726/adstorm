@@ -11,7 +11,7 @@
     word-break: break-all;
   }
 
-  .page-title--main {
+  &__title {
     @include vw-max(font-size, 120);
     @include vw-max(line-height, 119.7);
     @include vw-max(letter-spacing, -2);
