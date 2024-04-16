@@ -1,5 +1,9 @@
 @import './common';
 .bs-portfolio {
+  .page-title {
+    @include vw-max(text-indent, -10);
+  }
+
   .tab {
     display: flex; 
     justify-content: space-between;
@@ -14,6 +18,7 @@
       color: #888; 
       font-weight: 500;
       text-transform: uppercase;
+      font-family: $en;
       @include vw-max(border-bottom, 3 solid transparent); 
       @include vw-max(font-size, 30); 
       @include vw-max(line-height, 50); 
@@ -115,6 +120,9 @@
     .bs-portfolio {
       section {
         overflow: hidden;
+      }
+      .page-title {
+        @include vw-mo(text-indent, -5);
       }
 
       .tab {

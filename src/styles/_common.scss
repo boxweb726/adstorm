@@ -83,8 +83,8 @@ section.width-full {
   color: $color-white;
   font-family: $en;
   font-weight: 600;
-  @include vw-pc(font-size, 130);
-  @include vw-pc(line-height, 135);
+  @include vw-max(font-size, 130);
+  @include vw-max(line-height, 135);
 }
 
 // 각 영역 시작부분 붉은색 타이틀
@@ -100,16 +100,16 @@ section.width-full {
   color: $color-white;
   font-family: $kr;
   font-weight: 700;
-  @include vw-pc(font-size, 54);
-  @include vw-pc(line-height, 90);
+  @include vw-max(font-size, 54);
+  @include vw-max(line-height, 90);
 }
 
 .sec-desc {
   letter-spacing: -.1em;
   color: $color-white;
   font-family: $kr;
-  @include vw-pc(font-size, 22);
-  @include vw-pc(line-height, 38);
+  @include vw-max(font-size, 22);
+  @include vw-max(line-height, 38);
 }
 
 .color-red {
