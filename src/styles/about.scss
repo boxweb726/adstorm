@@ -100,3 +100,79 @@
     }
   }
 }
+
+@media all and (max-width: 768px) {
+  .bs-about {
+    .page {
+        @include vw-mo(width, 624);
+        @include vw-mo(height, 869);
+    
+      &__sub {
+        @include vw-mo(font-size, 96);
+        @include vw-mo(line-height, 112);
+      }
+  
+      &__desc {
+        @include vw-mo(left, 0);
+        @include vw-mo(top, 468);
+        @include vw-mo(font-size, 32);
+        @include vw-mo(line-height, 48);
+      }
+  
+      &__desc--2nd {
+        @include vw-mo(top, 630);
+      }
+    }
+  
+    .about {
+      display: flex;
+      @include vw-mo(gap, 100);
+    
+      &__item {
+        display: block;
+        .img-box {
+          position: relative;
+          width: 100%;
+        }
+      }
+      .about__item:nth-of-type(2n-1) {
+        .about__text-box {
+          .about__title {
+            @include vw-mo(margin-left, 0)
+          }
+        }
+      }
+    
+      
+  
+      &__title {
+        @include vw-mo(margin-left, 0);
+        @include vw-mo(font-size, 100);
+        @include vw-mo(line-height, 70);
+      }
+  
+      &__desc {
+        @include vw-mo(font-size, 32);
+        @include vw-mo(line-height, 48);
+        font-weight: 300;
+        color: $color-white;
+        opacity: .9;
+      }
+    }
+  
+    .slogan {
+      text-align: center;
+  
+      &__title {
+        @include vw-mo(font-size, 110);
+        @include vw-mo(line-height, 80);
+      }
+  
+      &__txt {
+        @include vw-mo(font-size, 36);
+        @include vw-mo(line-height, 54);
+      }
+    }
+  }
+  
+}
