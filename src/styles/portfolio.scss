@@ -135,7 +135,7 @@
         &__item {
           @include vw-mo(height, 59)
         }
-        &__txt {
+        &__btn {
           @include vw-mo(border-bottom, 4 solid transparent); 
           @include vw-mo(font-size, 36); 
           @include vw-mo(line-height, 59);
@@ -166,7 +166,7 @@
           @include vw-mo(font-size, 26); 
         }        
       }
-      
+
       .btn-plus--port {
         @include vw-mo(width, 140);
         @include vw-mo(height, 140);
