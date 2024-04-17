@@ -54,7 +54,7 @@
         @include vw-mo(height, 28);
         cursor: pointer;
     
-        &.hover {
+        &.on {
           z-index: 100;
         }
       }
