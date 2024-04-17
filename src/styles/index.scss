@@ -7,6 +7,17 @@
 .bs-home {
   overflow: hidden;
 
+  /* 시안 비교용 사진 */
+  .compare-img {
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* main start */
   .page {
     &-title {
       position: relative;
