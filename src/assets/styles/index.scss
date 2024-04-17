@@ -59,9 +59,11 @@
           transition: all 0.5s;
         }
 
-        &:hover::after {
-          transform: translateX(-50%) translateY(-50%) scale(1.2);
-        }
+        &:hover{
+          &::after {
+            transform: translateX(-50%) translateY(-50%) scale(1.2);
+          }
+        }        
       }
     }
   }

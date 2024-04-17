@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../assets/styles/portfolio.scss" />
   </head>
   <body>
-    <!-- <img src="../assets/portfolio-pc.jpg" style="position: absolute; top: 0; left: 0; opacity: .6;"> -->
-    <!-- <img src="../assets/portfolio-mo.jpg" style="position: absolute; top: 0; left: 0; opacity: .6;"> -->
+    <!-- <img src="/assets/images//portfolio-pc.jpg" style="position: absolute; top: 0; left: 0; opacity: .6;"> -->
+    <!-- <img src="/assets/images//portfolio-mo.jpg" style="position: absolute; top: 0; left: 0; opacity: .6;"> -->
     <div class="wrapper bs-portfolio">
       {{> header }}
       <!-- header.html -->
@@ -17,32 +17,33 @@
           <div class="inner-1240 pc-pb-190 mo-pb-140">
             <h2 class="page-title pc-pt-105 pc-pb-175 mo-pt-70 mo-pb-125">Portfolio.</h2>
             <!--// 페이지 타이틀  -->
-
-            <ul class="tab" id="portfolioTab">
-              <li class="tab__item">
-                <a href="javascript:;" class="tab__btn active" data-category="all">ALL</a>
-              </li>
-              <li class="tab__item">
-                <a href="javascript:;" class="tab__btn" data-category="promotion">Promotion</a>
-              </li>
-              <li class="tab__item">
-                <a href="javascript:;" class="tab__btn" data-category="management">Management</a>
-              </li>
-              <li class="tab__item">
-                <a href="javascript:;" class="tab__btn" data-category="development">Development</a>
-              </li>
-              <li class="tab__item">
-                <a href="javascript:;" class="tab__btn" data-category="sns-banner">SNS & Banner</a>
-              </li>
-            </ul>
+            <div class="swiper tab-wrapper">
+              <ul class="swiper-wrapper tab" id="portfolioTab">
+                <li class="swiper-slide tab__item">
+                  <a href="javascript:;" class="tab__btn active" data-category="all">ALL</a>
+                </li>
+                <li class="swiper-slide tab__item">
+                  <a href="javascript:;" class="tab__btn" data-category="promotion">Promotion</a>
+                </li>
+                <li class="swiper-slide tab__item">
+                  <a href="javascript:;" class="tab__btn" data-category="management">Management</a>
+                </li>
+                <li class="swiper-slide tab__item">
+                  <a href="javascript:;" class="tab__btn" data-category="development">Development</a>
+                </li>
+                <li class="swiper-slide tab__item">
+                  <a href="javascript:;" class="tab__btn" data-category="sns-banner">SNS & Banner</a>
+                </li>
+              </ul>
+            </div>
             <!--// 포트폴리오 탭  -->
             
             <ul class="list pc-pb-100 mo-pb-80" id="portfolioList">
               <li class="list__item" data-cont="promotion">
                 <a href="javascript:;" class="list__link">
                   <div class="img-box">
-                    <img src="../assets/portfolio_thumb_01_pc.jpg" alt="" class="m-hide">
-                    <img src="../assets/portfolio_thumb_01_mo.jpg" alt="" class="m-show">
+                    <img src="/assets/images/portfolio_thumb_001_pc.jpg" alt="" class="m-hide">
+                    <img src="/assets/images/portfolio_thumb_001_mo.jpg" alt="" class="m-show">
                   </div>
                   <div class="list__text">
                     <p class="list__title">비스포크</p>
@@ -54,8 +55,8 @@
               <li class="list__item" data-cont="management">
                 <a href="javascript:;" class="list__link">
                   <div class="img-box">
-                    <img src="../assets/portfolio_thumb_01_pc.jpg" alt="" class="m-hide">
-                    <img src="../assets/portfolio_thumb_01_mo.jpg" alt="" class="m-show">
+                    <img src="/assets/images/portfolio_thumb_02_pc.jpg" alt="" class="m-hide">
+                    <img src="/assets/images/portfolio_thumb_02_mo.jpg" alt="" class="m-show">
                   </div>
                   <div class="list__text">
                     <p class="list__title">비스포크</p>
@@ -67,8 +68,8 @@
               <li class="list__item" data-cont="development">
                 <a href="javascript:;" class="list__link">
                   <div class="img-box">
-                    <img src="../assets/portfolio_thumb_01_pc.jpg" alt="" class="m-hide">
-                    <img src="../assets/portfolio_thumb_01_mo.jpg" alt="" class="m-show">
+                    <img src="/assets/images/portfolio_thumb_03_pc.jpg" alt="" class="m-hide">
+                    <img src="/assets/images/portfolio_thumb_03_mo.jpg" alt="" class="m-show">
                   </div>
                   <div class="list__text">
                     <p class="list__title">비스포크</p>
@@ -80,8 +81,8 @@
               <li class="list__item" data-cont="sns-banner">
                 <a href="javascript:;" class="list__link">
                   <div class="img-box">
-                    <img src="../assets/portfolio_thumb_01_pc.jpg" alt="" class="m-hide">
-                    <img src="../assets/portfolio_thumb_01_mo.jpg" alt="" class="m-show">
+                    <img src="/assets/images/portfolio_thumb_004_pc.jpg" alt="" class="m-hide">
+                    <img src="/assets/images/portfolio_thumb_004_mo.jpg" alt="" class="m-show">
                   </div>
                   <div class="list__text">
                     <p class="list__title">비스포크</p>
@@ -91,7 +92,7 @@
               </li>
             </ul>
 
-            <a href="javascript:;" class="btn-plus btn-plus--port" id="btnMore"><span class="blind">더보기</span></a>
+            <a href="javascript:;" class="btn-plus btn-plus--portfolio" id="btnMore"><span class="blind">더보기</span></a>
 
             <!--// 컨텐츠 -->
           </div>

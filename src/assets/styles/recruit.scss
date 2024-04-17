@@ -34,7 +34,6 @@
       }
   
       &:hover .btn-plus--recruit {
-        transition: all .5s; 
         transform: rotate(90deg);
       }
       &:hover .btn-plus--recruit::before, 
