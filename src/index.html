@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="wrapper bs_home">
+    <div class="wrapper bs-home">
       {{> header }}
       <!-- header.html -->
 
@@ -18,147 +18,142 @@
           <div class="inner-1240">
             <!-- 메인 카피 -->
             <div class="title-box">
-              <h2 class="bs_home__title en">
+              <h2 class="page__title en">
                 Beyond<br class="m-show"> the creativity,<br>
                 Strive to<br class="m-show"> be sensational<br>
-                <span class="bs_home__highlight">Bstones</span>
+                <span class="page__highlight">Bstones</span>
               </h2>
             </div>
 
-            <div class="bs_home__deco img-box">
+            <div class="page__deco img-box">
               <img src="./assets/main_deco_pc.png" alt="" class="m-hide">
               <img src="./assets/main_deco_mo.png" alt="" class="m-show">
             </div>
           </div>
 
           <!-- 영상 비주얼 -->
-          <div class="bs_home__video img-box">
-            <a href="javascript:;" class="bs_home__video__bg">
+          <div class="page__video img-box">
+            <a href="javascript:;" class="page__video__bg">
               <img src="./assets/main_video_bg_pc.jpg" alt="" class="m-hide">
               <img src="./assets/main_video_bg_mo.jpg" alt="" class="m-show">
-            </a>
-
-            <a href="javascript:;" class="bs_home__video__btn">
-              <img src="./assets/main_video_btn_pc.png" alt="" class="m-hide">
-              <img src="./assets/main_video_btn_mo.png" alt="" class="m-show">
             </a>
           </div>
         </section>
 
         <!-- Portfolio -->
-        <section class="bs_home__portfolio">
-          <div class="inner-1240">
-            <h3 class="bs_home__sub">
+        <section>
+          <div class="inner-1240 page__portfolio">
+            <h3 class="page__sub">
               <a href="/portfolio/" class="page-sub page-sub--portfolio">Portfolio<span class="sub-arrow"></span></a>
             </h3>
 
-            <div class="swiper slide portfolio" id="main-portfolio">
-              <div class="swiper-wrapper portfolio__box">
+            <div class="swiper pf-swiper" id="main-portfolio">
+              <div class="swiper-wrapper pf-swiper__box">
 
-                <div class="swiper-slide portfolio__list img-box">
+                <div class="swiper-slide pf-swiper__list img-box">
                   <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-01_mo.jpg" alt="" class="m-show">
 
                   <!-- 슬라이드 내 텍스트 -->
-                  <div class="portfolio__txt" data-aos="fade-up" data-aos-duration="1500">
-                    <p class="portfolio__title">비스포크</p>
-                    <dl class="portfolio__desc en">
-                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">2022. 05</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info kr">삼성전자</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">Event</dd>
+                  <div class="pf-swiper__txt">
+                    <p class="pf-swiper__title">비스포크</p>
+                    <dl class="pf-swiper__desc en">
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">2022. 05</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info kr">삼성전자</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">Event</dd>
                     </dl>
                   </div>
                 </div>
 
-                <div class="swiper-slide portfolio__list img-box">
+                <div class="swiper-slide pf-swiper__list img-box">
                   <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-02_mo.jpg" alt="" class="m-show">
 
                   <!-- 슬라이드 내 텍스트 -->
-                  <div class="portfolio__txt" data-aos="fade-up">
-                    <p class="portfolio__title">비스포크</p>
-                    <dl class="portfolio__desc en">
-                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">2022. 05</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info kr">삼성전자</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">Event</dd>
+                  <div class="pf-swiper__txt">
+                    <p class="pf-swiper__title">비스포크</p>
+                    <dl class="pf-swiper__desc en">
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">2022. 05</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info kr">삼성전자</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">Event</dd>
                     </dl>
                   </div>
                 </div>
 
-                <div class="swiper-slide portfolio__list img-box">
+                <div class="swiper-slide pf-swiper__list img-box">
                   <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-01_mo.jpg" alt="" class="m-show">
 
                   <!-- 슬라이드 내 텍스트 -->
-                  <div class="portfolio__txt" data-aos="fade-up">
-                    <p class="portfolio__title">비스포크</p>
-                    <dl class="portfolio__desc en">
-                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">2022. 05</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info kr">삼성전자</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">Event</dd>
+                  <div class="pf-swiper__txt">
+                    <p class="pf-swiper__title">비스포크</p>
+                    <dl class="pf-swiper__desc en">
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">2022. 05</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info kr">삼성전자</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">Event</dd>
                     </dl>
                   </div>
                 </div>
 
-                <div class="swiper-slide portfolio__list img-box">
+                <div class="swiper-slide pf-swiper__list img-box">
                   <img src="./assets/main_portfolio_swiper-01_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-02_mo.jpg" alt="" class="m-show">
 
                   <!-- 슬라이드 내 텍스트 -->
-                  <div class="portfolio__txt" data-aos="fade-up">
-                    <p class="portfolio__title">비스포크</p>
-                    <dl class="portfolio__desc en">
-                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">2022. 05</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info kr">삼성전자</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">Event</dd>
+                  <div class="pf-swiper__txt">
+                    <p class="pf-swiper__title">비스포크</p>
+                    <dl class="pf-swiper__desc en">
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">2022. 05</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info kr">삼성전자</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">Event</dd>
                     </dl>
                   </div>
                 </div>
 
-                <div class="swiper-slide portfolio__list img-box">
+                <div class="swiper-slide pf-swiper__list img-box">
                   <img src="./assets/main_portfolio_swiper-02_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-01_mo.jpg" alt="" class="m-show">
 
                   <!-- 슬라이드 내 텍스트 -->
-                  <div class="portfolio__txt" data-aos="fade-up">
-                    <p class="portfolio__title">비스포크</p>
-                    <dl class="portfolio__desc en">
-                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">2022. 05</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info kr">삼성전자</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">Event</dd>
+                  <div class="pf-swiper__txt">
+                    <p class="pf-swiper__title">비스포크</p>
+                    <dl class="pf-swiper__desc en">
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">2022. 05</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info kr">삼성전자</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">Event</dd>
                     </dl>
                   </div>
                 </div>
 
-                <div class="swiper-slide portfolio__list img-box">
+                <div class="swiper-slide pf-swiper__list img-box">
                   <img src="./assets/main_portfolio_swiper-03_pc.jpg" alt="" class="m-hide">
                   <img src="./assets/main_portfolio_swiper-02_mo.jpg" alt="" class="m-show">
 
                   <!-- 슬라이드 내 텍스트 -->
-                  <div class="portfolio__txt" data-aos="fade-up">
-                    <p class="portfolio__title">비스포크</p>
-                    <dl class="portfolio__desc en">
-                      <dt class="portfolio__info portfolio__info--typea">Date&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">2022. 05</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Brand&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info kr">삼성전자</dd>
-                      <dt class="portfolio__info portfolio__info--typea">Type&nbsp;:&nbsp;</dt>
-                      <dd class="portfolio__info">Event</dd>
+                  <div class="pf-swiper__txt">
+                    <p class="pf-swiper__title">비스포크</p>
+                    <dl class="pf-swiper__desc en">
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Date&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">2022. 05</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Brand&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info kr">삼성전자</dd>
+                      <dt class="pf-swiper__info pf-swiper__info--typea">Type&nbsp;:&nbsp;</dt>
+                      <dd class="pf-swiper__info">Event</dd>
                     </dl>
                   </div>
                 </div>
@@ -170,27 +165,29 @@
         </section>
 
         <!-- Recruit -->
-        <section class="sec-border-top bs_home__recruit">
-          <div class="inner-1240">
-            <h3 class="bs_home__sub en">
-              <a href="/recruit/" class="page-sub page-sub--recruit">Recruit</a>
-            </h3>
-            <h4 class="bs_home__text">당신을 기다립니다.</h4>
-            <p class="bs_home__desc">
-              비스톤스와 함께 할 당신을 기다립니다.<br>
-              지금 비스톤스를 만나보세요! 
-            </p>
-            <p class="bs_home__info en">
-              <span class="kr">문의 메일</span> : PROJECT@BSTONES.CO.KR
-            </p>
-    
-            <!-- 비스톤스 지원 랜딩 버튼 -->
-            <a href="/contact/" class="btn_join">비스톤스 지원하기</a>
-    
-            <!-- 돌아가는 원 -->
-            <div class="bs_home__ani infinite_rotating img-box">
-              <img src="./assets/main_rotate_pc.png" alt="">
-              <img src="./assets/main_rotate_mo.png" alt="">
+        <section>
+          <div class="sec-border-top page__recruit">
+            <div class="inner-1240">
+              <h3 class="page__sub en">
+                <a href="/recruit/" class="page-sub page-sub--recruit">Recruit</a>
+              </h3>
+              <h4 class="page__text">당신을 기다립니다.</h4>
+              <p class="page__desc">
+                비스톤스와 함께 할 당신을 기다립니다.<br>
+                지금 비스톤스를 만나보세요! 
+              </p>
+              <p class="page__info en">
+                <span class="kr">문의 메일</span> : PROJECT@BSTONES.CO.KR
+              </p>
+      
+              <!-- 비스톤스 지원 랜딩 버튼 -->
+              <a href="/contact/" class="btn_join">비스톤스 지원하기</a>
+      
+              <!-- 돌아가는 원 -->
+              <div class="page__ani infinite_rotating img-box">
+                <img src="./assets/main_rotate_pc.png" alt="">
+                <img src="./assets/main_rotate_mo.png" alt="">
+              </div>
             </div>
           </div>
         </section>
@@ -201,11 +198,5 @@
     </div>
 
     <script type="module" src="./js/index.js" defer></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
 </body>
 </html>

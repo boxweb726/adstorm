@@ -26,7 +26,7 @@
         color: #fff;
         text-transform: uppercase;
   
-        &.on {
+        &:hover {
           color: #f84525;
         }
       }
@@ -54,7 +54,7 @@
         @include vw-mo(height, 28);
         cursor: pointer;
     
-        &.on {
+        &.hover {
           z-index: 100;
         }
       }
