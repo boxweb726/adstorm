@@ -50,10 +50,29 @@
     }
 
     &__img {
-     order: 2;
+     position: relative;
+      order: 2;
      right: 0;
      @include vw-max(margin-left, -336);
      @include vw-max(width, 505);
+
+     &:hover::before {
+      content: '';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background-color: $color-red;
+      border-radius: 50%;
+      @include vw-max(width, 160);
+      @include vw-max(height, 160);
+     }
+
+     &:hover::after {
+      content: 'See<br>our work';
+      display: block;
+      color: $color-white;
+     }
    }
   
     &__text-box {
@@ -97,7 +116,7 @@
     }
 
     .about__item.about__item--even {
-      .about__img{
+      .about__img {
         @include vw-max(margin-left, -407)
       }
       .about__title {
