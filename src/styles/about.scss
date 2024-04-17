@@ -51,8 +51,8 @@
 
     &__img {
      order: 2;
-     position: absolute;
      right: 0;
+     @include vw-max(margin-left, -336);
      @include vw-max(width, 505);
    }
   
@@ -85,6 +85,7 @@
         order: 1;
         position: relative;
         right: none;
+        margin-left: 0;
       }
   
       .about__text-box {
@@ -95,7 +96,10 @@
       }
     }
 
-    .about__item.about__item--4 {
+    .about__item.about__item--even {
+      .about__img{
+        @include vw-max(margin-left, -407)
+      }
       .about__title {
         @include vw-max(margin-left, 108);
       }
@@ -159,6 +163,7 @@
 
       &__img {
         position: relative;
+        margin-left: 0;
         width: 100%;
       }
 
@@ -170,11 +175,13 @@
         }
       }
 
-      &__item.about__item--4 {
-        .about__text-box {
+      .about__item.about__item--even {
+        .about__img {
+          @include vw-mo(margin-left, 0);
+        }
+
         .about__title {
             @include vw-mo(margin-left, 0);
-          }
         }
       }
 

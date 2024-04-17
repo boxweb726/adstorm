@@ -1,21 +1,26 @@
 @import './common';
 
 .bs-recruit {
-  .page-sub {
-    line-height: 1;
-    letter-spacing: 0;
-    color: $color-red;
-    @include vw-max(font-size, 90);
+  .title-box {
+    @include vw-max(padding-left, 15);
+    @include vw-max(padding-right, 12);
+
+    .page-sub {
+      line-height: 1;
+      letter-spacing: 0;
+      color: $color-red;
+      @include vw-max(font-size, 90);
+    }
+  
+    .sec-desc {
+      letter-spacing: -.04em;
+    }
   }
 
-  .sec-desc {
-    letter-spacing: -.04em;
-  }
 
   .list {
-    &.edit {
-      @include vw-max(padding-left, 15);
-      @include vw-max(padding-right, 12);
+    &__item {
+
     }
 
     &__link {
@@ -28,16 +33,16 @@
         color: $color-red;
       }
   
-      &:hover .plus-recruit{
+      &:hover .btn-plus--recruit {
         transition: all .5s; 
         transform: rotate(90deg);
       }
-      &:hover .plus-recruit::before, 
-      &:hover .plus-recruit::after {
+      &:hover .btn-plus--recruit::before, 
+      &:hover .btn-plus--recruit::after {
         background-color: $color-red;
       }
     }
-
+  
     &__txt {
       line-height: 1;
       color: $color-white;
@@ -55,17 +60,20 @@
       @include vw-max(font-size, 22);
     }
   
-    .plus-recruit {
-      position: absolute;
-      @include vw-max(top, 33);
-      @include vw-max(right, 10);
-      @include vw-max(width, 60);
-      @include vw-max(height, 60);
-      &::before, &::after {background-color: $color-white;}
-    }
-  
     &:last-child {
       border-bottom: 1px solid #60605f;
+    }
+  
+  }
+  .btn-plus--recruit {
+    position: absolute;
+    @include vw-max(top, 33);
+    @include vw-max(right, 10);
+    @include vw-max(width, 60);
+    @include vw-max(height, 60);
+    &::before, 
+    &::after {
+      background-color: $color-white;
     }
   }
 }
@@ -92,12 +100,11 @@
         &__desc {
           @include vw-mo(font-size, 32);
         }
-      
-        .plus-recruit {
-          @include vw-mo(top, 30);
-          @include vw-mo(width, 60);
-          @include vw-mo(height, 60);
-        }
+      }
+      .btn-plus--recruit {
+        @include vw-mo(top, 30);
+        @include vw-mo(width, 60);
+        @include vw-mo(height, 60);
       }
     } 
   }

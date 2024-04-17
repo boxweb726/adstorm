@@ -51,5 +51,14 @@ $color-deep-gray: #363534;
 }
 
 @media all and (max-width:768px) {
-  
+  // + 버튼
+  .btn-plus {
+    &::before {
+      @include vw-mo(height, 4);
+    }
+
+    &::after {
+      @include vw-mo(width, 4);
+    }
+  }
 }

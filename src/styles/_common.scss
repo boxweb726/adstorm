@@ -157,17 +157,6 @@ section.width-full {
   .page-sub {
     @include vw-mo(letter-spacing, 16);
   }
-
-  // + 버튼
-  .btn-plus {
-    &::before {
-      @include vw-mo(height, 4);
-    }
-
-    &::after {
-      @include vw-mo(width, 4);
-    }
-  }
 }
 
 @import './header';
