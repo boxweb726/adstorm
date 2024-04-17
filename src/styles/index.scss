@@ -352,6 +352,10 @@
           @include vw-mo(font-size, 60);
         }
 
+        &__cont {
+          display: flex;
+        }
+
         &__info {
           @include vw-mo(font-size, 44);
           @include vw-mo(line-height, 60);
