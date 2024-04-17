@@ -65,6 +65,9 @@
         position: absolute;
         background-color: $color-red;
         border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         @include vw-max(width, 160);
         @include vw-max(height, 160);
        }
@@ -72,9 +75,17 @@
 
      &:hover{
        &::after {
-        content: 'See<br>our work';
+        content: "See \A our work";
         display: block;
+        position: absolute;
         color: $color-white;
+        top: 50%;
+        left: 50%;
+        white-space:pre;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        @include vw-max(font-size, 26);
+        @include vw-max(line-height, 28);
        }
      }
      
