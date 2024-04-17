@@ -1,0 +1,64 @@
+// 변수 정리
+
+// font
+$en: "Outfit", sans-serif;
+$kr: "Noto Sans KR", sans-serif;
+// lang
+.en {
+  font-family: $en;
+}
+
+.kr {
+  font-family: $kr;
+}
+
+// color
+$color-black: #1f1e1d;
+$color-white: #fff;
+$color-red: #f84525;
+$color-gray: #bbb;
+$color-deep-gray: #363534;
+
+.btn-plus {
+  position: relative; 
+  display: inline-block;
+  transition: all .5s; 
+
+  &::before {
+    position: absolute; 
+    content: ''; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 100%;
+    background-color: $color-red;
+    @include vw-pc(height, 2);
+  }
+  &::after {
+    position: absolute; 
+    content: ''; 
+    left: 50%; 
+    top: 0; 
+    transform: translateX(-50%); 
+    @include vw-pc(width, 2);
+    background-color: $color-red;
+    height: 100%;
+  }
+
+  &:hover{
+    transform: rotate(90deg);
+  }
+}
+
+@media all and (max-width:768px) {
+  // + 버튼
+  .btn-plus {
+    &::before {
+      @include vw-mo(height, 4);
+    }
+
+    &::after {
+      @include vw-mo(width, 4);
+    }
+  }
+}

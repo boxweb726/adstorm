@@ -1,0 +1,175 @@
+@import './common';
+.bs-portfolio {
+  .page-title {
+    @include vw-max(text-indent, -10);
+  }
+
+  .tab {
+    display: flex; 
+    justify-content: space-between;
+    @include vw-max(margin-bottom, 40);
+
+    &__item {
+      @include vw-max(height, 50)
+    }
+    &__btn {
+      display: block; 
+      height: 100%; 
+      color: #888; 
+      font-weight: 500;
+      text-transform: uppercase;
+      font-family: $en;
+      @include vw-max(border-bottom, 3 solid transparent); 
+      @include vw-max(font-size, 30); 
+      @include vw-max(line-height, 50); 
+  
+      &.active {
+        color: $color-white;
+        @include vw-max(border-bottom, 3 solid $color-red); 
+      }
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .list {
+      display: flex;
+      flex-wrap: wrap;
+      @include vw-max(gap, 20);
+      
+      &__item {
+        position: relative;
+        @include vw-max(width, 400);
+        @include vw-max(height, 500);
+      }
+    
+      &__link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(248, 69, 37, .9);          
+          transition: .5s all ease-in;
+          opacity: 0;
+        }
+        &:hover::after{
+          top: 0;
+          opacity: 1;
+        }
+
+        .list__text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          transition: .5s all ease-in;
+          transform: scale(.5);
+          opacity: 0;
+        }
+
+        &:hover .list__text{
+          opacity: 1;
+          top: 0;
+          transform: scale(1);
+          @include vw-max(gap, 20);
+        }
+      }
+  
+      
+  
+      &__title {
+        line-height: 1;
+        color: $color-white;  
+        font-weight: 700;
+        @include vw-max(font-size, 42); 
+      }
+      
+      &__data {
+        line-height: 1;
+        color: $color-white;  
+        font-weight: 400;
+        @include vw-max(font-size, 26); 
+      }
+    }
+    .btn-plus--port {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all .5s; 
+      @include vw-max(width, 80);
+      @include vw-max(height, 80);
+      transition: all .5s;
+    }
+  }
+
+  @media all and (max-width:768px) {
+    .bs-portfolio {
+      section {
+        overflow: hidden;
+      }
+      .page-title {
+        @include vw-mo(text-indent, -5);
+      }
+
+      .tab {
+        display: flex; 
+        justify-content: flex-start;
+        @include vw-mo(gap, 70); 
+        @include vw-mo(margin-bottom, 40);
+        &__item {
+          @include vw-mo(height, 59)
+        }
+        &__btn {
+          @include vw-mo(border-bottom, 4 solid transparent); 
+          @include vw-mo(font-size, 36); 
+          @include vw-mo(line-height, 59);
+      
+          &.active {
+            @include vw-mo(border-bottom, 4 solid $color-red); 
+          }
+        }
+      }
+
+      .list {
+        @include vw-mo(gap, 24);
+        
+        &__item {
+          @include vw-mo(width, 300);
+          @include vw-mo(height, 370);
+        }
+      
+        &__text:hover {
+          @include vw-mo(gap, 20);
+        }
+    
+        &__title {
+          @include vw-mo(font-size, 42);
+        }
+
+        &__data {
+          @include vw-mo(font-size, 26); 
+        }        
+      }
+
+      .btn-plus--port {
+        @include vw-mo(width, 140);
+        @include vw-mo(height, 140);
+      }
+    }
+  }

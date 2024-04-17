@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import dataList from '../data.json';
+import dataList from './data.json';
 import List from './module/List';
 
 // const portfolioList = new List({

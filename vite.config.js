@@ -9,7 +9,7 @@ export default defineConfig(() => {
       port: 1234,
     },
     appType: 'mpa',
-    publicDir: 'public',
+    publicDir: path.resolve(__dirname, 'public'),
     root: path.resolve(__dirname, 'src'),
     // resolve: {
     //   alias: [
@@ -45,12 +45,12 @@ export default defineConfig(() => {
           assetFileNames: (assetInfo) => {
             let result = 'assets/[name][extname]';
             if (assetInfo.name.split('.')[1] === 'css') {
-              result = 'styles/[name][extname]';
+              result = 'assets/styles/[name][extname]';
             }
             return result;
           },
-          chunkFileNames: 'js/[name].js',
-          entryFileNames: 'js/[name].js',
+          chunkFileNames: 'assets/js/[name].js',
+          entryFileNames: 'assets/js/[name].js',
         },
       },
     },
