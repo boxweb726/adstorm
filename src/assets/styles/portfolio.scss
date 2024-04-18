@@ -65,13 +65,11 @@
           height: 100%;
           background-color: rgba(248, 69, 37, .9);          
           transition: .3s top ease-in;
-          opacity: 0;
         }
 
         &:hover{
           &::after{
             top: 0;
-            opacity: 1;
           }
         }
 
@@ -86,12 +84,10 @@
           height: 100%;
           z-index: 1;
           transition: .3s top ease-in;
-          opacity: 0;
           @include vw-max(gap, 20);
         }
 
         &:hover .list__text{
-          opacity: 1;
           top: 0;          
         }
       }
