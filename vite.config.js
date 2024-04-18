@@ -31,7 +31,7 @@ export default defineConfig(() => {
       outDir: '../dist',
       assetsInlineLimit: 0,
       emptyOutDir: true,
-      cssCodeSplit: false,
+      // cssCodeSplit: false,
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'src/index.html'),
@@ -43,7 +43,7 @@ export default defineConfig(() => {
         },
         output: {
           assetFileNames: (assetInfo) => {
-            let result = 'assets/[name][extname]';
+            let result = 'assets/images/[name][extname]';
             if (assetInfo.name.split('.')[1] === 'css') {
               result = 'assets/styles/[name][extname]';
             }
