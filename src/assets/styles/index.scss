@@ -21,10 +21,10 @@
   .page {
     &-title {
       position: relative;
-      @include vw-max(padding, 196 0 332);
+      @include vw-max(padding, 162 0 304);
       @include vw-max(font-size, 120);
-      @include vw-max(line-height, 119.7);
-      @include vw-max(letter-spacing, -2);
+      @include vw-max(line-height, 136.7);
+      @include vw-max(letter-spacing, -1);
       z-index: 50;
       word-break: break-all;
     }
@@ -35,8 +35,8 @@
 
     &-deco {
       position: absolute;
-      @include vw-max(right, 309);
-      @include vw-max(top, 440);
+      @include vw-max(right, 308);
+      @include vw-max(top, 427);
       @include vw-max(width, 360);
       @include vw-max(height, 360);
       z-index: 10;
@@ -49,7 +49,7 @@
         &::after {
           content: '';
           display: block;
-          background: center/cover no-repeat url('../assets/main_video_btn_pc.png');
+          background: center/cover no-repeat url('../images/main_video_btn_pc.png');
           position: absolute;
           left: 50%;
           top: 50%;
@@ -69,13 +69,14 @@
   }
 
   .bs-port {
-    @include vw-max(padding, 160 0 156);
+    @include vw-max(padding, 133 0 154);
 
     &__sub {
-      @include vw-max(margin-bottom, 77);
+      @include vw-max(margin-bottom, 71);
 
       .page-sub--portfolio {
         @include vw-max(font-size, 28);
+        letter-spacing: 0.24em;
   
         .sub-arrow {
           position: relative;
@@ -89,8 +90,8 @@
           @include vw-max(top, 13);
           @include vw-max(width, 14);
           @include vw-max(height, 14);
-          border-top: 3px solid $color-red;
-          border-right: 3px solid $color-red;
+          border-top: 2px solid $color-red;
+          border-right: 2px solid $color-red;
           transform: rotate(45deg);
         }
       }
@@ -167,12 +168,12 @@
 
       .swiper-button-prev {
         @include vw-max(left, 1036);
-        background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_prev_pc.png);
+        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
       }
 
       .swiper-button-next {
         @include vw-max(right, 0);
-        background: center/cover no-repeat url(../assets/main_portfolio_swiper_btn_next_pc.png);
+        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
       }
 
       &__txt {
@@ -180,15 +181,17 @@
       }
 
       &__title {
-        @include vw-max(font-size, 42);
+        @include vw-max(font-size, 40);
         @include vw-max(margin-bottom, 25);
+        @include vw-max(letter-spacing, 1);
         font-weight: bold;
       }
 
       &__info {
         display: inline-block;
-        @include vw-max(font-size, 30);
+        @include vw-max(font-size, 28);
         @include vw-max(line-height, 50);
+        @include vw-max(letter-spacing, 0.2);
 
         .kr {
           @include vw-max(font-size, 28);
@@ -203,38 +206,41 @@
 
   .bs-recruit {
     position: relative;
-    @include vw-max(padding, 120 0);
+    @include vw-max(padding, 110 0 120);
 
     &__sub {
-      @include vw-max(margin-bottom, 40);
+      @include vw-max(margin-bottom, 51);
 
       .page-sub--recruit {
         @include vw-max(font-size, 28);
+        letter-spacing: .23em;
       }
     }
 
     &__text {
       @include vw-max(font-size, 54);
       @include vw-max(line-height, 90);
-      @include vw-max(margin-bottom, 45);
+      @include vw-max(margin-bottom, 21);
+      @include vw-max(letter-spacing, -1);
     }
   
     &__desc {
-      @include vw-max(font-size, 22);
-      @include vw-max(line-height, 29.5);
-      @include vw-max(margin-bottom, 40);
+      @include vw-max(font-size, 21);
+      @include vw-max(line-height, 36);
+      @include vw-max(margin-bottom, 28);
     }
   
     &__info {
       @include vw-max(font-size, 24);
       @include vw-max(line-height, 29);
-      @include vw-max(margin-bottom, 60);
+      @include vw-max(margin-bottom, 54);
       color: $color-gray;
     }
   
     &__ani {
       position: absolute;
-      @include vw-max(top, 302);
+      @include vw-max(top, 298);
+      @include vw-max(right, -2);
       right: 0;
       @include vw-max(width, 234);
       animation: rotate_image 10s linear infinite;
@@ -244,8 +250,8 @@
         display: block;
         content: '';
         position: absolute;
-        top: 46%;
-        left: 51%;
+        top: 44%;
+        left: 50%;
         transform: translateX(-50%);
         @include vw-max(width, 24);
         @include vw-max(height, 24);
@@ -301,7 +307,7 @@
   
         &__bg {
           &::after {
-            background: center/cover no-repeat url('../assets/main_video_btn_mo.png');
+            background: center/cover no-repeat url('../images/main_video_btn_mo.png');
             @include vw-mo(width, 160);
             @include vw-mo(height, 161);
           }

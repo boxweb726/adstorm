@@ -7,7 +7,7 @@
   
     .header__logo {
       @include vw-max(width, 186);
-      @include vw-max(height, 34);
+      @include vw-max(height, 41);
     }
   
     .menu {
@@ -15,19 +15,19 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        @include vw-max(width, 785);
+        @include vw-max(width, 762);
       }
   
       &__txt {
         @include vw-max(font-size, 28);
-        @include vw-max(line-height, 34);
-        @include vw-max(letter-spacing, 1.5);
+        @include vw-max(line-height, 43);
         font-weight: bold;
         color: #fff;
         text-transform: uppercase;
   
         &:hover {
           color: #f84525;
+          transition: 0.4s;
         }
       }
     }
@@ -36,15 +36,23 @@
 
 @media screen and (max-width: 768px) {
   .wrapper {
+    /* 햄버거 메뉴 오픈시 뒤에 body 컨텐츠 스크롤 방지 */
+    &.side-menu-open {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
     .sec_header {
       @include vw-mo(padding, 60 48);
-  
+
       .header__logo {
         @include vw-mo(width, 198);
         @include vw-mo(height, 36);
         z-index: 100;
       }
-  
+
       .btn_menu {
         position: absolute;
         display: block;
@@ -107,12 +115,9 @@
   
         &.on {
           position: fixed;
-          overflow: hidden;
           display: block;
           left: 0;
           top: 0;
-          width: 100%;
-          height: 100%;
         }
 
         &__list {

@@ -23,40 +23,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-    $(".menu__txt").click(function(){
-      $(".menu__txt").removeClass("on");
-      $(this).addClass("on");
-    });
-
+    /* 햄버거 메뉴 오픈 */
     $(".btn_menu").click(function(){
       $(".btn_menu, .menu").toggleClass("on");
     });
 
-    // $("html, body").css({"overflow":"hidden", "height":"100%"});
-    // $(".menu").bind("touchmove", function(e) {
-    //   e.preventDefault();
-    // });
-    // $(".menu.on").bind("touchmove", function(e) {
-    //   e.stopPropagation();
-    // });
-
-    // $("html, body").css({"overflow":"auto", "height":"auto"});
-    // $('.menu').unbind('touchmove');
+    /* 햄버거 메뉴 오픈시 뒤에 body 컨텐츠 스크롤 방지 */
+    $(".menu.on").find(".wrapper").addClass(".side-menu-open");
   });
-
-  // var posY;
-        
-  //   $(".menu").on("click", function(e){
-  //       posY = $(window).scrollTop();
-        
-  //       $("html, body").addClass("on");
-  //       $(".menu").css("display","block");
-  //       $(".menu__list").css("top",-posY);
-  //   });
-    
-  //   $(".bnt_close").on("click", function(){
-  //       $("html, body").removeClass("on");
-  //       $(".menu").css("display","none");
-  //       posY = $(window).scrollTop(posY);
-  //   });
 </script>
