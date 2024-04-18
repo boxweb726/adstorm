@@ -3,8 +3,6 @@ import 'swiper/css';
 import dataList from './data.json';
 import List from './module/List';
 
-console.log('test');
-
 const portfolioList = new List({
   data: dataList.result,
   id: 'portfolioList',
@@ -32,6 +30,6 @@ const portfolioList = new List({
   },
 });
 
-// const tabSwiper = new Swiper('#portfolioTab', {
-//   slidesPerView: 'auto',
-// });
+const tabSwiper = new Swiper('#portfolioTab', {
+  slidesPerView: 'auto',
+});

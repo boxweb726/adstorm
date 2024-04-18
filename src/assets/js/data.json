@@ -95,6 +95,30 @@
       "brand": "삼성전자",
       "type": "Event",
       "category": "sns-banner"
+    },
+    {
+      "id": "001",
+      "title": "비스포크",
+      "date": "2025.01",
+      "brand": "삼성전자",
+      "type": "Event",
+      "category": "promotion"
+    },
+    {
+      "id": "002",
+      "title": "2222",
+      "date": "2026.01",
+      "brand": "삼성전자",
+      "type": "Event",
+      "category": "promotion"
+    },
+    {
+      "id": "003",
+      "title": "3333",
+      "date": "2027.01",
+      "brand": "삼성전자",
+      "type": "Event",
+      "category": "management"
     }
   ]
 }
