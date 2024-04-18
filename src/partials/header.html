@@ -1,4 +1,4 @@
-<header class="sec_header sticky en">
+<header class="sec_header sticky en pc-pt-80 pc-pb-80 mo-pt-60 mo-pb-60">
   <a href="/" class="header__logo img-box">
     <img src="/assets/images/header_logo_pc.png" class="m-hide" alt="">
     <img src="/assets/images/header_logo_mo.png" class="m-show" alt="">
@@ -26,9 +26,7 @@
     /* 햄버거 메뉴 오픈 */
     $(".btn_menu").click(function(){
       $(".btn_menu, .menu").toggleClass("on");
+      $(".sec_header").toggleClass("side-menu-open");
     });
-
-    /* 햄버거 메뉴 오픈시 뒤에 body 컨텐츠 스크롤 방지 */
-    $(".menu.on").find(".wrapper").addClass(".side-menu-open");
   });
 </script>

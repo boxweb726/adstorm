@@ -4,28 +4,26 @@
 @import './contact';
 
 
+/* 시안 비교용 사진 */
+.compare-img {
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .bs-home {
   overflow: hidden;
-
-  /* 시안 비교용 사진 */
-  .compare-img {
-    opacity: 0.5;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
 
   /* main start */
   .page {
     &-title {
       position: relative;
-      @include vw-max(padding, 162 0 304);
       @include vw-max(font-size, 120);
       @include vw-max(line-height, 136.7);
       @include vw-max(letter-spacing, -1);
-      z-index: 50;
+      z-index: 5;
       word-break: break-all;
     }
 
@@ -39,7 +37,7 @@
       @include vw-max(top, 427);
       @include vw-max(width, 360);
       @include vw-max(height, 360);
-      z-index: 10;
+      z-index: 1;
     }
 
     &-video {
@@ -68,169 +66,163 @@
     }
   }
 
-  .bs-port {
-    @include vw-max(padding, 133 0 154);
+  /* portfolio start */
+  .page-sub--portfolio {
+    @include vw-max(margin-bottom, 71);
+    @include vw-max(font-size, 28);
+    letter-spacing: 0.24em;
 
-    &__sub {
-      @include vw-max(margin-bottom, 71);
-
-      .page-sub--portfolio {
-        @include vw-max(font-size, 28);
-        letter-spacing: 0.24em;
-  
-        .sub-arrow {
-          position: relative;
-        }
-  
-        .sub-arrow::after {
-          content: '';
-          display: block;
-          position: absolute;
-          @include vw-max(left, 14);
-          @include vw-max(top, 13);
-          @include vw-max(width, 14);
-          @include vw-max(height, 14);
-          border-top: 2px solid $color-red;
-          border-right: 2px solid $color-red;
-          transform: rotate(45deg);
-        }
-      }
+    .sub-arrow {
+      position: relative;
     }
 
-    /* 포트폴리오 스와이퍼 구간 */
-    .pf-swiper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-      @include vw-max(padding-bottom, 120);
-
-      &__box {
-        width: auto;
-      }
-
-      &__list {
-        @include vw-max(width, 505);
-        @include vw-max(height, 600);
-        
-        &:not(:last-child) {
-          @include vw-max(margin-right, 40);
-        }
-
-        &:hover {
-          img {
-            opacity: .5;
-            cursor: pointer;
-          }
-          &::after {
-            content: 'View';
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            @include vw-max(width, 160);
-            @include vw-max(height, 161);
-            @include vw-max(font-size, 26);
-            border-radius: 50%;
-            background-color: $color-red;
-            align-items: center;
-          }
-        }
-      }
-
-      .swiper-slide-active {
-        @include vw-max(margin-right, 230);
-
-        .pf-swiper__txt {
-          position: absolute;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          @include vw-max(width, 255);
-          @include vw-max(right, -190);
-          @include vw-max(top, 310);
-        }
-      }
-
-      .swiper-button-prev,
-      .swiper-button-next {
-        position: absolute;
-        @include vw-max(top, 652);
-        @include vw-max(width, 88);
-        @include vw-max(height, 88);
-
-        &:after {
-          display: none;
-        }
-      }
-
-      .swiper-button-prev {
-        @include vw-max(left, 1036);
-        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
-      }
-
-      .swiper-button-next {
-        @include vw-max(right, 0);
-        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
-      }
-
-      &__txt {
-        display: none;
-
-        .fadeInUp {
-          &--01 {
-            animation: fadeInUp 0.4s ease backwards;
-          }
-          &--02 {
-            animation: fadeInUp 0.5s ease backwards;
-          }
-          &--03 {
-            animation: fadeInUp 0.6s ease backwards;
-          }
-          &--04 {
-            animation: fadeInUp 0.7s ease backwards;
-          }
-        }
-
-          @keyframes fadeInUp {
-            0% {
-              transform:translate(0px, 100px); opacity: 0;
-            }
-            100% {
-              transform:translate(0px, 0); opacity: 1;
-            }
-          }
-      }
-
-      &__title {
-        @include vw-max(font-size, 40);
-        @include vw-max(margin-bottom, 25);
-        @include vw-max(letter-spacing, 1);
-        font-weight: bold;
-      }
-
-      &__info {
-        display: inline-block;
-        @include vw-max(font-size, 28);
-        @include vw-max(line-height, 50);
-        @include vw-max(letter-spacing, 0.2);
-
-        .kr {
-          @include vw-max(font-size, 28);
-        }
-
-        &--typea {
-          font-weight: bold;
-        }
-      }
+    .sub-arrow::after {
+      content: '';
+      display: block;
+      position: absolute;
+      @include vw-max(left, 14);
+      @include vw-max(top, 13);
+      @include vw-max(width, 14);
+      @include vw-max(height, 14);
+      border-top: 2px solid $color-red;
+      border-right: 2px solid $color-red;
+      transform: rotate(45deg);
     }
   }
 
-  .bs-recruit {
+  /* 포트폴리오 스와이퍼 구간 */
+  .portfolio-swiper {
     position: relative;
-    @include vw-max(padding, 110 0 120);
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+
+    &__list {
+      width: auto;
+    }
+
+    &__item {
+      @include vw-max(width, 505);
+      @include vw-max(height, 600);
+      
+      &:not(:last-child) {
+        @include vw-max(margin-right, 40);
+      }
+
+      &:hover {
+        img {
+          opacity: .5;
+          cursor: pointer;
+        }
+        &::after {
+          content: 'View';
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          @include vw-max(width, 160);
+          @include vw-max(height, 161);
+          @include vw-max(font-size, 26);
+          border-radius: 50%;
+          background-color: $color-red;
+          align-items: center;
+        }
+      }
+    }
+
+    .swiper-slide-active {
+      @include vw-max(margin-right, 230);
+
+      .portfolio-swiper__txt {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        @include vw-max(width, 255);
+        @include vw-max(right, -190);
+        @include vw-max(top, 308);
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      @include vw-max(top, 652);
+      @include vw-max(width, 88);
+      @include vw-max(height, 88);
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      @include vw-max(left, 1036);
+      background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
+    }
+
+    .swiper-button-next {
+      @include vw-max(right, 0);
+      background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
+    }
+
+    &__txt {
+      display: none;
+
+      .fadeInUp {
+        &--01 {
+          animation: fadeInUp 0.4s ease backwards;
+        }
+        &--02 {
+          animation: fadeInUp 0.5s ease backwards;
+        }
+        &--03 {
+          animation: fadeInUp 0.6s ease backwards;
+        }
+        &--04 {
+          animation: fadeInUp 0.7s ease backwards;
+        }
+      }
+
+        @keyframes fadeInUp {
+          0% {
+            transform:translate(0px, 100px); opacity: 0;
+          }
+          100% {
+            transform:translate(0px, 0); opacity: 1;
+          }
+        }
+    }
+
+    &__title {
+      @include vw-max(font-size, 42);
+      @include vw-max(margin-bottom, 25);
+      @include vw-max(letter-spacing, -1);
+      font-weight: bold;
+    }
+
+    &__info {
+      display: inline-block;
+      @include vw-max(font-size, 28);
+      @include vw-max(line-height, 50);
+      @include vw-max(letter-spacing, 0.2);
+
+      .kr {
+        @include vw-max(font-size, 28);
+      }
+
+      &--typea {
+        font-weight: bold;
+      }
+    }
+  }
+  /* portfolio end */
+
+  /* recruit start */
+  .recruit {
+    position: relative;
 
     &__sub {
       @include vw-max(margin-bottom, 51);
@@ -304,6 +296,7 @@
     background-color: $color-deep-gray;
     font-weight: bold;
   }
+  /* recruit end */
 }
 
 
@@ -312,16 +305,17 @@
     .page {
       &-title {
         position: relative;
-        @include vw-mo(padding, 70 0 489);
-        margin: 0;
+        @include vw-mo(margin, 0 0 72 0);
         @include vw-mo(font-size, 95);
         @include vw-mo(line-height, 112);
         letter-spacing: 0;
       }
   
       &-deco {
-        @include vw-mo(right, 48);
-        @include vw-mo(top, 840);
+        position: relative;
+        right: 0;
+        top: 0;
+        @include vw-mo(left, 264);
         @include vw-mo(width, 360);
         @include vw-mo(height, 360);
       }
@@ -340,80 +334,75 @@
       }
     }
 
-    .bs-port {
-      @include vw-mo(padding, 94 0 0 0);
-      margin: 0;
+    /* portfolio start */
+    .page-sub--portfolio {
+      @include vw-mo(margin-bottom, 74);
+      @include vw-mo(font-size, 40);
+      @include vw-mo(letter-spacing, 10);
 
-      &__sub {
-        @include vw-mo(margin-bottom, 74);
-
-        .page-sub--portfolio {
-          @include vw-mo(font-size, 40);
-          @include vw-mo(letter-spacing, 10);
-
-          .sub-arrow::after {
-            @include vw-mo(left, 23);
-            @include vw-mo(top, 19);
-            @include vw-mo(width, 19);
-            @include vw-mo(height, 19);
-            transform: rotate(45deg);
-          }
-        }
-      }
-
-      /* 포트폴리오 스와이퍼 구간 */
-      .pf-swiper {
-        @include vw-mo(padding, 0 0 428 0);
-
-        &__list {
-          @include vw-mo(width, 516);
-          @include vw-mo(height, 640);
-          
-          &:not(:last-child) {
-            @include vw-mo(margin-right, 24);
-          }
-
-          &:hover {
-            &::after {
-              @include vw-mo(width, 160);
-              @include vw-mo(height, 161);
-              @include vw-mo(font-size, 26);
-            }
-          }
-        }
-
-        .swiper-slide-active {
-          .pf-swiper__txt {
-            display: block;
-            position: relative;
-            left: 0;
-            @include vw-mo(top, 60);
-            @include vw-mo(width, 516);
-            @include vw-mo(padding, 0 15);
-            text-align: left;
-          }
-        }
-
-        &__title {
-          @include vw-mo(margin-bottom, 36);
-          @include vw-mo(font-size, 60);
-          @include vw-mo(line-height, 55);
-        }
-
-        &__info {
-          @include vw-mo(font-size, 44);
-          @include vw-mo(line-height, 60);
-
-          .kr {
-            @include vw-mo(font-size, 40);
-          }
-        }
+      .sub-arrow::after {
+        @include vw-mo(left, 23);
+        @include vw-mo(top, 19);
+        @include vw-mo(width, 19);
+        @include vw-mo(height, 19);
+        transform: rotate(45deg);
       }
     }
 
-    .bs-recruit {
+    /* 포트폴리오 스와이퍼 구간 */
+    .portfolio-swiper {
+      @include vw-mo(padding, 0 0 428 0);
+
+      &__item {
+        @include vw-mo(width, 516);
+        @include vw-mo(height, 640);
+        
+        &:not(:last-child) {
+          @include vw-mo(margin-right, 24);
+        }
+
+        &:hover {
+          &::after {
+            @include vw-mo(width, 160);
+            @include vw-mo(height, 161);
+            @include vw-mo(font-size, 26);
+          }
+        }
+      }
+
+      .swiper-slide-active {
+        .portfolio-swiper__txt {
+          display: block;
+          position: relative;
+          left: 0;
+          @include vw-mo(top, 60);
+          @include vw-mo(width, 516);
+          @include vw-mo(margin, 0 15);
+          text-align: left;
+        }
+      }
+
+      &__title {
+        @include vw-mo(margin-bottom, 36);
+        @include vw-mo(font-size, 60);
+        @include vw-mo(line-height, 55);
+      }
+
+      &__info {
+        @include vw-mo(font-size, 44);
+        @include vw-mo(line-height, 58);
+        @include vw-mo(letter-spacing, -0.6);
+
+        .kr {
+          @include vw-mo(font-size, 40);
+        }
+      }
+    }
+    /* portfolio end */
+
+    /* recruit start */
+    .recruit {
       position: relative;
-      @include vw-mo(padding, 86 0 414);
 
       &__sub {
         @include vw-mo(margin-bottom, 54);
@@ -445,8 +434,10 @@
       }
   
       &__ani {
-        @include vw-mo(top, 760);
+        position: relative;
+        top: 0;
         right: 0;
+        @include vw-mo(left, 383);
         @include vw-mo(width, 242);
 
         &::after {
@@ -459,10 +450,12 @@
 
     .btn_join {
       @include vw-mo(width, 400);
+      @include vw-mo(margin-bottom, 81);
       @include vw-mo(font-size, 32);
       @include vw-mo(line-height, 101);
       @include vw-mo(letter-spacing, -1);
       @include vw-mo(border-radius, 50);
     }
+    /* recruit end */
   }
 }
