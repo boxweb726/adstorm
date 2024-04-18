@@ -178,6 +178,30 @@
 
       &__txt {
         display: none;
+
+        .fadeInUp {
+          &--01 {
+            animation: fadeInUp 0.4s ease backwards;
+          }
+          &--02 {
+            animation: fadeInUp 0.5s ease backwards;
+          }
+          &--03 {
+            animation: fadeInUp 0.6s ease backwards;
+          }
+          &--04 {
+            animation: fadeInUp 0.7s ease backwards;
+          }
+        }
+
+          @keyframes fadeInUp {
+            0% {
+              transform:translate(0px, 100px); opacity: 0;
+            }
+            100% {
+              transform:translate(0px, 0); opacity: 1;
+            }
+          }
       }
 
       &__title {
@@ -288,10 +312,11 @@
     .page {
       &-title {
         position: relative;
-        @include vw-mo(padding, 94 0 512);
+        @include vw-mo(padding, 70 0 489);
         margin: 0;
         @include vw-mo(font-size, 95);
         @include vw-mo(line-height, 112);
+        letter-spacing: 0;
       }
   
       &-deco {
@@ -316,10 +341,12 @@
     }
 
     .bs-port {
-      @include vw-mo(padding, 101 0 0 0);
+      @include vw-mo(padding, 94 0 0 0);
       margin: 0;
 
       &__sub {
+        @include vw-mo(margin-bottom, 74);
+
         .page-sub--portfolio {
           @include vw-mo(font-size, 40);
           @include vw-mo(letter-spacing, 10);
@@ -362,12 +389,13 @@
             left: 0;
             @include vw-mo(top, 60);
             @include vw-mo(width, 516);
+            @include vw-mo(padding, 0 15);
             text-align: left;
           }
         }
 
         &__title {
-          @include vw-mo(margin-bottom, 50);
+          @include vw-mo(margin-bottom, 36);
           @include vw-mo(font-size, 60);
           @include vw-mo(line-height, 55);
         }
@@ -385,10 +413,10 @@
 
     .bs-recruit {
       position: relative;
-      @include vw-mo(padding, 100 0 414);
+      @include vw-mo(padding, 86 0 414);
 
       &__sub {
-        @include vw-mo(margin-bottom, 40);
+        @include vw-mo(margin-bottom, 54);
 
         .page-sub--recruit {
           @include vw-mo(font-size, 40);
@@ -397,16 +425,16 @@
       }
 
       &__text {
-        @include vw-mo(font-size, 60);
+        @include vw-mo(font-size, 59);
         @include vw-mo(line-height, 90);
-        @include vw-mo(margin-bottom, 50);
+        @include vw-mo(margin-bottom, 28);
       }
     
       &__desc {
-        @include vw-mo(font-size, 40);
-        @include vw-mo(line-height, 48);
-        @include vw-mo(margin-bottom, 41);
-        @include vw-mo(letter-spacing, -1);
+        @include vw-mo(font-size, 41);
+        @include vw-mo(line-height, 53);
+        @include vw-mo(margin-bottom, 34);
+        @include vw-mo(letter-spacing, -2);
       }
     
       &__info {
