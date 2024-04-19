@@ -6,7 +6,7 @@ import List from './module/List';
 const portfolioList = new List({
   data: dataList.result,
   id: 'portfolioList',
-  render(data) {
+  renderHtml(data) {
     const { category } = data;
 
     return `<div class="swiper-slide portfolio-swiper__item">
