@@ -204,6 +204,8 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        text-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+
         @include vw-max(width, 255);
         @include vw-max(right, -190);
         @include vw-max(top, 308);
