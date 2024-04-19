@@ -5,8 +5,10 @@
   }
 
   .tab {
-    display: flex; 
-    justify-content: space-between;
+    & ul {
+      display: flex; 
+      justify-content: space-between;
+    }
     @include vw-max(margin-bottom, 40);
 
     &__item {
@@ -67,12 +69,6 @@
           transition: .3s top ease-in;
         }
 
-        &:hover{
-          &::after{
-            top: 0;
-          }
-        }
-
         .list__text {
           display: flex;
           flex-direction: column;
@@ -87,8 +83,14 @@
           @include vw-max(gap, 20);
         }
 
-        &:hover .list__text{
-          top: 0;          
+        &:hover{
+          &::after{
+            top: 0;
+          }
+
+          & .list__text {
+            top: 0;          
+          }
         }
       }
   
@@ -125,12 +127,15 @@
       }
 
       .tab {
-        display: flex; 
-        justify-content: flex-start;
-        @include vw-mo(gap, 70); 
-        @include vw-mo(margin-bottom, 40);
+        & ul {
+          justify-content: flex-start;
+        }
+        
         &__item {
-          @include vw-mo(height, 59)
+          @include vw-mo(padding-right, 70);
+          @include vw-mo(height, 59);
+          &:last-child {padding-right: 0;}
+
         }
         &__btn {
           @include vw-mo(border-bottom, 4 solid transparent); 
