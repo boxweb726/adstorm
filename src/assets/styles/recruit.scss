@@ -79,16 +79,15 @@
   
   @media all and (max-width:768px) {
     .bs-recruit {
-      .page-sub {
-        @include vw-mo(font-size, 56);
+      .title-box {
+        .page-sub {
+          @include vw-mo(font-size, 56);
+        }
       }
       
       .list {
-        &.edit {
-          @include vw-mo(padding-left, 6);
-          @include vw-mo(padding-right, 18);
-          @include vw-mo(margin-left, 8)
-        }
+        @include vw-mo(padding-left, 15);
+        @include vw-mo(padding-right, 18);
         
         &__link {
           @include vw-mo(height, 222);
@@ -101,7 +100,7 @@
         }
       }
       .btn-plus--recruit {
-        @include vw-mo(top, 30);
+        @include vw-mo(top, 35);
         @include vw-mo(width, 60);
         @include vw-mo(height, 60);
       }
