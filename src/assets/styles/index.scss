@@ -3,74 +3,62 @@
 @import './footer';
 @import './contact';
 
-
-/* 시안 비교용 사진 */
-.compare-img {
-  opacity: 0.5;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
 .bs-home {
   overflow: hidden;
 
   /* main start */
-  .page {
-    &-title {
-      position: relative;
-      @include vw-max(font-size, 120);
-      @include vw-max(line-height, 136.7);
-      @include vw-max(letter-spacing, -1);
-      z-index: 5;
-      word-break: break-all;
-    }
-
-    &-highlight {
+  .page-title {
+    position: relative;
+    word-break: break-all;
+    z-index: 5;
+    @include vw-max(font-size, 120);
+    @include vw-max(line-height, 136.7);
+    @include vw-max(letter-spacing, -1);
+    
+    &--highlight {
       color: $color-red;
     }
+  }
 
-    &-deco {
-      position: absolute;
-      @include vw-max(right, 308);
-      @include vw-max(top, 427);
-      @include vw-max(width, 360);
-      @include vw-max(height, 360);
-      z-index: 1;
-    }
+  .title-img {
+    position: absolute;
+    z-index: 1;
+    @include vw-max(right, 308);
+    @include vw-max(top, 427);
+    @include vw-max(width, 360);
+    @include vw-max(height, 360);
+  }
 
-    &-video {
-      position: relative;
+  .intro-video {
+    position: relative;
 
-      &__bg {
+    &__bg {
+      &::after {
+        content: '';
+        display: block;
+        background: center/cover no-repeat url('../images/main_video_btn_pc.png');
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        transition: all 0.5s;
+        @include vw-max(width, 160);
+        @include vw-max(height, 161);
+      }
+
+      &:hover {
         &::after {
-          content: '';
-          display: block;
-          background: center/cover no-repeat url('../images/main_video_btn_pc.png');
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translateX(-50%) translateY(-50%);
-          @include vw-max(width, 160);
-          @include vw-max(height, 161);
-          transition: all 0.5s;
+          transform: translateX(-50%) translateY(-50%) scale(1.2);
         }
-
-        &:hover{
-          &::after {
-            transform: translateX(-50%) translateY(-50%) scale(1.2);
-          }
-        }        
       }
     }
   }
 
   /* portfolio start */
   .page-sub--portfolio {
+    letter-spacing: 0.24em;
     @include vw-max(margin-bottom, 71);
     @include vw-max(font-size, 28);
-    letter-spacing: 0.24em;
 
     .sub-arrow {
       position: relative;
@@ -80,13 +68,13 @@
       content: '';
       display: block;
       position: absolute;
+      border-top: 2px solid $color-red;
+      border-right: 2px solid $color-red;
+      transform: rotate(45deg);
       @include vw-max(left, 14);
       @include vw-max(top, 13);
       @include vw-max(width, 14);
       @include vw-max(height, 14);
-      border-top: 2px solid $color-red;
-      border-right: 2px solid $color-red;
-      transform: rotate(45deg);
     }
   }
 
@@ -99,6 +87,7 @@
 
     &__list {
       width: auto;
+      @include vw-max(margin-bottom, 30);
     }
 
     &__item {
@@ -114,6 +103,7 @@
           opacity: .5;
           cursor: pointer;
         }
+
         &::after {
           content: 'View';
           display: flex;
@@ -122,50 +112,14 @@
           left: 50%;
           top: 50%;
           transform: translateX(-50%) translateY(-50%);
-          @include vw-max(width, 160);
-          @include vw-max(height, 161);
-          @include vw-max(font-size, 26);
           border-radius: 50%;
           background-color: $color-red;
           align-items: center;
+          @include vw-max(width, 160);
+          @include vw-max(height, 161);
+          @include vw-max(font-size, 26);
         }
       }
-    }
-
-    .swiper-slide-active {
-      @include vw-max(margin-right, 230);
-
-      .portfolio-swiper__txt {
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        @include vw-max(width, 255);
-        @include vw-max(right, -190);
-        @include vw-max(top, 308);
-      }
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      position: absolute;
-      @include vw-max(top, 652);
-      @include vw-max(width, 88);
-      @include vw-max(height, 88);
-
-      &:after {
-        display: none;
-      }
-    }
-
-    .swiper-button-prev {
-      @include vw-max(left, 1036);
-      background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
-    }
-
-    .swiper-button-next {
-      @include vw-max(right, 0);
-      background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
     }
 
     &__txt {
@@ -188,19 +142,19 @@
 
         @keyframes fadeInUp {
           0% {
-            transform:translate(0px, 100px); opacity: 0;
+            transform: translate(0px, 100px); opacity: 0;
           }
           100% {
-            transform:translate(0px, 0); opacity: 1;
+            transform: translate(0px, 0); opacity: 1;
           }
         }
     }
 
     &__title {
+      font-weight: bold;
       @include vw-max(font-size, 42);
       @include vw-max(margin-bottom, 25);
       @include vw-max(letter-spacing, -1);
-      font-weight: bold;
     }
 
     &__info {
@@ -217,6 +171,44 @@
         font-weight: bold;
       }
     }
+
+    &__navi {
+      position: absolute;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      margin-top: 0;
+      @include vw-max(width, 88);
+      @include vw-max(height, 88);
+
+      &--prev {
+        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
+        @include vw-max(right, 116);
+      }
+      &--next {
+        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
+        @include vw-max(right, 0);
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-slide-active {
+      @include vw-max(margin-right, 230);
+
+      .portfolio-swiper__txt {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        @include vw-max(width, 255);
+        @include vw-max(right, -190);
+        @include vw-max(top, 308);
+      }
+    }
   }
   /* portfolio end */
 
@@ -228,8 +220,8 @@
       @include vw-max(margin-bottom, 51);
 
       .page-sub--recruit {
-        @include vw-max(font-size, 28);
         letter-spacing: .23em;
+        @include vw-max(font-size, 28);
       }
     }
 
@@ -247,20 +239,19 @@
     }
   
     &__info {
+      color: $color-gray;
       @include vw-max(font-size, 24);
       @include vw-max(line-height, 29);
       @include vw-max(margin-bottom, 54);
-      color: $color-gray;
     }
   
     &__ani {
       position: absolute;
-      @include vw-max(top, 298);
-      @include vw-max(right, -2);
-      right: 0;
-      @include vw-max(width, 234);
       animation: rotate_image 10s linear infinite;
       transform-origin: 50% 50%;
+      @include vw-max(top, 298);
+      @include vw-max(right, -2);
+      @include vw-max(width, 234);
 
       &::after {
         display: block;
@@ -269,10 +260,10 @@
         top: 44%;
         left: 50%;
         transform: translateX(-50%);
-        @include vw-max(width, 24);
-        @include vw-max(height, 24);
         border-radius: 50%;
         background-color: $color-red;
+        @include vw-max(width, 24);
+        @include vw-max(height, 24);
       }
 
       @keyframes rotate_image {
@@ -287,14 +278,14 @@
     display: block;
     text-align: center;
     align-items: center;
+    color: $color-white;
+    background-color: $color-deep-gray;
+    font-weight: bold;
     @include vw-max(width, 250);
     @include vw-max(font-size, 24);
     @include vw-max(line-height, 65);
     @include vw-max(letter-spacing, -1);
     @include vw-max(border-radius, 32);
-    color: $color-white;
-    background-color: $color-deep-gray;
-    font-weight: bold;
   }
   /* recruit end */
 }
@@ -302,34 +293,32 @@
 
 @media screen and (max-width: 768px) {
   .bs-home {
-    .page {
-      &-title {
-        position: relative;
-        @include vw-mo(margin, 0 0 72 0);
-        @include vw-mo(font-size, 95);
-        @include vw-mo(line-height, 112);
-        letter-spacing: 0;
-      }
-  
-      &-deco {
-        position: relative;
-        right: 0;
-        top: 0;
-        @include vw-mo(left, 264);
-        @include vw-mo(width, 360);
-        @include vw-mo(height, 360);
-      }
-  
-      &-video {
-        width: 100%;
-        @include vw-mo(height, 1280);
-  
-        &__bg {
-          &::after {
-            background: center/cover no-repeat url('../images/main_video_btn_mo.png');
-            @include vw-mo(width, 160);
-            @include vw-mo(height, 161);
-          }
+    .page-title {
+      position: relative;
+      letter-spacing: 0;
+      @include vw-mo(margin, 0 0 72 0);
+      @include vw-mo(font-size, 95);
+      @include vw-mo(line-height, 112);
+    }
+
+    .title-img {
+      position: relative;
+      right: 0;
+      top: 0;
+      @include vw-mo(left, 264);
+      @include vw-mo(width, 360);
+      @include vw-mo(height, 360);
+    }
+
+    .intro-video {
+      width: 100%;
+      @include vw-mo(height, 1280);
+
+      &__bg {
+        &::after {
+          background: center/cover no-repeat url('../images/main_video_btn_mo.png');
+          @include vw-mo(width, 160);
+          @include vw-mo(height, 161);
         }
       }
     }
@@ -341,11 +330,11 @@
       @include vw-mo(letter-spacing, 10);
 
       .sub-arrow::after {
+        transform: rotate(45deg);
         @include vw-mo(left, 23);
         @include vw-mo(top, 19);
         @include vw-mo(width, 19);
         @include vw-mo(height, 19);
-        transform: rotate(45deg);
       }
     }
 
@@ -370,18 +359,6 @@
         }
       }
 
-      .swiper-slide-active {
-        .portfolio-swiper__txt {
-          display: block;
-          position: relative;
-          left: 0;
-          @include vw-mo(top, 60);
-          @include vw-mo(width, 516);
-          @include vw-mo(margin, 0 15);
-          text-align: left;
-        }
-      }
-
       &__title {
         @include vw-mo(margin-bottom, 36);
         @include vw-mo(font-size, 60);
@@ -395,6 +372,18 @@
 
         .kr {
           @include vw-mo(font-size, 40);
+        }
+      }
+
+      .swiper-slide-active {
+        .portfolio-swiper__txt {
+          display: block;
+          position: relative;
+          left: 0;
+          text-align: left;
+          @include vw-mo(top, 60);
+          @include vw-mo(width, 516);
+          @include vw-mo(margin, 0 15);
         }
       }
     }
@@ -427,10 +416,10 @@
       }
     
       &__info {
+        color: $color-gray;
         @include vw-mo(font-size, 36);
         @include vw-mo(line-height, 29);
         @include vw-mo(margin-bottom, 99);
-        color: $color-gray;
       }
   
       &__ani {

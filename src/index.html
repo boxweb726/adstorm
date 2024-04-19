@@ -10,8 +10,8 @@
 
   <body>
     <!-- <div class="compare-img img-box">
-      <img src="./assets/images/main_pc.png" alt="" class="m-hide">
-      <img src="./assets/images/main_mo.png" alt="" class="m-show">
+      <img src="./assets/images/main_pc.png" class="m-hide" style="position: absolute; top: 0px; left: 0px; opacity: 0.5; z-index: -1; pointer-event:none;">
+      <img src="./assets/images/main_mo.png" class="m-show" style="position: absolute; top: 0px; left: 0px; opacity: 0.5; z-index: -1; pointer-event:none;">
     </div> -->
 
     <div class="wrapper bs-home">
@@ -21,20 +21,20 @@
       <main>
         <section>
           <div class="inner-1240 pc-pt-160 pc-pb-300 mo-pt-70 mo-pb-80">
-            <h2 class="page-title en">
+            <h2 class="page-title">
               Beyond<br class="m-show"> the creativity,<br>
               Strive to<br class="m-show"> be sensational<br>
-              <span class="page-highlight">Bstones</span>
+              <span class="page-title--highlight">Bstones</span>
             </h2>
 
-            <div class="page-deco img-box mp-pb-80">
+            <div class="title-img img-box mp-pb-80">
               <img src="./assets/images/main_deco_pc.png" alt="" class="m-hide">
               <img src="./assets/images/main_deco_mo.png" alt="" class="m-show">
             </div>
           </div>
 
-          <div class="page-video img-box">
-            <a href="javascript:;" class="page-video__bg">
+          <div class="intro-video img-box">
+            <a href="javascript:;" class="intro-video__bg">
               <img src="./assets/images/main_video_bg_pc.jpg" alt="" class="m-hide">
               <img src="./assets/images/main_video_bg_mo.jpg" alt="" class="m-show">
             </a>
@@ -48,8 +48,8 @@
               <h3 class="page-sub page-sub--portfolio">Portfolio<span class="sub-arrow"></span></h3>
             </a>
 
-            <div class="swiper portfolio-swiper" id="main-portfolio">
-              <div class="swiper-wrapper portfolio-swiper__list">
+            <div class="swiper portfolio-swiper" id="mainPortfolio">
+              <div class="swiper-wrapper portfolio-swiper__list" id="portfolioList">
 
                 <div class="swiper-slide portfolio-swiper__item">
                   <a href="javascript:;" class="img-box">
@@ -207,8 +207,8 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next m-hide"></div>
-              <div class="swiper-button-prev m-hide"></div>
+              <div class="swiper-button-prev portfolio-swiper__navi portfolio-swiper__navi--prev m-hide"></div>
+              <div class="swiper-button-next portfolio-swiper__navi portfolio-swiper__navi--next m-hide"></div>
             </div>
           </div>
         </section>
@@ -217,7 +217,7 @@
         <section class="sec-top-line">
           <div class="inner-1240">
             <div class="recruit pc-pt-110 pc-pb-120 mo-pt-85 mo-pb-100">
-              <h3 class="recruit__sub en">
+              <h3 class="recruit__sub">
                 <a href="/recruit/" class="page-sub page-sub--recruit">Recruit</a>
               </h3>
 
