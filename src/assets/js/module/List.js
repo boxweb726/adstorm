@@ -1,17 +1,19 @@
+import { isMobile } from './utill';
+
 export default class List {
   constructor({ ...prop }) {
     this.originData = prop.data;
     this.target = document.getElementById(prop.id);
     this.renderHtml = prop.renderHtml;
-    this.category = { default: 'all', ...prop.category };
-    this.currentCategory = this.category.default;
-    this.categoryData =
+    this.useCategory = { default: 'all', ...prop.useCategory };
+    this.currentCategory = this.useCategory.default;
+    this.useCategoryData =
       this.currentCategory === 'all'
         ? this.originData
         : this.originData.filter(
-            (item) => item.category === this.category.default,
+            (item) => item.category === this.useCategory.default,
           );
-    this.btnMore = {
+    this.usePaging = {
       id: false,
       increase: 6,
       initNum: {
@@ -19,51 +21,46 @@ export default class List {
         mo: 6,
       },
       currentPage: 0,
-      ...prop.btnMore,
+      ...prop.usePaging,
     };
-    this.isInit = false;
 
-    if (this.btnMore.id) {
-      this.btnMore.target = document.getElementById(this.btnMore.id);
-      this.btnMore.maxPage = this.getMaxPage();
+    if (this.usePaging.id) {
+      this.usePaging.target = document.getElementById(this.usePaging.id);
+      this.usePaging.maxPage = this.getMaxPage();
     }
 
     this.init();
   }
 
-  static isMobile() {
-    return window.innerWidth <= 768 ? 'mo' : 'pc';
-  }
-
   getMaxPage() {
-    const listLength = this.categoryData.length;
-    const initLength = this.btnMore.initNum[List.isMobile()];
+    const listLength = this.useCategoryData.length;
+    const initLength = this.usePaging.initNum[isMobile()];
 
     return listLength > initLength
-      ? Math.ceil((listLength - initLength) / this.btnMore.increase)
+      ? Math.ceil((listLength - initLength) / this.usePaging.increase)
       : 0;
   }
 
-  findList(category) {
-    this.categoryData = this.originData.filter(
+  findCategoryList(category) {
+    this.useCategoryData = this.originData.filter(
       (item) => item.category === category,
     );
   }
 
-  pagingList() {
-    let result = [...this.categoryData];
-    const initEndIdx = this.btnMore.initNum[List.isMobile()];
+  findPagingList() {
+    let result = [...this.useCategoryData];
+    const initEndIdx = this.usePaging.initNum[isMobile()];
     let startIdx = 0;
     let endIdx = 0;
 
-    if (this.btnMore.currentPage === 0) {
+    if (this.usePaging.currentPage === 0) {
       endIdx = initEndIdx;
     } else {
       startIdx =
-        initEndIdx + (this.btnMore.currentPage - 1) * this.btnMore.increase;
-      endIdx = startIdx + this.btnMore.increase;
+        initEndIdx + (this.usePaging.currentPage - 1) * this.usePaging.increase;
+      endIdx = startIdx + this.usePaging.increase;
 
-      if (this.btnMore.currentPage === this.btnMore.maxPage) {
+      if (this.usePaging.currentPage === this.usePaging.maxPage) {
         endIdx = result.length;
       }
     }
@@ -83,24 +80,24 @@ export default class List {
       this.target.insertAdjacentHTML('beforeend', this.renderHtml(listArr[i]));
     }
 
-    if (this.btnMore.currentPage === this.btnMore.maxPage)
-      this.btnMore.target.classList.add('blind');
+    if (this.usePaging.currentPage === this.usePaging.maxPage)
+      this.usePaging.target.classList.add('blind');
 
     return result;
   }
 
   addList() {
-    this.btnMore.currentPage += 1;
+    this.usePaging.currentPage += 1;
 
-    this.printList(this.pagingList());
+    this.printList(this.findPagingList());
   }
 
   initList() {
-    let listArr = this.categoryData;
+    let listArr = this.useCategoryData;
 
-    if (this.btnMore.id) {
-      listArr = this.pagingList();
-      this.btnMore.target.classList.remove('blind');
+    if (this.usePaging.id) {
+      listArr = this.findPagingList();
+      this.usePaging.target.classList.remove('blind');
     }
 
     this.target.innerHTML = '';
@@ -108,8 +105,8 @@ export default class List {
   }
 
   reset() {
-    this.btnMore.currentPage = 0;
-    this.btnMore.maxPage = this.getMaxPage();
+    this.usePaging.currentPage = 0;
+    this.usePaging.maxPage = this.getMaxPage();
   }
 
   handleResize() {
@@ -127,7 +124,7 @@ export default class List {
   }
 
   addCategoryEvt() {
-    const $categoryTab = document.getElementById(this.category.id);
+    const $categoryTab = document.getElementById(this.useCategory.id);
 
     $categoryTab.addEventListener('click', (e) => {
       const $this = e.target;
@@ -141,9 +138,9 @@ export default class List {
 
         this.currentCategory = category;
         if (category === 'all') {
-          this.categoryData = this.originData;
+          this.useCategoryData = this.originData;
         } else {
-          this.findList(category);
+          this.findCategoryList(category);
         }
 
         this.reset();
@@ -153,7 +150,7 @@ export default class List {
   }
 
   addMoreEvt() {
-    const $btnMore = this.btnMore.target;
+    const $btnMore = this.usePaging.target;
 
     $btnMore.addEventListener('click', (e) => {
       this.addList();
@@ -162,9 +159,8 @@ export default class List {
 
   init() {
     this.initList();
-    this.isInit = true;
     this.addResizeEvt();
-    if (this.category.id) this.addCategoryEvt();
-    if (this.btnMore.id) this.addMoreEvt();
+    if (this.useCategory.id) this.addCategoryEvt();
+    if (this.usePaging.id) this.addMoreEvt();
   }
 }

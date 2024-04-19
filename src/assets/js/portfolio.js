@@ -7,11 +7,13 @@ const portfolioList = new List({
   data: dataList.result,
   id: 'portfolioList',
   renderHtml(data) {
+    const imgVer = {};
+
     return `<li class="list__item">
       <a href="./detail/?id=${data.id}" class="list__link">
         <div class="img-box">
-          <img src="../assets/images/portfolio_thumb_${data.id}_pc.jpg" alt="" class="m-hide">
-          <img src="../assets/images/portfolio_thumb_${data.id}_mo.jpg" alt="" class="m-show">
+          <img src="../assets/images/portfolio_thumb_${data.id}_pc${imgVer[data.id]?.pc ? imgVer[data.id].pc : ''}.jpg" alt="" class="m-hide">
+          <img src="../assets/images/portfolio_thumb_${data.id}_mo${imgVer[data.id]?.mo ? imgVer[data.id].mo : ''}.jpg" alt="" class="m-show">
         </div>
         <div class="list__text">
           <p class="list__title">${data.title}</p>
@@ -20,11 +22,11 @@ const portfolioList = new List({
       </a>
     </li>`;
   },
-  category: {
+  useCategory: {
     id: 'portfolioTab',
     default: 'all',
   },
-  btnMore: {
+  usePaging: {
     id: 'btnMore',
     increase: 6,
   },

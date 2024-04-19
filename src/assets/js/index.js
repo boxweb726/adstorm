@@ -3,23 +3,17 @@ import 'swiper/css/bundle';
 import dataList from './data.json';
 import List from './module/List';
 
-function slideReset(el) {
-  const $active = el.querySelectorAll('.active');
-  Array.from($active).forEach((item) => {
-    item.classList.remove('active');
-  });
-}
-
 const portfolioList = new List({
   data: dataList.result,
   id: 'portfolioList',
   renderHtml(data) {
     const { category } = data;
+    const imgVer = {};
 
     return `<div class="swiper-slide portfolio-swiper__item">
       <a href="/portfolio/detail/?id=${data.id}" class="img-box">
-        <img src="./assets/images/main_portfolio_swiper_${data.id}_pc.jpg" alt="" class="m-hide">
-        <img src="./assets/images/main_portfolio_swiper_${data.id}_mo.jpg" alt="" class="m-show">
+        <img src="./assets/images/main_thumb_${data.id}_pc${imgVer[data.id]?.pc ? imgVer[data.id].pc : ''}.jpg" alt="" class="m-hide">
+        <img src="./assets/images/main_thumb_${data.id}_mo${imgVer[data.id]?.mo ? imgVer[data.id].mo : ''}.jpg" alt="" class="m-show">
       </a>
 
       <!-- 슬라이드 내 텍스트 -->
@@ -44,6 +38,13 @@ const portfolioList = new List({
   },
 });
 
+function slideReset(el) {
+  const $active = el.querySelectorAll('.active');
+  Array.from($active).forEach((item) => {
+    item.classList.remove('active');
+  });
+}
+
 // main 포트폴리오 영역 스와이퍼
 const swiper = new Swiper('#mainPortfolio', {
   slidesPerView: 1,
@@ -51,8 +52,7 @@ const swiper = new Swiper('#mainPortfolio', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesOffsetBefore: 0,
-  centeredSlides: true,
+  // centeredSlides: true,
   // observer: true,
   on: {
     init() {
@@ -64,23 +64,13 @@ const swiper = new Swiper('#mainPortfolio', {
       const $slides = this.slides;
 
       slideReset(this.el);
-
-      // if (this.isEnd) {
-      //   console.log('its end');
-      //   $slides[$slides.length - 1].classList.add('active');
-      // } else {
-      //   $slides[this.snapIndex].classList.add('active');
-      // }
-
       $slides[this.snapIndex].classList.add('active');
     },
     // transitionEnd() {
     //   const $slides = this.slides;
-    //   console.log(this.isEnd);
 
     //   if (this.isEnd) {
     //     slideReset(this.el);
-    //     console.log('its end');
     //     $slides[$slides.length - 1].classList.add('active');
     //   }
     // },
