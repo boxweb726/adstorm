@@ -3,6 +3,13 @@ import 'swiper/css/bundle';
 import dataList from './data.json';
 import List from './module/List';
 
+function slideReset(el) {
+  const $active = el.querySelectorAll('.active');
+  Array.from($active).forEach((item) => {
+    item.classList.remove('active');
+  });
+}
+
 const portfolioList = new List({
   data: dataList.result,
   id: 'portfolioList',
@@ -39,9 +46,43 @@ const portfolioList = new List({
 
 // main 포트폴리오 영역 스와이퍼
 const swiper = new Swiper('#mainPortfolio', {
-  slidesPerView: 'auto',
+  slidesPerView: 1,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  slidesOffsetBefore: 0,
+  centeredSlides: true,
+  // observer: true,
+  on: {
+    init() {
+      const $slides = this.slides;
+
+      $slides[0].classList.add('active');
+    },
+    slideChangeTransitionStart() {
+      const $slides = this.slides;
+
+      slideReset(this.el);
+
+      // if (this.isEnd) {
+      //   console.log('its end');
+      //   $slides[$slides.length - 1].classList.add('active');
+      // } else {
+      //   $slides[this.snapIndex].classList.add('active');
+      // }
+
+      $slides[this.snapIndex].classList.add('active');
+    },
+    // transitionEnd() {
+    //   const $slides = this.slides;
+    //   console.log(this.isEnd);
+
+    //   if (this.isEnd) {
+    //     slideReset(this.el);
+    //     console.log('its end');
+    //     $slides[$slides.length - 1].classList.add('active');
+    //   }
+    // },
   },
 });
