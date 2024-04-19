@@ -57,7 +57,7 @@
   /* portfolio start */
   .page-sub--portfolio {
     letter-spacing: 0.24em;
-    @include vw-max(margin-bottom, 71);
+    @include vw-max(margin-bottom, 74);
     @include vw-max(font-size, 28);
 
     .sub-arrow {
@@ -259,7 +259,7 @@
         display: block;
         content: '';
         position: absolute;
-        top: 44%;
+        top: 44.5%;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 50%;
@@ -298,7 +298,7 @@
     .page-title {
       position: relative;
       letter-spacing: 0;
-      @include vw-mo(margin, 0 0 72 0);
+      @include vw-mo(margin, 0 0 55 0);
       @include vw-mo(font-size, 95);
       @include vw-mo(line-height, 112);
     }
@@ -327,22 +327,24 @@
 
     /* portfolio start */
     .page-sub--portfolio {
-      @include vw-mo(margin-bottom, 74);
+      @include vw-mo(margin-bottom, 72);
       @include vw-mo(font-size, 40);
       @include vw-mo(letter-spacing, 10);
 
       .sub-arrow::after {
         transform: rotate(45deg);
+        border-top: 3px solid $color-red;
+        border-right: 3px solid $color-red;  
         @include vw-mo(left, 23);
-        @include vw-mo(top, 19);
-        @include vw-mo(width, 19);
+        @include vw-mo(top, 13);
+        @include vw-mo(width, 20);
         @include vw-mo(height, 19);
       }
     }
 
     /* 포트폴리오 스와이퍼 구간 */
     .portfolio-swiper {
-      @include vw-mo(padding, 0 0 428 0);
+      @include vw-mo(padding, 0 0 418 0);
 
       &__item {
         @include vw-mo(width, 516);
@@ -405,23 +407,25 @@
       }
 
       &__text {
+        letter-spacing: 0;
         @include vw-mo(font-size, 59);
         @include vw-mo(line-height, 90);
-        @include vw-mo(margin-bottom, 28);
+        @include vw-mo(margin-bottom, 24);
       }
     
       &__desc {
         @include vw-mo(font-size, 41);
-        @include vw-mo(line-height, 53);
-        @include vw-mo(margin-bottom, 34);
-        @include vw-mo(letter-spacing, -2);
+        @include vw-mo(line-height, 57);
+        @include vw-mo(margin-bottom, 27);
+        @include vw-mo(letter-spacing, -2.3);
       }
     
       &__info {
         color: $color-gray;
         @include vw-mo(font-size, 36);
         @include vw-mo(line-height, 29);
-        @include vw-mo(margin-bottom, 99);
+        @include vw-mo(letter-spacing, -1);
+        @include vw-mo(margin-bottom, 101);
       }
   
       &__ani {

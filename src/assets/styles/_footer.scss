@@ -57,6 +57,7 @@
       &__tel {
         @include vw-mo(font-size, 25);
         @include vw-mo(line-height, 18);
+        @include vw-mo(letter-spacing, -0.4);
       }
     }
   }
