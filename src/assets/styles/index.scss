@@ -81,18 +81,17 @@
   /* 포트폴리오 스와이퍼 구간 */
   .portfolio-swiper {
     position: relative;
-    width: 100%;
-    height: 100%;
     overflow: visible;
+    height: 100%;
+    @include vw-max(width, 505);
+    @include vw-max(margin, 0 0 30 0);
 
     &__list {
       width: auto;
-      @include vw-max(margin-bottom, 30);
     }
 
     &__item {
       @include vw-max(width, 505);
-      @include vw-max(height, 600);
       
       &:not(:last-child) {
         @include vw-max(margin-right, 40);
@@ -103,8 +102,10 @@
           opacity: .5;
           cursor: pointer;
         }
-
-        &::after {
+      }
+      
+      .img-box {
+        &:hover::after {
           content: 'View';
           display: flex;
           justify-content: center;
@@ -114,6 +115,7 @@
           transform: translateX(-50%) translateY(-50%);
           border-radius: 50%;
           background-color: $color-red;
+          color: $color-white;
           align-items: center;
           @include vw-max(width, 160);
           @include vw-max(height, 161);
@@ -124,6 +126,7 @@
 
     &__txt {
       display: none;
+      @include vw-mo(padding-top, 60);
 
       .fadeInUp {
         &--01 {
@@ -345,18 +348,22 @@
 
     /* 포트폴리오 스와이퍼 구간 */
     .portfolio-swiper {
-      @include vw-mo(padding, 0 0 418 0);
+      margin: 0;
+      @include vw-mo(width, 516);
 
+      &__list {
+        @include vw-mo(width, 516);
+      }
+      
       &__item {
         @include vw-mo(width, 516);
-        @include vw-mo(height, 640);
         
         &:not(:last-child) {
           @include vw-mo(margin-right, 24);
         }
 
-        &:hover {
-          &::after {
+        .img-box {
+          &:hover::after {
             @include vw-mo(width, 160);
             @include vw-mo(height, 161);
             @include vw-mo(font-size, 26);
@@ -383,10 +390,8 @@
       .active {
         .portfolio-swiper__txt {
           display: block;
-          position: relative;
-          left: 0;
+          position: static;
           text-align: left;
-          @include vw-mo(top, 60);
           @include vw-mo(width, 516);
           @include vw-mo(margin, 0 15);
         }
