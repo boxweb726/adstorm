@@ -244,6 +244,7 @@
       color: $color-gray;
       @include vw-max(font-size, 24);
       @include vw-max(line-height, 29);
+      @include vw-max(letter-spacing, -0.2);
       @include vw-max(margin-bottom, 54);
     }
   
