@@ -12,6 +12,7 @@
     &__sub {
       font-weight: 600;
       letter-spacing: -.01em;
+      font-family: $en;
       @include vw-max(font-size, 130);
       @include vw-max(line-height, 135);
     }
@@ -22,13 +23,13 @@
       letter-spacing: -.025em;
       opacity: .9;
       @include vw-max(left, 735);
-      @include vw-max(top, 475);
+      @include vw-max(top, 465);
       @include vw-max(font-size, 22);
       @include vw-max(line-height, 38);
     }
 
     &__desc + .page__desc {
-      @include vw-max(top, 610);
+      @include vw-max(top, 600);
     }
   }
 
