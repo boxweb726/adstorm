@@ -3,16 +3,6 @@
 @import './footer';
 @import './contact';
 
-
-/* 시안 비교용 사진 */
-.compare-img {
-  opacity: 0.5;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
 .bs-home {
   overflow: hidden;
 
@@ -132,42 +122,6 @@
       }
     }
 
-    .swiper-slide-active {
-      @include vw-max(margin-right, 230);
-
-      .portfolio-swiper__txt {
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        @include vw-max(width, 255);
-        @include vw-max(right, -190);
-        @include vw-max(top, 308);
-      }
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      position: absolute;
-      @include vw-max(top, 652);
-      @include vw-max(width, 88);
-      @include vw-max(height, 88);
-
-      &:after {
-        display: none;
-      }
-    }
-
-    .swiper-button-prev {
-      @include vw-max(left, 1036);
-      background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
-    }
-
-    .swiper-button-next {
-      @include vw-max(right, 0);
-      background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
-    }
-
     &__txt {
       display: none;
 
@@ -215,6 +169,39 @@
 
       &--typea {
         font-weight: bold;
+      }
+    }
+
+    &__navi {
+      &:after {
+        display: none;
+      }
+      position: absolute;
+      @include vw-max(top, 652);
+      @include vw-max(width, 88);
+      @include vw-max(height, 88);
+
+      &--prev {
+        @include vw-max(left, 1036);
+        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
+      }
+      &--next {
+        @include vw-max(right, 0);
+        background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
+      }
+    }
+
+    .swiper-slide-active {
+      @include vw-max(margin-right, 230);
+
+      .portfolio-swiper__txt {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        @include vw-max(width, 255);
+        @include vw-max(right, -190);
+        @include vw-max(top, 308);
       }
     }
   }
@@ -370,18 +357,6 @@
         }
       }
 
-      .swiper-slide-active {
-        .portfolio-swiper__txt {
-          display: block;
-          position: relative;
-          left: 0;
-          @include vw-mo(top, 60);
-          @include vw-mo(width, 516);
-          @include vw-mo(margin, 0 15);
-          text-align: left;
-        }
-      }
-
       &__title {
         @include vw-mo(margin-bottom, 36);
         @include vw-mo(font-size, 60);
@@ -395,6 +370,18 @@
 
         .kr {
           @include vw-mo(font-size, 40);
+        }
+      }
+
+      .swiper-slide-active {
+        .portfolio-swiper__txt {
+          display: block;
+          position: relative;
+          left: 0;
+          @include vw-mo(top, 60);
+          @include vw-mo(width, 516);
+          @include vw-mo(margin, 0 15);
+          text-align: left;
         }
       }
     }
