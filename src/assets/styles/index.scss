@@ -100,33 +100,38 @@
       .img-box {
         &:hover {
           img {
-            opacity: .5;
+            opacity: .3;
             transition: .3s;
           }
 
           &::after {
-            content: 'View';
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            border-radius: 50%;
-            background-color: $color-red;
-            color: $color-white;
-            align-items: center;
-            @include vw-max(width, 160);
-            @include vw-max(height, 161);
-            @include vw-max(font-size, 26);
+            opacity: 1;
           }
+        }
+
+        &::after {
+          content: 'View';
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          border-radius: 50%;
+          background-color: $color-red;
+          color: $color-white;
+          align-items: center;
+          opacity: 0;
+          transition: all .2s ease-in;
+          @include vw-max(width, 160);
+          @include vw-max(height, 161);
+          @include vw-max(font-size, 26);
         }
       }
     }
 
     &__txt {
       display: none;
-      // @include vw-max(padding-top, 60);
 
       .fadeInUp {
         &--01 {
@@ -367,15 +372,15 @@
 
           &:hover {
             img {
-              opacity: .5;
+              opacity: .3;
               transition: .3s;
             }
+          }
 
-            &::after {
-              @include vw-mo(width, 160);
-              @include vw-mo(height, 161);
-              @include vw-mo(font-size, 26);
-            }
+          &::after {
+            @include vw-mo(width, 160);
+            @include vw-mo(height, 161);
+            @include vw-mo(font-size, 26);
           }
         }
       }
