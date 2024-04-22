@@ -178,6 +178,7 @@
 
       &--typea {
         font-weight: bold;
+        @include vw-max(margin-right, 3);
       }
     }
 
@@ -399,6 +400,10 @@
 
         .kr {
           @include vw-mo(font-size, 40);
+        }
+
+        &--typea {
+          @include vw-mo(margin-right, 5);
         }
       }
 
