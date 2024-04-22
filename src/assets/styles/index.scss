@@ -97,29 +97,29 @@
         @include vw-max(margin-right, 40);
       }
 
-      &:hover {
-        img {
-          opacity: .5;
-          cursor: pointer;
-        }
-      }
-      
       .img-box {
-        &:hover::after {
-          content: 'View';
-          display: flex;
-          justify-content: center;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translateX(-50%) translateY(-50%);
-          border-radius: 50%;
-          background-color: $color-red;
-          color: $color-white;
-          align-items: center;
-          @include vw-max(width, 160);
-          @include vw-max(height, 161);
-          @include vw-max(font-size, 26);
+        &:hover {
+          img {
+            opacity: .5;
+            transition: .3s;
+          }
+
+          &::after {
+            content: 'View';
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 50%;
+            background-color: $color-red;
+            color: $color-white;
+            align-items: center;
+            @include vw-max(width, 160);
+            @include vw-max(height, 161);
+            @include vw-max(font-size, 26);
+          }
         }
       }
     }
@@ -365,10 +365,17 @@
         .img-box {
           @include vw-mo(margin-bottom, 60);
 
-          &:hover::after {
-            @include vw-mo(width, 160);
-            @include vw-mo(height, 161);
-            @include vw-mo(font-size, 26);
+          &:hover {
+            img {
+              opacity: .5;
+              transition: .3s;
+            }
+
+            &::after {
+              @include vw-mo(width, 160);
+              @include vw-mo(height, 161);
+              @include vw-mo(font-size, 26);
+            }
           }
         }
       }
