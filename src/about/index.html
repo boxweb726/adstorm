@@ -14,10 +14,12 @@
       {{> header }}
       <!-- header.html -->
       <main>
-        <section>
+        <section class="js-scroll">
           <div class="inner-1240">
             <div class="page pc-pt-95 mo-pt-70">
-              <h2 class="page-title color-red">Hello!</h2>
+              <h2 class="page-title color-red scroll-wrapper">
+                <span class="scroll-inner scroll-inner--step01">Hello!</span>
+              </h2>
               <p class="page__sub">We are <br class="m-show">Bstones.</p>
               <p class="page__desc">2007년 설립된 비스톤스는 <br>기획, 디자인, 개발/퍼블리싱 사업부를 중심으로 <br>구성된 디지털 콘텐츠 에이전시입니다.</p>
               <p class="page__desc">2022년, 비스톤스는 크리에이티브에 대한 열정을 <br>가진 100여 명의 스텝과 함께 하고 있습니다.</p>
@@ -31,7 +33,7 @@
             <h3 class="page-sub pc-pb-70 mo-pb-70">What we do</h3>
 
             <ul class="about pc-pb-290 mo-pb-155">
-              <li class="about__item about__item--odd">
+              <li class="about__item about__item--odd js-scroll">
                 <div class="img-box about__img">
                   <img src="/assets/images/about_img01_pc.jpg" alt="" class="m-hide">
                   <img src="/assets/images/about_img01_mo.jpg" alt="" class="m-show">
@@ -42,7 +44,7 @@
                 </div>
               </li>
   
-              <li class="about__item">
+              <li class="about__item js-scroll">
                 <div class="img-box about__img">
                   <img src="/assets/images/about_img02_pc.jpg" alt="" class="m-hide">
                   <img src="/assets/images/about_img02_mo.jpg" alt="" class="m-show">
@@ -91,6 +93,6 @@
       <!-- footer.html -->
     </div>
 
-    <!-- <script type="module" src="../js/about.js"></script> -->
+    <script type="module" src="../assets/js/about.js"></script>
   </body>
 </html>
