@@ -10,7 +10,7 @@
       letter-spacing: -.035em;
       @include vw-max(margin-left, -5);
       @include vw-max(font-size, 110);
-      @include vw-max(line-height, 100);
+      @include vw-max(line-height, 135);
 
       .bespoke {
         display: block;
@@ -88,7 +88,7 @@
       &__title {
         @include vw-mo(margin-left, 0);
         @include vw-mo(font-size, 56);
-        @include vw-mo(line-height, 50);
+        @include vw-mo(line-height, 70);
   
         .bespoke {
           @include vw-mo(font-size, 96);
