@@ -52,27 +52,29 @@ const swiper = new Swiper('#mainPortfolio', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  observer: true,
+  observeParents: true,
+  resizeObserver: true,
   // centeredSlides: true,
-  // observer: true,
-  on: {
-    init() {
-      const $slides = this.slides;
+  // on: {
+  //   init() {
+  //     const $slides = this.slides;
 
-      $slides[0].classList.add('active');
-    },
-    slideChangeTransitionStart() {
-      const $slides = this.slides;
+  //     $slides[0].classList.add('active');
+  //   },
+  //   slideChangeTransitionStart() {
+  //     const $slides = this.slides;
 
-      slideReset(this.el);
-      $slides[this.snapIndex].classList.add('active');
-    },
-    // transitionEnd() {
-    //   const $slides = this.slides;
+  //     slideReset(this.el);
+  //     $slides[this.snapIndex].classList.add('active');
+  //   },
+  //   // transitionEnd() {
+  //   //   const $slides = this.slides;
 
-    //   if (this.isEnd) {
-    //     slideReset(this.el);
-    //     $slides[$slides.length - 1].classList.add('active');
-    //   }
-    // },
-  },
+  //   //   if (this.isEnd) {
+  //   //     slideReset(this.el);
+  //   //     $slides[$slides.length - 1].classList.add('active');
+  //   //   }
+  //   // },
+  // },
 });
