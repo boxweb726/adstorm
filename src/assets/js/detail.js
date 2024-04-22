@@ -14,7 +14,7 @@ const project = new Project({
             <dt>Date.</dt>
             <dd>${data.date}</dd>
             <dt>Brand.</dt>
-            <dd class="kr detail__info--space">${data.brand}</dd>
+            <dd class="detail__info--space">${data.brand}</dd>
             <dt>Type.</dt>
             <dd>${data.category}</dd>
           </dl>
