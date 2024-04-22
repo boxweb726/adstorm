@@ -199,7 +199,7 @@
       }
     }
 
-    .active {
+    .swiper-slide-active {
       @include vw-max(margin-right, 230);
 
       .portfolio-swiper__txt {
@@ -389,7 +389,7 @@
         }
       }
 
-      .active {
+      .swiper-slide-active {
         .portfolio-swiper__txt {
           display: block;
           position: static;
