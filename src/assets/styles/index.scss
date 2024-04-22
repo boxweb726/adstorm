@@ -123,6 +123,7 @@
           align-items: center;
           opacity: 0;
           transition: all .2s ease-in;
+          font-family: $en;
           @include vw-max(width, 160);
           @include vw-max(height, 161);
           @include vw-max(font-size, 26);
