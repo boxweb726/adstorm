@@ -2,9 +2,9 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite.js Vanilla Template</title>
+    <title>BSTONES CONTACT</title>
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="../assets/styles/contact.scss" />
   </head>
   <body>
@@ -14,24 +14,30 @@
       {{> header }}
       <!-- header.html -->
       <main>
-        <section>
+        <section class="js-scroll">
           <div class="inner-1240">
-            <h2 class="page-title en pc-pt-105 pc-pb-125 mo-pt-70 mo-pb-140">Contact.</h2>
+            <div class="pc-pt-105 pc-pb-125 mo-pt-70 mo-pb-140">
+              <h2 class="page-title en scroll-wrapper">
+                <span class="scroll-inner scroll-inner--up">Contact.</span>
+              </h2>
+            </div>
             
-            <ul class="info pc-pb-120 mo-pb-100">
-              <li class="info__division">
-                <strong class="info__sub pc-pb-30 mo-pb-20">Address</strong>
-                <span class="info__desc">서울시 강남구 강남대로 146길25, 1층 1호</span>
-              </li>
-              <li class="info__division">
-                <strong class="info__sub pc-pb-30 mo-pb-20">Mail</strong>
-                <span class="info__desc en"><a href="mailto:project@bstones.co.kr">project@bstones.co.kr</a></span>
-              </li>
-              <li class="info__division">
-                <strong class="info__sub pc-pb-30 mo-pb-20">Tel</strong>
-                <span class="info__desc en"><a href="tel:02-511-9160">02-511-9160</a></span>
-              </li>
-            </ul>
+            <div class="pc-pb-120 mo-pb-100 scroll-wrapper">
+              <ul class="info scroll-inner scroll-inner--up">
+                <li class="info__division">
+                  <strong class="info__sub pc-pb-30 mo-pb-20">Address</strong>
+                  <span class="info__desc">서울시 강남구 강남대로 146길25, 1층 1호</span>
+                </li>
+                <li class="info__division">
+                  <strong class="info__sub pc-pb-30 mo-pb-20">Mail</strong>
+                  <span class="info__desc en"><a href="mailto:project@bstones.co.kr">project@bstones.co.kr</a></span>
+                </li>
+                <li class="info__division">
+                  <strong class="info__sub pc-pb-30 mo-pb-20">Tel</strong>
+                  <span class="info__desc en"><a href="tel:02-511-9160">02-511-9160</a></span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <section class="width-full map">
@@ -41,6 +47,8 @@
       {{> footer }}
       <!-- footer.html -->
     </div>
+
     <!-- <script type="module" src="../js/index.js" defer></script> -->
+    <script type="module" src="../assets/js/contact.js"></script>
   </body>
 </html>
