@@ -2,14 +2,6 @@ import dataList from './data.json';
 import Project from './module/Project';
 import Scroll from './module/Scroll';
 
-const $scrollBox = document.querySelectorAll('.js-scroll');
-
-Array.from($scrollBox).forEach((item) => {
-  const scroll = new Scroll({
-    target: item,
-  });
-});
-
 const project = new Project({
   data: dataList.result,
   target: 'main',
@@ -54,4 +46,12 @@ const project = new Project({
     </div>
   </section>`;
   },
+});
+
+const $scrollBox = document.querySelectorAll('.js-scroll');
+
+Array.from($scrollBox).forEach((item) => {
+  const scroll = new Scroll({
+    target: item,
+  });
 });
