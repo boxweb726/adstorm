@@ -17,17 +17,19 @@ const project = new Project({
     return `<section class="width-full">
     <div class="detail pc-pb-160 mo-pb-120">
       <div class="inner-1240">
-        <div class="detail__txt-box pc-pb-60 mo-pb-55">
-          <h2 class="detail__title pc-pt-115 pc-pb-120 mo-pt-90 mo-pb-105">${data.title}</h2>
-          <dl class="detail__info">
-            <dt>Date.</dt>
-            <dd>${data.date}</dd>
-            <dt>Brand.</dt>
-            <dd class="detail__info--space">${data.brand}</dd>
-            <dt>Type.</dt>
-            <dd>${data.category}</dd>
-          </dl>
-      </div>
+        <div class="js-scroll">
+          <div class="detail__txt-box pc-pb-60 mo-pb-55 scroll-wrapper">
+            <h2 class="detail__title pc-pt-115 pc-pb-120 mo-pt-90 mo-pb-105 scroll-inner scroll-inner--up">${data.title}</h2>
+            <dl class="detail__info scroll-inner scroll-inner--step01 scroll-inner--up">
+              <dt>Date.</dt>
+              <dd>${data.date}</dd>
+              <dt>Brand.</dt>
+              <dd class="detail__info--space">${data.brand}</dd>
+              <dt>Type.</dt>
+              <dd>${data.category}</dd>
+            </dl>
+          </div>
+        </div>
       </div>
       <!--// 상단 타이틀 -->
   
