@@ -8,8 +8,6 @@
   .scroll-inner {
     display: block;
     position: relative;
-    transform: translateY(100%);
-    transition: transform 0.5s ease-in-out;
 
     @for $i from 1 through 5 {
       &--step0#{$i} {
@@ -17,11 +15,25 @@
       }
     }
 
+    &--up {
+      transform: translateY(100%);
+      transition: transform 0.5s ease-in-out;
+    }
+    &--border {
+
+    }
+    &--fade {
+
+    }
+
   }
 
   &.js-active {
     .scroll-inner {
-      transform: none;
+
+      &--up {
+        transform: none;
+      }
     }
   }
 }
