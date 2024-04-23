@@ -97,10 +97,11 @@
       
   
       &__title {
-        line-height: 1;
         color: $color-white;  
         font-weight: 700;
-        @include vw-max(font-size, 42); 
+        text-align: center;
+        @include vw-max(font-size, 42);
+        @include vw-max(font-size, 50); 
       }
       
       &__data {
