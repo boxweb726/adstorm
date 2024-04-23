@@ -2,6 +2,15 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import dataList from './data.json';
 import List from './module/List';
+import Scroll from './module/Scroll';
+
+const $scrollBox = document.querySelectorAll('.js-scroll');
+
+Array.from($scrollBox).forEach((item) => {
+  const scroll = new Scroll({
+    target: item,
+  });
+});
 
 const portfolioList = new List({
   data: dataList.result,
