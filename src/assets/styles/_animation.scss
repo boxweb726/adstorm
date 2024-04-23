@@ -1,5 +1,6 @@
 .js-scroll {
   .scroll-wrapper {
+    display: block;
     position: relative;
     overflow: hidden;
   }
@@ -8,11 +9,11 @@
     display: block;
     position: relative;
     transform: translateY(100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease-in-out;
 
     @for $i from 1 through 5 {
       &--step0#{$i} {
-        transition-delay: $i * 0.3s;
+        transition-delay: $i * 0.4s;
       }
     }
 
@@ -20,7 +21,7 @@
 
   &.js-active {
     .scroll-inner {
-      transform: translateY(0);
+      transform: none;
     }
   }
 }

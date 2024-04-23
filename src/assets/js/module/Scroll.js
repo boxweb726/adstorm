@@ -32,6 +32,6 @@ export default class Scroll {
     this.reset();
     this.addClassActive();
     this.addScrollEvt();
-    // this.addResizeEvt();
+    this.addResizeEvt();
   }
 }
