@@ -56,10 +56,6 @@
       transition: all .5s;
       @include vw-max(font-size, 22);
     }
-
-    &:last-child {
-      border-bottom: 1px solid #60605f;
-    }
   }
 
   .btn-plus--recruit {
