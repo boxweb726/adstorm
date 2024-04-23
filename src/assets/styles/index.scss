@@ -15,7 +15,7 @@
     @include vw-max(font-size, 120);
     @include vw-max(line-height, 136.7);
     @include vw-max(letter-spacing, -1);
-    
+
     &--highlight {
       color: $color-red;
     }
@@ -93,7 +93,7 @@
 
     &__item {
       @include vw-max(width, 505);
-      
+
       &:not(:last-child) {
         @include vw-max(margin-right, 40);
       }
@@ -139,25 +139,31 @@
         &--01 {
           animation: fadeInUp 0.4s ease backwards;
         }
+
         &--02 {
           animation: fadeInUp 0.5s ease backwards;
         }
+
         &--03 {
           animation: fadeInUp 0.6s ease backwards;
         }
+
         &--04 {
           animation: fadeInUp 0.7s ease backwards;
         }
       }
 
-        @keyframes fadeInUp {
-          0% {
-            transform: translate(0px, 100px); opacity: 0;
-          }
-          100% {
-            transform: translate(0px, 0); opacity: 1;
-          }
+      @keyframes fadeInUp {
+        0% {
+          transform: translate(0px, 100px);
+          opacity: 0;
         }
+
+        100% {
+          transform: translate(0px, 0);
+          opacity: 1;
+        }
+      }
     }
 
     &__title {
@@ -197,6 +203,7 @@
         background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
         @include vw-max(right, 456);
       }
+
       &--next {
         background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
         @include vw-max(right, 340);
@@ -215,7 +222,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        text-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+        text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 
         @include vw-max(width, 310);
         @include vw-max(right, -190);
@@ -223,6 +230,7 @@
       }
     }
   }
+
   /* portfolio end */
 
   /* recruit start */
@@ -244,13 +252,13 @@
       @include vw-max(margin-bottom, 21);
       @include vw-max(letter-spacing, -1);
     }
-  
+
     &__desc {
       @include vw-max(font-size, 21);
       @include vw-max(line-height, 36);
       @include vw-max(margin-bottom, 28);
     }
-  
+
     &__info {
       color: $color-gray;
       @include vw-max(font-size, 24);
@@ -258,7 +266,7 @@
       @include vw-max(letter-spacing, -0.2);
       @include vw-max(margin-bottom, 54);
     }
-  
+
     &__ani {
       position: absolute;
       animation: rotate_image 10s linear infinite;
@@ -301,6 +309,7 @@
     @include vw-max(letter-spacing, -1);
     @include vw-max(border-radius, 32);
   }
+
   /* recruit end */
 }
 
@@ -346,7 +355,7 @@
       .sub-arrow::after {
         transform: rotate(45deg);
         border-top: 3px solid $color-red;
-        border-right: 3px solid $color-red;  
+        border-right: 3px solid $color-red;
         @include vw-mo(left, 23);
         @include vw-mo(top, 13);
         @include vw-mo(width, 20);
@@ -362,10 +371,10 @@
       &__list {
         @include vw-mo(width, 516);
       }
-      
+
       &__item {
         @include vw-mo(width, 516);
-        
+
         &:not(:last-child) {
           @include vw-mo(margin-right, 24);
         }
@@ -418,6 +427,7 @@
         }
       }
     }
+
     /* portfolio end */
 
     /* recruit start */
@@ -439,14 +449,14 @@
         @include vw-mo(line-height, 90);
         @include vw-mo(margin-bottom, 24);
       }
-    
+
       &__desc {
         @include vw-mo(font-size, 41);
         @include vw-mo(line-height, 57);
         @include vw-mo(margin-bottom, 27);
         @include vw-mo(letter-spacing, -2.3);
       }
-    
+
       &__info {
         color: $color-gray;
         @include vw-mo(font-size, 36);
@@ -454,7 +464,7 @@
         @include vw-mo(letter-spacing, -1);
         @include vw-mo(margin-bottom, 101);
       }
-  
+
       &__ani {
         position: relative;
         top: 0;
@@ -478,6 +488,7 @@
       @include vw-mo(letter-spacing, -1);
       @include vw-mo(border-radius, 50);
     }
+
     /* recruit end */
   }
 }
