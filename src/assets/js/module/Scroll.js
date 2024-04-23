@@ -29,7 +29,7 @@ export default class Scroll {
   init() {
     this.reset();
     this.addScrollEvt();
-    this.addClassActive();
     this.addResizeEvt();
+    this.addClassActive();
   }
 }
