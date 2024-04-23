@@ -11,7 +11,7 @@
 
     @for $i from 1 through 5 {
       &--step0#{$i} {
-        transition-delay: $i * 0.4s;
+        transition-delay: $i * 0.4s !important;
       }
     }
 
