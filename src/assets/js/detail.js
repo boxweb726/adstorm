@@ -31,10 +31,10 @@ const project = new Project({
           <img src="/assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show">
         </div>
         <!-- overview -->
-        <div class="inner-1240">
-          <div class="detail__overview pc-pt-120 pc-pb-130 mo-pt-100 mo-pb-90">
-            <h3 class="detail__sub pc-pb-45 mo-pb-50">OVERVIEW</h3>
-            <p class="detail_desc">${data.overview}</p>
+        <div class="inner-1240 js-scroll">
+          <div class="detail__overview pc-pt-120 pc-pb-130 mo-pt-100 mo-pb-90 scroll-wrapper">
+            <h3 class="detail__sub pc-pb-45 mo-pb-50 scroll-inner scroll-inner--up">OVERVIEW</h3>
+            <p class="detail_desc scroll-inner scroll-inner--up">${data.overview}</p>
           </div>
         </div>
         <!--// overview -->
