@@ -8,6 +8,7 @@
   .scroll-inner {
     display: block;
     position: relative;
+    opacity: 1;
 
     @for $i from 1 through 5 {
       &--step0#{$i} {
@@ -20,12 +21,29 @@
       transition: transform 0.5s ease-in-out;
     }
     &--border {
-
+      transform: translateY(100%);
+      transition: transform 0.5s ease-in-out;
     }
+    
+  }
+  .scroll-opacity {
+    opacity: 0;
     &--fade {
-
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+      transition-delay: .4s;
     }
+  }
 
+  .scroll-top {
+    overflow: hidden;
+    &--border {
+      &::before {
+        transform: translateX(-100%);
+        transition: transform .5s ease-in-out;
+      }
+    }
   }
 
   &.js-active {
@@ -33,6 +51,19 @@
 
       &--up {
         transform: none;
+      }
+    }
+    .scroll-opacity {
+      &--fade {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .scroll-top { 
+      &--border {
+        &::before {
+          transform: translateX(0);
+        }
       }
     }
   }

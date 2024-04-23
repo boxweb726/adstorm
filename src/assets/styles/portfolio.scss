@@ -1,4 +1,6 @@
 @import './common';
+@import './animation';
+
 .bs-portfolio {
   .page-title {
     @include vw-max(text-indent, -10);
