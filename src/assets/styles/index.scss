@@ -8,6 +8,10 @@
   overflow: hidden;
 
   /* main start */
+  .txt-box {
+    @include vw-max(margin-bottom, 300);
+  }
+
   .page-title {
     position: relative;
     word-break: break-all;
@@ -235,7 +239,9 @@
 
   /* recruit start */
   .recruit {
-    position: relative;
+    .inner-1240 {
+      position: relative;
+    }
 
     &__sub {
       @include vw-max(margin-bottom, 51);
@@ -271,8 +277,8 @@
       position: absolute;
       animation: rotate_image 10s linear infinite;
       transform-origin: 50% 50%;
-      @include vw-max(top, 298);
-      @include vw-max(right, -2);
+      @include vw-max(top, 181);
+      @include vw-max(right, 0);
       @include vw-max(width, 234);
 
       &::after {
@@ -309,17 +315,19 @@
     @include vw-max(letter-spacing, -1);
     @include vw-max(border-radius, 32);
   }
-
   /* recruit end */
 }
 
 
 @media screen and (max-width: 768px) {
   .bs-home {
+    .txt-box {
+      @include vw-mo(margin-bottom, 55);
+    }
+
     .page-title {
       position: relative;
       letter-spacing: 0;
-      @include vw-mo(margin, 0 0 55 0);
       @include vw-mo(font-size, 95);
       @include vw-mo(line-height, 112);
     }
@@ -331,6 +339,7 @@
       @include vw-mo(left, 264);
       @include vw-mo(width, 360);
       @include vw-mo(height, 360);
+      @include vw-mo(margin-bottom, 80);
     }
 
     .intro-video {
@@ -488,7 +497,6 @@
       @include vw-mo(letter-spacing, -1);
       @include vw-mo(border-radius, 50);
     }
-
     /* recruit end */
   }
 }
