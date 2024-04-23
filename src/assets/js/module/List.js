@@ -80,7 +80,10 @@ export default class List {
       this.target.insertAdjacentHTML('beforeend', this.renderHtml(listArr[i]));
     }
 
-    if (this.usePaging.currentPage === this.usePaging.maxPage)
+    if (
+      this.usePaging.id &&
+      this.usePaging.currentPage === this.usePaging.maxPage
+    )
       this.usePaging.target.classList.add('blind');
 
     return result;
