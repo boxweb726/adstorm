@@ -76,16 +76,11 @@ section.width-full {
 .sec-top-line {
   // inner_1760 과 함께 사용
   // border-top: 1px solid #60605f;
-  position: relative;
-  &::before {
-    display: block;
-    position: absolute;
-    content: '';
     width: 100%;
     height: 1px;
     background-color: #60605f;
-  }
 }
+
 
 // 페이지 타이틀
 .page-title {
