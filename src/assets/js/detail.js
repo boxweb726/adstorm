@@ -12,7 +12,7 @@ const project = new Project({
         <div class="js-scroll">
           <div class="detail__txt-box pc-pb-60 mo-pb-55 scroll-wrapper">
             <h2 class="detail__title pc-pt-115 pc-pb-120 mo-pt-90 mo-pb-105 scroll-inner scroll-inner--up">${data.title}</h2>
-            <dl class="detail__info scroll-inner scroll-inner--step01 scroll-inner--up">
+            <dl class="detail__info scroll-inner scroll-inner--step02 scroll-inner--up">
               <dt>Date.</dt>
               <dd>${data.date}</dd>
               <dt>Brand.</dt>
