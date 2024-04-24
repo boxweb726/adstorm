@@ -6,14 +6,21 @@ export default class Scroll {
   }
 
   reset() {
-    this.offsetTop = this.target.offsetTop;
+    this.offsetTop = window.scrollY + this.target.getBoundingClientRect().top;
     this.buffer = window.innerHeight / 2;
   }
 
   addClassActive() {
-    if (window.scrollY > this.offsetTop - this.buffer) {
+    const scrollAmount = window.scrollY;
+
+    if (
+      this.offsetTop < this.buffer ||
+      (scrollAmount >= document.body.scrollHeight - window.innerHeight - 10 &&
+        document.body.scrollHeight <= this.offsetTop + this.buffer) ||
+      scrollAmount > this.offsetTop - this.buffer
+    ) {
       this.target.classList.add('js-active');
-      window.removeEventListener('scroll', this.handleScrollEvt);
+      // window.removeEventListener('scroll', this.handleScrollEvt);
     }
   }
 
