@@ -31,10 +31,9 @@
   }
 
   &.scroll-border {
-    position: absolute;
+    position: static;
     width: 0;
     height: 1px;
-    top: 0;
     background-color: #60605f;
     transition: width .7s linear;
 }

@@ -24,13 +24,11 @@ body {
 }
 
 section {
-  position: relative;
   margin: 0 auto;
   @include vw-max(max-width, 1760);
 }
 
 section.width-full {
-  position: relative;
   max-width: none;
   margin: 0 auto;
 }
