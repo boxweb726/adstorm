@@ -36,11 +36,11 @@
     }
 
     &__menu {
-      @include vw-max(font-size, 28);
-      @include vw-max(line-height, 43);
       font-weight: bold;
       color: #fff;
       text-transform: uppercase;
+      @include vw-max(font-size, 28);
+      @include vw-max(line-height, 43);
 
       &:hover {
         color: #f84525;
@@ -55,7 +55,6 @@
     @include vw-mo(padding-top, 155);
 
     .header {
-      position: relative;
       @include vw-mo(height, 155);
       @include vw-mo(padding, 0 48);
 
@@ -65,8 +64,8 @@
         position: fixed;
         left: 0;
         top: 0;
-        @include vw-mo(width, 624);
         z-index: 10;
+        @include vw-mo(width, 624);
       }
 
       &__logo {
@@ -75,57 +74,57 @@
         z-index: 15;
       }
 
-      .btn_menu {
+      &__open {
         position: absolute;
         display: block;
         @include vw-mo(top, 60);
-        right: 0;
+        @include vw-mo(right, 48);
         @include vw-mo(width, 40);
         @include vw-mo(height, 28);
-        cursor: pointer;
+
+        .bar {
+          display: block;
+          position: absolute;
+          width: 100%;
+          @include vw-mo(height, 5);
+          background: #fff;
+          transition: all 0.35s;
+
+          &:nth-child(1) {
+            top: 0;
+          }
+          &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:nth-child(3) {
+            bottom: 0;
+          }
+
+        }
+
+        &.on {
+          .bar {
+            &:nth-child(1) {
+              top: 50%;
+              transform: translateY(-50%) rotate(45deg);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              bottom: 50%;
+              transform: translateY(50%) rotate(-45deg);
+            }
+          }
+        }
     
         &.on {
           z-index: 15;
         }
       }
   
-      .btn_menu span {
-        display: block;
-        position: absolute;
-        width: 100%;
-        @include vw-mo(height, 5);
-        background: #fff;
-        transition: all 0.35s;
-      }
-  
-      .btn_menu span:nth-child(1) {
-        top: 0;
-      }
-  
-      .btn_menu span:nth-child(2) {
-        top: 50%;
-        transform: translateY(-50%);
-      }
-  
-      .btn_menu span:nth-child(3) {
-        bottom: 0;
-      }
-  
-      .btn_menu.on span:nth-child(1) {
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-      }
-  
-      .btn_menu.on span:nth-child(2) {
-        opacity: 0;
-      }
-  
-      .btn_menu.on span:nth-child(3) {
-        bottom: 50%;
-        transform: translateY(50%) rotate(-45deg);
-      }
-  
-      .menu {
+      &__nav {
         display: none;
         width: 100%;
         height: 100vh;
@@ -142,21 +141,15 @@
           top: 0;
         }
 
-        &__list {
-          display: flex;
-          flex-direction: column;
-          position: absolute;
-          @include vw-mo(top, 340);
-          @include vw-mo(left, 70);
-        }
-  
-        &__txt {
-          display: block;
-          text-transform: none;
-          @include vw-mo(font-size, 80);
-          @include vw-mo(line-height, 112);
-          @include vw-mo(letter-spacing, 2.5);
-        }
+        
+      }
+
+      &__menu {
+        display: block;
+        text-transform: none;
+        @include vw-mo(font-size, 80);
+        @include vw-mo(line-height, 112);
+        @include vw-mo(letter-spacing, 2.5);
       }
     }
   }

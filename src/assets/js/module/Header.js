@@ -21,6 +21,10 @@ export default class Header {
     });
   }
 
+  // addClickEvt() {
+
+  // }
+
   init() {
     this.addScrollEvt();
   }
