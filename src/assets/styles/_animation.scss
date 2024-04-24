@@ -30,18 +30,17 @@
       transform: translateY(10%);
       transition: transform 0.3s ease-in-out, opacity 0.7s ease-in; 
     }
-    &--border {
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: -100%;
-        transition: left .7s linear;
-        
-      }
-    }
+    
   }
+
+  &.scroll-border {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left .7s linear;
+}
 
 
   &.js-active {
