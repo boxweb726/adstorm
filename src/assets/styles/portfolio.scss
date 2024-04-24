@@ -104,14 +104,17 @@
         color: $color-white;  
         font-weight: 700;
         text-align: center;
+        word-break: keep-all;
         @include vw-max(font-size, 42);
         @include vw-max(font-size, 50); 
       }
       
       &__data {
-        line-height: 1;
+        line-height: 1.5;
         color: $color-white;  
         font-weight: 400;
+        text-align: center;
+        word-break: keep-all;
         @include vw-max(font-size, 26); 
       }
     }
