@@ -1,4 +1,7 @@
 import Scroll from './module/Scroll';
+import StickyHeader from './module/StickyHeader';
+
+const header = new StickyHeader();
 
 const $scrollBox = document.querySelectorAll('.js-scroll');
 

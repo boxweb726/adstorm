@@ -1,6 +1,9 @@
 import dataList from './data.json';
 import Project from './module/Project';
+import StickyHeader from './module/StickyHeader';
 import Scroll from './module/Scroll';
+
+const header = new StickyHeader();
 
 const project = new Project({
   data: dataList.result,
