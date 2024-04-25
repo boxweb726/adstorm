@@ -83,7 +83,8 @@
     position: relative;
     overflow: visible;
     height: 100%;
-    @include vw-max(width, 505);
+    // @include vw-max(width, 505);
+    @include vw-max(padding, 0 505 0 200);
     @include vw-max(margin, 0 0 30 0);
 
     &__list {
@@ -215,8 +216,15 @@
       }
     }
 
+    .swiper-slide-prev {
+      position: relative;
+      @include vw-max(left, -200);
+    }
+
     .swiper-slide-active {
-      @include vw-max(margin-right, 230);
+      // @include vw-max(margin-right, 230);
+      position: relative;
+      @include vw-max(left, -200);
 
       .portfolio-swiper__txt {
         position: absolute;

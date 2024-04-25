@@ -41,7 +41,7 @@ const portfolioList = new List({
 
 // main 포트폴리오 영역 스와이퍼
 const swiper = new Swiper('#mainPortfolio', {
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
