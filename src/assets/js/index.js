@@ -21,7 +21,7 @@ const portfolioList = new List({
       </a>
 
       <div class="portfolio-swiper__txt">
-        <p class="portfolio-swiper__title pc-mb-25 mo-mb-35 fade-in-up fade-in-up--01">${data.title.replace('<br>', '')}</p>
+        <p class="portfolio-swiper__title pc-mb-25 mo-mb-35 fade-in-up fade-in-up--01">${data.title}</p>
         <dl class="portfolio-swiper__desc en">
           <div class="portfolio-swiper__cont fade-in-up fade-in-up--02">
             <dt class="portfolio-swiper__info portfolio-swiper__info--typea">Date:</dt>
