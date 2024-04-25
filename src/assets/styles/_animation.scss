@@ -45,8 +45,15 @@
       background-color: #60605f;
       transition: width .7s linear;
     }
-}
 
+    @for $i from 1 through 5 {
+      &--step0#{$i} {
+        &::before {
+          transition-delay: $i * 0.3s !important;
+        }
+      }
+    }
+  }
 
   &.js-active {
     .scroll-inner {
