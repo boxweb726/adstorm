@@ -1,8 +1,11 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import dataList from './data.json';
+import StickyHeader from './module/StickyHeader';
 import List from './module/List';
 import Scroll from './module/Scroll';
+
+const header = new StickyHeader();
 
 const portfolioList = new List({
   data: dataList.result,

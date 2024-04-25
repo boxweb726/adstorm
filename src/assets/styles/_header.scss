@@ -12,15 +12,21 @@
     width: 100%;
     margin: 0 auto;
     background-color: $color-black;
+    transition: opacity 0.3s ease-in;
     @include vw-max(height, 200);
     @include vw-max(padding, 0 80 0 89);
-
-    &.fixed {
+    
+    &.js-fixed {
       position: fixed;
       top: 0; 
       left: 50%;
       transform: translateX(-50%);
+      opacity: 0;
       z-index: 50;
+    }
+
+    &.js-show {
+      opacity: 1;
     }
   
     &__logo {
