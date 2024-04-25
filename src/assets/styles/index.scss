@@ -25,7 +25,7 @@
     position: absolute;
     z-index: 1;
     @include vw-max(right, 308);
-    @include vw-max(top, 427);
+    @include vw-max(top, 270);
     @include vw-max(width, 360);
     @include vw-max(height, 360);
   }
@@ -167,7 +167,10 @@
 
     &__title {
       font-weight: bold;
+      overflow: hidden;
       text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 200px;
       @include vw-max(height, 122);
       @include vw-max(font-size, 42);
       @include vw-max(letter-spacing, -1);
@@ -186,8 +189,10 @@
 
       &--typeb {
         font-family: $kr;
+        overflow: hidden;
         text-overflow: ellipsis;
-        @include vw-max(width, 200);
+        white-space: nowrap;
+        width: 200px;
         @include vw-max(font-size, 28);
       }
     }
