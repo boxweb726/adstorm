@@ -2,10 +2,7 @@
 @import './animation';
 
 .bs-about {
-  .page {
-      position: relative;
-      @include vw-max(height, 885);
-  
+  .page {  
     .page-title.color-red {
       @include vw-max(margin-left, -10);
     }
@@ -19,18 +16,12 @@
     }
 
     &__desc {
-      position: absolute;
       font-weight: 300;
       letter-spacing: -.025em;
       opacity: .9;
       @include vw-max(left, 735);
-      @include vw-max(top, 465);
       @include vw-max(font-size, 22);
       @include vw-max(line-height, 38);
-    }
-
-    &__desc + .page__desc {
-      @include vw-max(top, 600);
     }
   }
 
@@ -172,7 +163,6 @@
   .bs-about {
     .page {
         @include vw-mo(width, 624);
-        @include vw-mo(height, 869);
     
       &__sub {
         @include vw-mo(font-size, 96);
@@ -181,13 +171,8 @@
   
       &__desc {
         @include vw-mo(left, 0);
-        @include vw-mo(top, 455);
         @include vw-mo(font-size, 32);
         @include vw-mo(line-height, 48);
-      }
-  
-      &__desc + .page__desc {
-        @include vw-mo(top, 620);
       }
     }
   
