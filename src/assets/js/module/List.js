@@ -101,8 +101,6 @@ export default class List {
       ? this.useCategoryData.slice(0, this.listLimit)
       : this.useCategoryData;
 
-    console.log(listArr);
-
     if (this.usePaging.id) {
       listArr = this.findPagingList();
       this.usePaging.target.classList.remove('blind');
