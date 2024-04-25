@@ -14,7 +14,7 @@ const project = new Project({
       <div class="inner-1240">
         <div class="js-scroll">
           <div class="detail__txt-box pc-pb-60 mo-pb-55 scroll-inner scroll-inner--fade">
-            <h2 class="detail__title pc-pt-115 pc-pb-120 mo-pt-90 mo-pb-105">${data.title}</h2>
+            <h2 class="detail__title pc-pt-95 pc-pb-105 mo-pt-90 mo-pb-105">${data.title}</h2>
             <dl class="detail__info scroll-inner scroll-inner--fade">
               <dt>Date.</dt>
               <dd>${data.date}</dd>
@@ -37,7 +37,7 @@ const project = new Project({
         </div>
         <!-- overview -->
         <div class="inner-1240 js-scroll">
-          <div class="detail__overview pc-pt-120 pc-pb-130 mo-pt-100 mo-pb-90 scroll-inner scroll-inner--fade">
+          <div class="detail__overview pc-pt-120 pc-pb-100 mo-pt-100 mo-pb-90 scroll-inner scroll-inner--fade">
             <h3 class="detail__sub pc-pb-45 mo-pb-50">OVERVIEW</h3>
             <p class="detail_desc">${data.overview}</p>
           </div>
