@@ -136,19 +136,19 @@
 
       .fade-in-up {
         &--01 {
-          animation: fade-in-up 0.1s ease backwards;
-        }
-
-        &--02 {
           animation: fade-in-up 0.4s ease backwards;
         }
 
+        &--02 {
+          animation: fade-in-up 0.6s ease backwards;
+        }
+
         &--03 {
-          animation: fade-in-up 0.5s ease backwards;
+          animation: fade-in-up 0.7s ease backwards;
         }
 
         &--04 {
-          animation: fade-in-up 0.6s ease backwards;
+          animation: fade-in-up 0.8s ease backwards;
         }
       }
 
@@ -169,7 +169,7 @@
       font-weight: bold;
       overflow: hidden;
       text-overflow: ellipsis;
-      word-break: break-word;
+      word-break: keep-all;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
