@@ -7,13 +7,14 @@
   }
 
   .tab {
-    & ul {
+    &__box {
       display: flex; 
       justify-content: space-between;
     }
     @include vw-max(margin-bottom, 40);
 
     &__item {
+      width: auto;
       @include vw-max(height, 50)
     }
     &__btn {
@@ -36,10 +37,6 @@
         color: $color-white;
       }
     }
-  }
-
-  .swiper-slide {
-    width: auto;
   }
 
   .list {
@@ -72,20 +69,6 @@
           transition: .3s top ease-in, .3s opacity ease-in;
         }
 
-        .list__text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          top: 100%;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          transition: .3s top ease-in;
-          @include vw-max(gap, 20);
-        }
-
         &:hover{
           &::after{
             top: 0;
@@ -96,10 +79,22 @@
             top: 0;          
           }
         }
+      }    
+  
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: .3s top ease-in;
+        @include vw-max(gap, 20);
       }
-  
-      
-  
+
       &__title {
         color: $color-white;  
         font-weight: 700;
@@ -135,7 +130,7 @@
       }
 
       .tab {
-        & ul {
+        &__box {
           justify-content: flex-start;
         }
         

@@ -3,9 +3,6 @@
 
 .bs-detail {
   .detail {
-    &__txt-box {    
-    }
-
     &__title {
       font-family: $kr;
       font-weight: 300;
@@ -57,10 +54,6 @@
       }
     }
 
-    &__img-box {}
-
-    &__overview {}
-
     &__sub {
       font-family: $en;
       font-weight: 500;
@@ -84,9 +77,6 @@
 @media all and (max-width:768px) {
   .bs-detail {
     .detail{
-      &__txt-box {    
-      }
-  
       &__title {
         @include vw-mo(margin-left, 0);
         @include vw-mo(font-size, 56);
@@ -114,11 +104,7 @@
           @include vw-mo(line-height, 60);
         }
       }
-  
-      &__img-box {}
-  
-      &__overview {}
-  
+      
       &__sub {
         @include vw-mo(font-size, 60);
         @include vw-mo(line-height, 44);
