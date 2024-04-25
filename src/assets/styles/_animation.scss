@@ -46,6 +46,21 @@
       transition: width .7s linear;
     }
 
+    &--both {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #60605f;
+        transition: width .7s linear;
+        transition-delay: 1.2s;
+      }
+    }
+
     @for $i from 1 through 5 {
       &--step0#{$i} {
         &::before {
@@ -71,6 +86,12 @@
     .scroll-border {
       &::before {
         width: 100%;
+      }
+
+      &--both {
+        &::after {
+          width: 100%;
+        }
       }
     }
 
