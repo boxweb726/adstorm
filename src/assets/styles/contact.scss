@@ -50,7 +50,7 @@
     .info {
       display: flex;
       flex-direction: column;
-      @include vw-mo(gap, 55);
+      @include vw-mo(gap, 52);
 
       &__division {
         width: 100%;
