@@ -29,11 +29,15 @@ export default class StickyHeader {
   addClickEvt() {
     const $btnOpen = this.target.querySelector('#btnOpen');
 
-    console.log($btnOpen);
     $btnOpen.addEventListener('click', (e) => {
       e.preventDefault();
-
-      this.target.classList.has('js-open');
+      if (this.target.classList.contains('js-open')) {
+        this.target.classList.remove('js-open');
+        document.body.style.cssText = 'height: initial; overflow: initial;';
+      } else {
+        this.target.classList.add('js-open');
+        document.body.style.cssText = 'height: 100%; overflow: hidden;';
+      }
     });
   }
 

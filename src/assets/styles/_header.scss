@@ -1,3 +1,14 @@
+@keyframes showMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+}
+
 .wrapper {
   @include vw-max(padding-top, 200);
 
@@ -11,8 +22,9 @@
     transform: translateX(-50%);
     width: 100%;
     margin: 0 auto;
-    background-color: $color-black;
+    // background-color: $color-black;
     transition: opacity 0.3s ease-in;
+    z-index: 50;
     @include vw-max(height, 200);
     @include vw-max(padding, 0 80 0 89);
     
@@ -22,7 +34,6 @@
       left: 50%;
       transform: translateX(-50%);
       opacity: 0;
-      z-index: 50;
     }
 
     &.js-show {
@@ -64,52 +75,34 @@
       @include vw-mo(height, 155);
       @include vw-mo(padding, 0 48);
 
-      &.side-menu-open {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: #f84525;
+        transform: translate(50%, -50%);
+        transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+        @include vw-mo(top, 75);
+        @include vw-mo(right, 67);
+      }
+
+      &.js-open {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         justify-content: space-between;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 10;
-        @include vw-mo(width, 624);
-      }
 
-      &__logo {
-        @include vw-mo(width, 198);
-        @include vw-mo(height, 36);
-        z-index: 15;
-      }
-
-      &__open {
-        position: absolute;
-        display: block;
-        @include vw-mo(top, 60);
-        @include vw-mo(right, 48);
-        @include vw-mo(width, 40);
-        @include vw-mo(height, 28);
-
-        .bar {
-          display: block;
-          position: absolute;
-          width: 100%;
-          @include vw-mo(height, 5);
-          background: #fff;
-          transition: all 0.35s;
-
-          &:nth-child(1) {
-            top: 0;
-          }
-          &:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-          &:nth-child(3) {
-            bottom: 0;
-          }
-
+        &::before {
+          width: 250vmax;
+          height: 250vmax;
         }
-
-        &.on {
+        
+        .header__open {
           .bar {
             &:nth-child(1) {
               top: 50%;
@@ -124,39 +117,69 @@
             }
           }
         }
-    
-        &.on {
-          z-index: 15;
+
+        .header__nav {
+          display: block;
+          animation: showMenu 0.3s forwards 0.2s;
         }
+
+        .header__menu {
+        }
+      }
+
+      &__logo {
+        @include vw-mo(width, 198);
+        @include vw-mo(height, 36);
+        z-index: 15;
+      }
+
+      &__open {
+        position: absolute;
+        display: block;
+        z-index: 5;
+        @include vw-mo(top, 60);
+        @include vw-mo(right, 48);
+        @include vw-mo(width, 40);
+        @include vw-mo(height, 28);
+
+        .bar {
+          display: block;
+          position: absolute;
+          width: 100%;
+          @include vw-mo(height, 5);
+          background: #fff;
+          transition: transform 0.35s, top 0.35s;
+
+          &:nth-child(1) {
+            top: 0;
+          }
+          &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:nth-child(3) {
+            bottom: 0;
+          }
+
+        }
+
       }
   
       &__nav {
         display: none;
-        width: 100%;
-        height: 100vh;
-        background: #f84525;
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 10;
-  
-        &.on {
-          position: fixed;
-          display: block;
-          left: 0;
-          top: 0;
-        }
-
-        
+        opacity: 0;
+        @include vw-mo(top, 315);
+        @include vw-mo(left, 70);
       }
 
       &__menu {
-        display: block;
         text-transform: none;
         @include vw-mo(font-size, 80);
         @include vw-mo(line-height, 112);
         @include vw-mo(letter-spacing, 2.5);
       }
+
     }
   }
 }
