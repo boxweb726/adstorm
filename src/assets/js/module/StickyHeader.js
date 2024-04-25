@@ -1,3 +1,5 @@
+import { isMobile } from './utill';
+
 export default class StickyHeader {
   constructor() {
     this.target = document.querySelector('header');
@@ -41,8 +43,23 @@ export default class StickyHeader {
     });
   }
 
+  addResizeEvt() {
+    let timer;
+
+    window.addEventListener('resize', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (isMobile() === 'pc') {
+          this.target.classList.remove('js-open');
+          document.body.style.cssText = 'height: initial; overflow: initial;';
+        }
+      }, 100);
+    });
+  }
+
   init() {
     this.addScrollEvt();
     this.addClickEvt();
+    this.addResizeEvt();
   }
 }
