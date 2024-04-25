@@ -12,30 +12,30 @@ const portfolioList = new List({
     const imgVer = {};
 
     return `<div class="swiper-slide portfolio-swiper__item">
-      <a href="/portfolio/detail/?id=${data.id}" class="img-box">
+      <a href="/portfolio/detail/?id=${data.id}" class="img-box portfolio-swiper__img">
         <img src="./assets/images/main_thumb_${data.id}_pc${imgVer[data.id]?.pc ? imgVer[data.id].pc : ''}.jpg" alt="" class="m-hide">
         <img src="./assets/images/main_thumb_${data.id}_mo${imgVer[data.id]?.mo ? imgVer[data.id].mo : ''}.jpg" alt="" class="m-show">
       </a>
 
-      <!-- 슬라이드 내 텍스트 -->
       <div class="portfolio-swiper__txt">
-        <p class="portfolio-swiper__title fadeInUp--01">${data.title}</p>
+        <p class="portfolio-swiper__title pc-mb-25 mo-mb-35 fade-in-up fade-in-up--01">${data.title}</p>
         <dl class="portfolio-swiper__desc en">
-          <div class="portfolio-swiper__cont fadeInUp--02">
-            <dt class="portfolio-swiper__info portfolio-swiper__info--typea">Date : </dt>
+          <div class="portfolio-swiper__cont fade-in-up fade-in-up--02">
+            <dt class="portfolio-swiper__info portfolio-swiper__info--typea">Date:</dt>
             <dd class="portfolio-swiper__info">${data.date}</dd>
           </div>
-          <div class="portfolio-swiper__cont fadeInUp--03">
-            <dt class="portfolio-swiper__info portfolio-swiper__info--typea">Brand : </dt>
-            <dd class="portfolio-swiper__info kr">${data.brand}</dd>
+          <div class="portfolio-swiper__cont fade-in-up fade-in-up--03">
+            <dt class="portfolio-swiper__info portfolio-swiper__info--typea">Brand:</dt>
+            <dd class="portfolio-swiper__info portfolio-swiper__info--typeb">${data.brand}</dd>
           </div>
-          <div class="portfolio-swiper__cont fadeInUp--04">
-            <dt class="portfolio-swiper__info portfolio-swiper__info--typea">Type : </dt>
+          <div class="portfolio-swiper__cont fade-in-up fade-in-up--04">
+            <dt class="portfolio-swiper__info portfolio-swiper__info--typea">Type:</dt>
             <dd class="portfolio-swiper__info">${category.replace(/^[a-z]/, (char) => char.toUpperCase())}</dd>
           </div>
         </dl>
       </div>
-    </div>`;
+    </div>
+    `;
   },
 });
 

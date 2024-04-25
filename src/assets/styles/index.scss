@@ -8,10 +8,6 @@
   overflow: hidden;
 
   /* main start */
-  .main-title-box {
-    @include vw-max(margin-bottom, 300);
-  }
-
   .page-title {
     position: relative;
     word-break: break-all;
@@ -174,7 +170,6 @@
     &__title {
       font-weight: bold;
       @include vw-max(font-size, 42);
-      // @include vw-max(margin-bottom, 25);
       @include vw-max(letter-spacing, -1);
     }
 
@@ -229,14 +224,12 @@
         flex-wrap: wrap;
         flex-direction: column;
         text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
-
         @include vw-max(width, 310);
         @include vw-max(right, -190);
         @include vw-max(top, 280);
       }
     }
   }
-
   /* portfolio end */
 
   /* recruit start */
@@ -246,8 +239,6 @@
     }
 
     &__sub {
-      @include vw-max(margin-bottom, 51);
-
       .page-sub--recruit {
         letter-spacing: .23em;
         @include vw-max(font-size, 28);
@@ -257,14 +248,12 @@
     &__text {
       @include vw-max(font-size, 54);
       @include vw-max(line-height, 90);
-      @include vw-max(margin-bottom, 21);
       @include vw-max(letter-spacing, -1);
     }
 
     &__desc {
       @include vw-max(font-size, 21);
       @include vw-max(line-height, 36);
-      @include vw-max(margin-bottom, 28);
     }
 
     &__info {
@@ -272,12 +261,11 @@
       @include vw-max(font-size, 24);
       @include vw-max(line-height, 29);
       @include vw-max(letter-spacing, -0.2);
-      @include vw-max(margin-bottom, 54);
     }
 
     &__ani {
       position: absolute;
-      animation: rotate_image 10s linear infinite;
+      animation: rotate 10s linear infinite;
       transform-origin: 50% 50%;
       @include vw-max(top, 181);
       @include vw-max(right, 0);
@@ -296,7 +284,7 @@
         @include vw-max(height, 24);
       }
 
-      @keyframes rotate_image {
+      @keyframes rotate {
         100% {
           transform: rotate(360deg);
         }
@@ -323,10 +311,6 @@
 
 @media screen and (max-width: 768px) {
   .bs-home {
-    .main-title-box {
-      @include vw-mo(margin-bottom, 55);
-    }
-
     .page-title {
       position: relative;
       letter-spacing: 0;
@@ -408,7 +392,6 @@
       }
 
       &__title {
-        @include vw-mo(margin-bottom, 36);
         @include vw-mo(font-size, 60);
         @include vw-mo(line-height, 80);
       }
@@ -445,8 +428,6 @@
       position: relative;
 
       &__sub {
-        @include vw-mo(margin-bottom, 54);
-
         .page-sub--recruit {
           @include vw-mo(font-size, 40);
           @include vw-mo(letter-spacing, 10);
@@ -457,13 +438,11 @@
         letter-spacing: 0;
         @include vw-mo(font-size, 59);
         @include vw-mo(line-height, 90);
-        @include vw-mo(margin-bottom, 24);
       }
 
       &__desc {
         @include vw-mo(font-size, 41);
         @include vw-mo(line-height, 57);
-        @include vw-mo(margin-bottom, 27);
         @include vw-mo(letter-spacing, -2.3);
       }
 
@@ -472,7 +451,6 @@
         @include vw-mo(font-size, 36);
         @include vw-mo(line-height, 29);
         @include vw-mo(letter-spacing, -1);
-        @include vw-mo(margin-bottom, 101);
       }
 
       &__ani {
