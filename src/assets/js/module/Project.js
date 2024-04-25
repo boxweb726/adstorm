@@ -6,8 +6,14 @@ export default class Project {
     this.target = document.querySelector(prop.target);
     this.renderHtml = prop.renderHtml;
     this.id = getUrlParams('id');
+    this.afterInit = prop.afterInit;
 
     this.init();
+    if (this.afterInit && typeof this.afterInit === 'function') {
+      setTimeout(() => {
+        this.afterInit();
+      }, 300);
+    }
   }
 
   init() {
