@@ -13,7 +13,7 @@ const portfolioList = new List({
   renderHtml(data) {
     const imgVer = {};
 
-    return `<li class="list__item">
+    return `<li class="list__item scroll-inner scroll-inner--fade scroll-inner-step02">
       <a href="./detail/?id=${data.id}" class="list__link">
         <div class="img-box">
           <img src="../assets/images/portfolio_thumb_${data.id}_pc${imgVer[data.id]?.pc ? imgVer[data.id].pc : ''}.jpg" alt="" class="m-hide">

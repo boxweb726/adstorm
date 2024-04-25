@@ -11,8 +11,8 @@ const project = new Project({
       <div class="inner-1240">
         <div class="js-scroll">
           <div class="detail__txt-box pc-pb-60 mo-pb-55 scroll-wrapper">
-            <h2 class="detail__title pc-pt-115 pc-pb-120 mo-pt-90 mo-pb-105 scroll-inner scroll-inner--up">${data.title}</h2>
-            <dl class="detail__info scroll-inner scroll-inner--step02 scroll-inner--up">
+            <h2 class="detail__title pc-pt-115 pc-pb-120 mo-pt-90 mo-pb-105 scroll-inner scroll-inner--fade">${data.title}</h2>
+            <dl class="detail__info scroll-inner scroll-inner--fade">
               <dt>Date.</dt>
               <dd>${data.date}</dd>
               <dt>Brand.</dt>
@@ -26,21 +26,25 @@ const project = new Project({
       <!--// 상단 타이틀 -->
   
       <div class="detail__contents">
-        <div class="img-box detail__img-box">
-          <img src="/assets/images/detail_${data.id}_01_pc.jpg" alt="" class="m-hide">
-          <img src="/assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show">
+        <div class="js-scroll">
+          <div class="img-box detail__img-box scroll-wrapper">
+            <img src="/assets/images/detail_${data.id}_01_pc.jpg" alt="" class="m-hide scroll-inner scroll-inner--fade">
+            <img src="/assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show scroll-inner scroll-inner--fade">
+          </div>
         </div>
         <!-- overview -->
         <div class="inner-1240 js-scroll">
           <div class="detail__overview pc-pt-120 pc-pb-130 mo-pt-100 mo-pb-90 scroll-wrapper">
-            <h3 class="detail__sub pc-pb-45 mo-pb-50 scroll-inner scroll-inner--up">OVERVIEW</h3>
-            <p class="detail_desc scroll-inner scroll-inner--up">${data.overview}</p>
+            <h3 class="detail__sub pc-pb-45 mo-pb-50 scroll-inner scroll-inner--fade">OVERVIEW</h3>
+            <p class="detail_desc scroll-inner scroll-inner--fade">${data.overview}</p>
           </div>
         </div>
         <!--// overview -->
-        <div class="img-box detail__img-box">
-          <img src="/assets/images/detail_${data.id}_02_pc.jpg" alt="" class="m-hide">
-          <img src="/assets/images/detail_${data.id}_02_mo.jpg" alt="" class="m-show">
+        <div class="js-scroll">
+          <div class="img-box detail__img-box swiper-wrapper">
+            <img src="/assets/images/detail_${data.id}_02_pc.jpg" alt="" class="m-hide scroll-inner scroll-inner--fade">
+            <img src="/assets/images/detail_${data.id}_02_mo.jpg" alt="" class="m-show scroll-inner scroll-inner--fade">
+          </div>
         </div>
       </div>
     </div>
