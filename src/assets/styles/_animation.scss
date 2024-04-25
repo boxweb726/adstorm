@@ -1,5 +1,6 @@
 .js-scroll {
   overflow: hidden;
+  width: 100%;
 
   .scroll-wrapper {
     display: block;
@@ -30,12 +31,20 @@
     
   }
 
-  &.scroll-border {
-    position: static;
-    width: 0;
-    height: 1px;
-    background-color: #60605f;
-    transition: width .7s linear;
+  .scroll-border {
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #60605f;
+      transition: width .7s linear;
+    }
 }
 
 
@@ -52,8 +61,10 @@
       }
     }
 
-    &.scroll-border {
-      width: 100%;
+    .scroll-border {
+      &::before {
+        width: 100%;
+      }
     }
 
   }

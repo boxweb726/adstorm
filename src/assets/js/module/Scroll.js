@@ -7,7 +7,7 @@ export default class Scroll {
 
   reset() {
     this.offsetTop = window.scrollY + this.target.getBoundingClientRect().top;
-    this.buffer = window.innerHeight / 2;
+    this.buffer = (window.innerHeight / 5) * 3;
   }
 
   addClassActive() {
@@ -20,7 +20,7 @@ export default class Scroll {
       scrollAmount > this.offsetTop - this.buffer
     ) {
       this.target.classList.add('js-active');
-      // window.removeEventListener('scroll', this.handleScrollEvt);
+      window.removeEventListener('scroll', this.handleScrollEvt);
     }
   }
 
