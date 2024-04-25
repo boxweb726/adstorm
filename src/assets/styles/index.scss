@@ -8,7 +8,7 @@
   overflow: hidden;
 
   /* main start */
-  .txt-box {
+  .main-title-box {
     @include vw-max(margin-bottom, 300);
   }
 
@@ -62,24 +62,23 @@
   /* portfolio start */
   .page-sub--portfolio {
     letter-spacing: 0.24em;
-    @include vw-max(margin-bottom, 74);
     @include vw-max(font-size, 28);
 
     .sub-arrow {
       position: relative;
-    }
 
-    .sub-arrow::after {
-      content: '';
-      display: block;
-      position: absolute;
-      border-top: 2px solid $color-red;
-      border-right: 2px solid $color-red;
-      transform: rotate(45deg);
-      @include vw-max(left, 14);
-      @include vw-max(top, 13);
-      @include vw-max(width, 14);
-      @include vw-max(height, 14);
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-top: 2px solid $color-red;
+        border-right: 2px solid $color-red;
+        transform: rotate(45deg);
+        @include vw-max(left, 14);
+        @include vw-max(top, 13);
+        @include vw-max(width, 14);
+        @include vw-max(height, 14);
+      }
     }
   }
 
@@ -101,63 +100,65 @@
       &:not(:last-child) {
         @include vw-max(margin-right, 40);
       }
+    }
 
-      .img-box {
-        &:hover {
-          img {
-            opacity: .3;
-            transition: .3s;
-          }
-
-          &::after {
-            opacity: 1;
-          }
+    &__img {
+      &:hover {
+        img {
+          opacity: .3;
+          transition: .3s;
         }
-
+  
         &::after {
-          content: 'View';
-          display: flex;
-          justify-content: center;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translateX(-50%) translateY(-50%);
-          border-radius: 50%;
-          background-color: $color-red;
-          color: $color-white;
-          align-items: center;
-          opacity: 0;
-          transition: all .2s ease-in;
-          font-family: $en;
-          @include vw-max(width, 160);
-          @include vw-max(height, 161);
-          @include vw-max(font-size, 26);
+          opacity: 1;
         }
+      }
+  
+      &::after {
+        content: 'View';
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 50%;
+        background-color: $color-red;
+        color: $color-white;
+        align-items: center;
+        opacity: 0;
+        transition: all .2s ease-in;
+        font-family: $en;
+        @include vw-max(width, 160);
+        @include vw-max(height, 161);
+        @include vw-max(font-size, 26);
       }
     }
 
     &__txt {
       display: none;
 
-      .fadeInUp {
+      .fade-in-up {
+        animation: fade-in-up ease backwards;
+
         &--01 {
-          animation: fadeInUp 0.4s ease backwards;
+          animation-delay: 0.4s;
         }
 
         &--02 {
-          animation: fadeInUp 0.5s ease backwards;
+          animation-delay: 0.5s;
         }
 
         &--03 {
-          animation: fadeInUp 0.6s ease backwards;
+          animation-delay: 0.6s;
         }
 
         &--04 {
-          animation: fadeInUp 0.7s ease backwards;
+          animation-delay: 0.7s;
         }
       }
 
-      @keyframes fadeInUp {
+      @keyframes fade-in-up {
         0% {
           transform: translate(0px, 100px);
           opacity: 0;
@@ -173,7 +174,7 @@
     &__title {
       font-weight: bold;
       @include vw-max(font-size, 42);
-      @include vw-max(margin-bottom, 25);
+      // @include vw-max(margin-bottom, 25);
       @include vw-max(letter-spacing, -1);
     }
 
@@ -183,13 +184,14 @@
       @include vw-max(line-height, 50);
       @include vw-max(letter-spacing, 0.2);
 
-      .kr {
-        @include vw-max(font-size, 28);
-      }
-
       &--typea {
         font-weight: bold;
         @include vw-max(margin-right, 3);
+      }
+
+      &--typeb {
+        font-family: $kr;
+        @include vw-max(font-size, 28);
       }
     }
 
@@ -321,7 +323,7 @@
 
 @media screen and (max-width: 768px) {
   .bs-home {
-    .txt-box {
+    .main-title-box {
       @include vw-mo(margin-bottom, 55);
     }
 
@@ -357,7 +359,6 @@
 
     /* portfolio start */
     .page-sub--portfolio {
-      @include vw-mo(margin-bottom, 72);
       @include vw-mo(font-size, 40);
       @include vw-mo(letter-spacing, 10);
 
