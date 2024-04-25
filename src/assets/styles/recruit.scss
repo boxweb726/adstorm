@@ -20,6 +20,10 @@
 
 
   .list {
+    &__item {
+      position: relative;
+    }
+
     &__link {
       position: relative;
       width: 100%;
