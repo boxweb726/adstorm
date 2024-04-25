@@ -14,7 +14,7 @@ const project = new Project({
       <div class="inner-1240">
         <div class="js-scroll">
           <div class="detail__txt-box pc-pb-60 mo-pb-55 scroll-inner scroll-inner--fade">
-            <h2 class="detail__title pc-pt-95 pc-pb-105 mo-pt-90 mo-pb-105">${data.title}</h2>
+            <h2 class="detail__title pc-pt-85 pc-pb-105 mo-pt-70 mo-pb-90">${data.title}</h2>
             <dl class="detail__info scroll-inner scroll-inner--fade">
               <dt>Date.</dt>
               <dd>${data.date}</dd>

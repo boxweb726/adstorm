@@ -79,8 +79,8 @@
     .detail{
       &__title {
         @include vw-mo(margin-left, 0);
-        @include vw-mo(font-size, 56);
-        @include vw-mo(line-height, 68);
+        @include vw-mo(font-size, 66);
+        @include vw-mo(line-height, 85);
   
         .bespoke {
           @include vw-mo(font-size, 96);
