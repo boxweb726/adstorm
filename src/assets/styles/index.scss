@@ -60,7 +60,7 @@
     letter-spacing: 0.24em;
     @include vw-max(font-size, 28);
 
-    .sub-arrow {
+    .page-sub__arrow {
       position: relative;
 
       &::after {
@@ -135,7 +135,7 @@
       display: none;
 
       .fade-in-up {
-        animation: fade-in-up ease backwards;
+        animation: fade-in-up 0.4s ease backwards;
 
         &--01 {
           animation-delay: 0.4s;
@@ -346,7 +346,7 @@
       @include vw-mo(font-size, 40);
       @include vw-mo(letter-spacing, 10);
 
-      .sub-arrow::after {
+      .page-sub__arrow::after {
         transform: rotate(45deg);
         border-top: 3px solid $color-red;
         border-right: 3px solid $color-red;
@@ -372,22 +372,22 @@
         &:not(:last-child) {
           @include vw-mo(margin-right, 24);
         }
-
-        .img-box {
-          @include vw-mo(margin-bottom, 60);
-
-          &:hover {
-            img {
-              opacity: .3;
-              transition: .3s;
-            }
+      }
+      
+      &__img {
+        @include vw-mo(margin-bottom, 60);
+  
+        &:hover {
+          img {
+            opacity: .3;
+            transition: .3s;
           }
-
-          &::after {
-            @include vw-mo(width, 160);
-            @include vw-mo(height, 161);
-            @include vw-mo(font-size, 26);
-          }
+        }
+  
+        &::after {
+          @include vw-mo(width, 160);
+          @include vw-mo(height, 161);
+          @include vw-mo(font-size, 26);
         }
       }
 
@@ -401,12 +401,12 @@
         @include vw-mo(line-height, 58);
         @include vw-mo(letter-spacing, -0.6);
 
-        .kr {
-          @include vw-mo(font-size, 40);
-        }
-
         &--typea {
           @include vw-mo(margin-right, 5);
+        }
+
+        &--typeb {
+          @include vw-mo(font-size, 40);
         }
       }
 
