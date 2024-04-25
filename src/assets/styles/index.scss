@@ -24,8 +24,8 @@
   .title-img {
     position: absolute;
     z-index: 1;
-    @include vw-max(right, 308);
-    @include vw-max(top, 270);
+    @include vw-max(right, 229);
+    @include vw-max(top, 226);
     @include vw-max(width, 360);
     @include vw-max(height, 360);
   }
@@ -136,31 +136,19 @@
 
       .fade-in-up {
         &--01 {
-          animation: fade-in-up 0.4s ease backwards;
+          transition-delay: 0.4s;
         }
 
         &--02 {
-          animation: fade-in-up 0.6s ease backwards;
+          transition-delay: 0.6s;
         }
 
         &--03 {
-          animation: fade-in-up 0.7s ease backwards;
+          transition-delay: 0.7s;
         }
 
         &--04 {
-          animation: fade-in-up 0.8s ease backwards;
-        }
-      }
-
-      @keyframes fade-in-up {
-        0% {
-          transform: translate(0px, 100px);
-          opacity: 0;
-        }
-
-        100% {
-          transform: translate(0px, 0);
-          opacity: 1;
+          transition-delay: 0.8s;
         }
       }
     }
