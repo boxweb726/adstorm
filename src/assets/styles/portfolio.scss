@@ -7,16 +7,18 @@
   }
 
   .tab {
+    @include vw-max(margin-bottom, 40);
+
     &__box {
       display: flex; 
       justify-content: space-between;
     }
-    @include vw-max(margin-bottom, 40);
 
     &__item {
       width: auto;
       @include vw-max(height, 50)
     }
+
     &__btn {
       display: block; 
       height: 100%; 
@@ -75,7 +77,7 @@
             opacity: 1;
           }
 
-          & .list__text {
+          .list__text {
             top: 0;          
           }
         }
