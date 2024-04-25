@@ -170,6 +170,11 @@
         @include vw-mo(font-size, 80);
         @include vw-mo(line-height, 112);
         @include vw-mo(letter-spacing, 2.5);
+
+        &:hover {
+          color: #fff;
+          transition: 0.4s;
+        }
       }
 
     }
