@@ -40,6 +40,7 @@ const portfolioList = new List({
     </div>
     `;
   },
+  listLimit: 12,
 });
 
 // main 포트폴리오 영역 스와이퍼

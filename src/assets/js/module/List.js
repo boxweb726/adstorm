@@ -13,6 +13,7 @@ export default class List {
         : this.originData.filter(
             (item) => item.category === this.useCategory.default,
           );
+    this.listLimit = prop.listLimit;
     this.usePaging = {
       id: false,
       increase: 6,
@@ -96,7 +97,11 @@ export default class List {
   }
 
   initList() {
-    let listArr = this.useCategoryData;
+    let listArr = this.listLimit
+      ? this.useCategoryData.slice(0, this.listLimit)
+      : this.useCategoryData;
+
+    console.log(listArr);
 
     if (this.usePaging.id) {
       listArr = this.findPagingList();
