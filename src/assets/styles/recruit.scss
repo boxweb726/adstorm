@@ -40,6 +40,8 @@
 
       &:hover .btn-plus--recruit::before,
       &:hover .btn-plus--recruit::after {
+        transform: rotate(90deg);
+        transition: transform 0.3s;
         background-color: $color-red;
       }
     }
