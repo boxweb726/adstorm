@@ -83,7 +83,6 @@
     position: relative;
     overflow: visible;
     height: 100%;
-    // @include vw-max(width, 505);
     @include vw-max(padding, 0 505 0 200);
     @include vw-max(margin, 0 0 30 0);
 
@@ -136,22 +135,20 @@
       display: none;
 
       .fade-in-up {
-        animation: fade-in-up 0.4s ease backwards;
-
         &--01 {
-          animation-delay: 0.4s;
+          animation: fade-in-up 0.1s ease backwards;
         }
 
         &--02 {
-          animation-delay: 0.5s;
+          animation: fade-in-up 0.4s ease backwards;
         }
 
         &--03 {
-          animation-delay: 0.6s;
+          animation: fade-in-up 0.5s ease backwards;
         }
 
         &--04 {
-          animation-delay: 0.7s;
+          animation: fade-in-up 0.6s ease backwards;
         }
       }
 
@@ -170,6 +167,8 @@
 
     &__title {
       font-weight: bold;
+      text-overflow: ellipsis;
+      @include vw-max(height, 122);
       @include vw-max(font-size, 42);
       @include vw-max(letter-spacing, -1);
     }
@@ -187,6 +186,8 @@
 
       &--typeb {
         font-family: $kr;
+        text-overflow: ellipsis;
+        @include vw-max(width, 200);
         @include vw-max(font-size, 28);
       }
     }
@@ -222,7 +223,6 @@
     }
 
     .swiper-slide-active {
-      // @include vw-max(margin-right, 230);
       position: relative;
       @include vw-max(left, -200);
 
@@ -234,7 +234,7 @@
         text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
         @include vw-max(width, 310);
         @include vw-max(right, -190);
-        @include vw-max(top, 280);
+        @include vw-max(bottom, 60);
       }
     }
   }
