@@ -78,6 +78,7 @@
   .bs-detail {
     .detail{
       &__title {
+        letter-spacing: -1.4rem;
         @include vw-mo(margin-left, 0);
         @include vw-mo(font-size, 66);
         @include vw-mo(line-height, 85);
