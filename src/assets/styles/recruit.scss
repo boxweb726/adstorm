@@ -3,9 +3,6 @@
 
 .bs-recruit {
   .title-box {
-    @include vw-max(padding-left, 15);
-    @include vw-max(padding-right, 12);
-
     .page-sub {
       line-height: 1;
       letter-spacing: 0;
@@ -22,6 +19,8 @@
   .list {
     &__item {
       position: relative;
+      @include vw-max(padding-left, 20);
+      @include vw-max(padding-right, 10);
     }
 
     &__link {
@@ -88,9 +87,11 @@
     }
 
     .list {
-      @include vw-mo(padding-left, 15);
-      @include vw-mo(padding-right, 18);
-
+      &__item {
+        @include vw-mo(padding-left, 20);
+        @include vw-mo(padding-left, 20);
+      }
+      
       &__link {
         @include vw-mo(height, 222);
       }
