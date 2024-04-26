@@ -31,6 +31,10 @@
       color: $color-white;
       text-transform: uppercase;
       @include vw-max(font-size, 22);
+
+      &--kr {
+        @include vw-max(letter-spacing, -2);
+      }
     }
 
     a {
