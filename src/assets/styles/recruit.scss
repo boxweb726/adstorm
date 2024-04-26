@@ -35,12 +35,12 @@
 
       &:hover .btn-plus--recruit {
         transform: rotate(90deg);
+        transition: transform 0.3s;
       }
 
       &:hover .btn-plus--recruit::before,
       &:hover .btn-plus--recruit::after {
-        transform: rotate(90deg);
-        transition: transform 0.3s;
+        // transform: rotate(90deg);
         background-color: $color-red;
       }
     }
