@@ -37,12 +37,12 @@
       &::after {
         content: '';
         display: block;
-        background: center/cover no-repeat url('../images/main_video_btn_pc.png');
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
         transition: all 0.5s;
+        background: center/cover no-repeat url('../images/main_video_btn_pc.png');
         @include vw-max(width, 160);
         @include vw-max(height, 161);
       }
@@ -67,9 +67,9 @@
         content: '';
         display: block;
         position: absolute;
+        transform: rotate(45deg);
         border-top: 2px solid $color-red;
         border-right: 2px solid $color-red;
-        transform: rotate(45deg);
         @include vw-max(left, 14);
         @include vw-max(top, 13);
         @include vw-max(width, 14);
@@ -112,18 +112,18 @@
   
       &::after {
         content: 'View';
-        display: flex;
-        justify-content: center;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
+        transition: all .2s ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 50%;
         background-color: $color-red;
         color: $color-white;
-        align-items: center;
         opacity: 0;
-        transition: all .2s ease-in;
         font-family: $en;
         @include vw-max(width, 160);
         @include vw-max(height, 161);
@@ -132,10 +132,10 @@
     }
 
     &__txt {
+      position: absolute;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      position: absolute;
       text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
       @include vw-max(width, 310);
       @include vw-max(right, -190);
@@ -149,11 +149,11 @@
     }
 
     &__title {
-      font-weight: bold;
+      display: -webkit-box;
       overflow: hidden;
       text-overflow: ellipsis;
       word-break: keep-all;
-      display: -webkit-box;
+      font-weight: bold;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       @include vw-max(width, 310);
@@ -178,12 +178,12 @@
       }
 
       &--typeb {
-        font-family: $kr;
+        display: -webkit-box;
+        float: right;
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: break-word;
-        display: -webkit-box;
-        float: right;
+        font-family: $kr;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         @include vw-max(width, 200);
@@ -194,9 +194,9 @@
     &__navi {
       position: absolute;
       top: auto;
+      right: auto;
       bottom: auto;
       left: auto;
-      right: auto;
       margin-top: 0;
       @include vw-max(width, 88);
       @include vw-max(height, 88);
@@ -286,19 +286,19 @@
 
     &__ani {
       position: absolute;
-      animation: rotate 10s linear infinite;
       transform-origin: 50% 50%;
+      animation: rotate 10s linear infinite;
       @include vw-max(top, 191);
       @include vw-max(right, 0);
       @include vw-max(width, 234);
 
       &::after {
-        display: block;
         content: '';
         position: absolute;
         top: 44.5%;
         left: 50%;
         transform: translateX(-50%);
+        display: block;
         border-radius: 50%;
         background-color: $color-red;
         @include vw-max(width, 24);
@@ -317,9 +317,9 @@
     display: block;
     text-align: center;
     align-items: center;
+    font-weight: bold;
     color: $color-white;
     background-color: $color-deep-gray;
-    font-weight: bold;
     @include vw-max(width, 250);
     @include vw-max(font-size, 24);
     @include vw-max(line-height, 65);
@@ -444,10 +444,10 @@
         left: 0;
 
         .portfolio-swiper__txt {
-          display: block;
           position: static;
-          width: auto;
+          display: block;
           text-align: left;
+          width: auto;
           @include vw-mo(margin, 0 15);
         }
       }

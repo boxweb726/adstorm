@@ -8,9 +8,9 @@
     }
 
     &__sub {
+      font-family: $en;
       font-weight: 600;
       letter-spacing: -.01em;
-      font-family: $en;
       @include vw-max(font-size, 130);
       @include vw-max(line-height, 142);
     }
@@ -36,9 +36,9 @@
     @include vw-max(gap, 300);
 
     &__item {
+      position: relative;
       display: flex;
       justify-content: flex-start;
-      position: relative;
       @include vw-max(gap, 230);
     }
 
@@ -52,14 +52,14 @@
       &:hover {
         &::before {
           content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
           display: flex;
           justify-content: center;
           align-items: center;
-          position: absolute;
           width: 100%;
           height: 100%;
-          top: 0;
-          left: 0;
           background-color: rgba(0, 0, 0, .7);
         }
       }
@@ -67,20 +67,21 @@
       &:hover {
         &::after {
           content: "See \A our work";
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
           display: flex;
           justify-content: center;
           align-items: center;
-          position: absolute;
-          color: $color-white;
-          top: 50%;
-          left: 50%;
-          white-space: pre;
+          font-family: $en;
           text-align: center;
-          background-color: $color-red;
+          white-space: pre;
           border-radius: 50%;
+          background-color: $color-red;
+          color: $color-white;
           @include vw-max(width, 160);
           @include vw-max(height, 160);
-          transform: translate(-50%, -50%);
           @include vw-max(font-size, 26);
           @include vw-max(line-height, 28);
         }
@@ -88,33 +89,33 @@
     }
 
     &__text-box {
-      z-index: 1;
       order: 1;
+      z-index: 1;
     }
 
     &__title {
+      font-family: $en;
+      font-weight: 500;
+      color: $color-white;
       @include vw-max(margin-left, 80);
       @include vw-max(font-size, 140);
       @include vw-max(line-height, 147);
-      font-weight: 500;
-      font-family: $en;
-      color: $color-white;
     }
 
     &__desc {
+      font-family: $kr;
+      font-weight: 300;
+      letter-spacing: -.045em;
+      color: $color-white;
+      opacity: .9;
       @include vw-max(font-size, 22);
       @include vw-max(line-height, 38);
-      font-weight: 300;
-      color: $color-white;
-      font-family: $kr;
-      letter-spacing: -.045em;
-      opacity: .9;
     }
 
     &__item.about__item--odd {
       .about__img {
-        order: 1;
         position: relative;
+        order: 1;
         right: none;
         margin-left: 0;
       }
@@ -143,16 +144,16 @@
     text-align: center;
 
     &__title {
+      font-family: $en;
       font-weight: 600;
       color: $color-white;
-      font-family: $en;
       @include vw-max(font-size, 160);
       @include vw-max(line-height, 113);
     }
 
     &__txt {
-      font-weight: 200;
       font-family: $en;
+      font-weight: 200;
       @include vw-max(font-size, 36);
       @include vw-max(line-height, 52);
     }
@@ -191,8 +192,8 @@
 
       &__img {
         position: relative;
-        margin-left: 0;
         width: 100%;
+        margin-left: 0;
       }
 
       &__item.about__item--odd {
@@ -214,8 +215,8 @@
       }
 
       &__text-box {
-        @include vw-mo(padding-left, 15);
         letter-spacing: -.03em;
+        @include vw-mo(padding-left, 15);
       }
 
       &__title {
@@ -225,12 +226,12 @@
       }
 
       &__desc {
+        font-weight: 300;
+        letter-spacing: -.025em;
+        opacity: .9;
+        color: $color-white;
         @include vw-mo(font-size, 32);
         @include vw-mo(line-height, 48);
-        font-weight: 300;
-        color: $color-white;
-        opacity: .9;
-        letter-spacing: -.025em;
       }
     }
 
