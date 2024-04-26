@@ -142,7 +142,7 @@
       @include vw-max(bottom, 60);
       
       .fade-in-up { 
-        transform: translateY(100%);
+        transform: translateY(30px);
         transition: opacity 0.2s ease-in, transform 0.2s ease-in;
         opacity: 0;
       }
@@ -414,6 +414,14 @@
         }
       }
 
+      &__txt {
+        position: static;
+        display: block;
+        text-align: left;
+        width: auto;
+        @include vw-mo(margin, 0 15);
+      }
+
       &__title {
         width: auto;
         height: auto;
@@ -436,20 +444,9 @@
         }
       }
 
-      .swiper-slide-prev {
-        left: 0;
-      }
-
+      .swiper-slide-prev,
       .swiper-slide-active {
         left: 0;
-
-        .portfolio-swiper__txt {
-          position: static;
-          display: block;
-          text-align: left;
-          width: auto;
-          @include vw-mo(margin, 0 15);
-        }
       }
     }
     /* portfolio end */

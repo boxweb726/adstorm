@@ -35,10 +35,12 @@ export default class StickyHeader {
       e.preventDefault();
       if (this.target.classList.contains('js-open')) {
         this.target.classList.remove('js-open');
-        document.body.style.cssText = 'height: initial; overflow: initial;';
+        document.body.style.cssText =
+          'height: initial; overflow: initial; position: initial;';
       } else {
         this.target.classList.add('js-open');
-        document.body.style.cssText = 'height: 100%; overflow: hidden;';
+        document.body.style.cssText =
+          'height: 100%; overflow: hidden; position: fixed; top:0; left:0;';
       }
     });
   }

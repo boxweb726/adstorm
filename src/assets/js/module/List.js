@@ -2,6 +2,7 @@ import { isMobile } from './utill';
 
 export default class List {
   constructor({ ...prop }) {
+    this.currentDevice = isMobile();
     this.originData = prop.data;
     this.target = document.getElementById(prop.id);
     this.setImgUrl = prop.setImgUrl;
@@ -127,8 +128,13 @@ export default class List {
   }
 
   handleResize() {
-    this.reset();
-    this.initList();
+    const nowDevice = isMobile();
+
+    if (this.currentDevice !== nowDevice) {
+      this.reset();
+      this.initList();
+      this.currentDevice = nowDevice;
+    }
   }
 
   addResizeEvt() {
@@ -136,7 +142,7 @@ export default class List {
 
     window.addEventListener('resize', () => {
       clearTimeout(timer);
-      timer = setTimeout(() => this.handleResize(), 100);
+      timer = setTimeout(() => this.handleResize(), 300);
     });
   }
 

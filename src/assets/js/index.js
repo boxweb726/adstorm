@@ -57,8 +57,8 @@ const swiper = new Swiper('#mainPortfolio', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  observer: true,
-  observeParents: true,
+  // observer: true,
+  // observeParents: true,
   resizeObserver: true,
 });
 
