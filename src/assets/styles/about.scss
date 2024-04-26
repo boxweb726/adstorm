@@ -2,7 +2,7 @@
 @import './animation';
 
 .bs-about {
-  .page {  
+  .page {
     .page-title.color-red {
       @include vw-max(margin-left, -10);
     }
@@ -12,12 +12,12 @@
       letter-spacing: -.01em;
       font-family: $en;
       @include vw-max(font-size, 130);
-      @include vw-max(line-height, 135);
+      @include vw-max(line-height, 142);
     }
 
     &__desc {
       font-weight: 300;
-      letter-spacing: -.025em;
+      letter-spacing: -.03em;
       opacity: .9;
       @include vw-max(left, 735);
       @include vw-max(font-size, 22);
@@ -34,7 +34,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     @include vw-max(gap, 300);
-  
+
     &__item {
       display: flex;
       justify-content: flex-start;
@@ -43,52 +43,50 @@
     }
 
     &__img {
-     position: relative;
+      position: relative;
       order: 2;
-     right: 0;
-     @include vw-max(margin-left, -336);
-     @include vw-max(width, 505);
+      right: 0;
+      @include vw-max(margin-left, -336);
+      @include vw-max(width, 505);
 
-     &:hover{
-       &::before {
-        content: '';
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.7);
-        
-       }
+      &:hover {
+        &::before {
+          content: '';
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, .7);
+        }
+      }
+
+      &:hover {
+        &::after {
+          content: "See \A our work";
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          color: $color-white;
+          top: 50%;
+          left: 50%;
+          white-space: pre;
+          text-align: center;
+          background-color: $color-red;
+          border-radius: 50%;
+          @include vw-max(width, 160);
+          @include vw-max(height, 160);
+          transform: translate(-50%, -50%);
+          @include vw-max(font-size, 26);
+          @include vw-max(line-height, 28);
+        }
+      }
     }
 
-     &:hover{
-       &::after {
-        content: "See \A our work";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        color: $color-white;
-        top: 50%;
-        left: 50%;
-        white-space:pre;
-        text-align: center;
-        background-color: $color-red;
-        border-radius: 50%;
-        @include vw-max(width, 160);
-        @include vw-max(height, 160);
-        transform: translate(-50%, -50%);
-        @include vw-max(font-size, 26);
-        @include vw-max(line-height, 28);
-       }
-     }
-     
-   }
-  
     &__text-box {
       z-index: 1;
       order: 1;
@@ -120,9 +118,10 @@
         right: none;
         margin-left: 0;
       }
-  
+
       .about__text-box {
         order: 2;
+
         .about__title {
           @include vw-max(margin-left, -315)
         }
@@ -133,6 +132,7 @@
       .about__img {
         @include vw-max(margin-left, -407)
       }
+
       .about__title {
         @include vw-max(margin-left, 108);
       }
@@ -162,28 +162,29 @@
 @media all and (max-width: 768px) {
   .bs-about {
     .page {
-        @include vw-mo(width, 624);
-    
+      @include vw-mo(width, 624);
+
       &__sub {
         @include vw-mo(font-size, 96);
         @include vw-mo(line-height, 112);
       }
-  
+
       &__desc {
         @include vw-mo(left, 0);
         @include vw-mo(font-size, 32);
         @include vw-mo(line-height, 48);
       }
     }
-  
+
     .page-sub {
       letter-spacing: .2em;
       @include vw-mo(font-size, 40)
     }
+
     .about {
       display: flex;
       @include vw-mo(gap, 95);
-    
+
       &__item {
         display: block;
       }
@@ -208,7 +209,7 @@
         }
 
         .about__title {
-            @include vw-mo(margin-left, 0);
+          @include vw-mo(margin-left, 0);
         }
       }
 
@@ -216,35 +217,35 @@
         @include vw-mo(padding-left, 15);
         letter-spacing: -.03em;
       }
-  
+
       &__title {
         @include vw-mo(margin-left, 0);
         @include vw-mo(font-size, 100);
         @include vw-mo(line-height, 70);
       }
-  
+
       &__desc {
         @include vw-mo(font-size, 32);
         @include vw-mo(line-height, 48);
         font-weight: 300;
         color: $color-white;
         opacity: .9;
+        letter-spacing: -.025em;
       }
     }
-  
+
     .slogan {
       text-align: center;
-  
+
       &__title {
         @include vw-mo(font-size, 110);
         @include vw-mo(line-height, 80);
       }
-  
+
       &__txt {
         @include vw-mo(font-size, 36);
         @include vw-mo(line-height, 54);
       }
     }
   }
-  
 }

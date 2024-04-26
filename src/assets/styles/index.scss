@@ -203,12 +203,12 @@
 
       &--prev {
         background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_prev_pc.png');
-        @include vw-max(right, 456);
+        @include vw-max(right, 376);
       }
 
       &--next {
         background: center/cover no-repeat url('../images/main_portfolio_swiper_btn_next_pc.png');
-        @include vw-max(right, 340);
+        @include vw-max(right, 260);
       }
 
       &:after {
@@ -281,14 +281,14 @@
       color: $color-gray;
       @include vw-max(font-size, 24);
       @include vw-max(line-height, 29);
-      @include vw-max(letter-spacing, -0.2);
+      @include vw-max(letter-spacing, -0.3);
     }
 
     &__ani {
       position: absolute;
       animation: rotate 10s linear infinite;
       transform-origin: 50% 50%;
-      @include vw-max(top, 181);
+      @include vw-max(top, 191);
       @include vw-max(right, 0);
       @include vw-max(width, 234);
 
