@@ -88,12 +88,12 @@
 
     .list {
       &__item {
-        position: relative;
         @include vw-mo(padding-left, 20);
         @include vw-mo(padding-left, 20);
       }
       
       &__link {
+        position: static;
         @include vw-mo(height, 222);
       }
 
@@ -107,9 +107,8 @@
     }
 
     .btn-plus--recruit {
-      right: unset;
-      @include vw-mo(top, -75);
-      @include vw-mo(left, 525);
+      @include vw-mo(top, 87);
+      @include vw-mo(right, 20);
       @include vw-mo(width, 60);
       @include vw-mo(height, 60);
     }
