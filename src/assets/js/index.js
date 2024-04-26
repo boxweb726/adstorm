@@ -8,16 +8,23 @@ import Scroll from './module/Scroll';
 const header = new StickyHeader();
 
 const portfolioList = new List({
-  data: dataList.result,
+  data: dataList.result.slice(0, 12),
   id: 'portfolioList',
+  setImgUrl(id) {
+    const imgVer = {};
+
+    return {
+      pc: `/assets/images/main_thumb_${id}_pc${imgVer[id]?.pc ? imgVer[id].pc : ''}.jpg`,
+      mo: `/assets/images/main_thumb_${id}_mo${imgVer[id]?.mo ? imgVer[id].mo : ''}.jpg`,
+    };
+  },
   renderHtml(data) {
     const { category } = data;
-    const imgVer = {};
 
     return `<div class="swiper-slide portfolio-swiper__item">
       <a href="/portfolio/detail/?id=${data.id}" class="img-box portfolio-swiper__img">
-        <img src="./assets/images/main_thumb_${data.id}_pc${imgVer[data.id]?.pc ? imgVer[data.id].pc : ''}.jpg" alt="" class="m-hide">
-        <img src="./assets/images/main_thumb_${data.id}_mo${imgVer[data.id]?.mo ? imgVer[data.id].mo : ''}.jpg" alt="" class="m-show">
+        <img src="${data.imgUrl.pc}" alt="" class="m-hide">
+        <img src="${data.imgUrl.mo}" alt="" class="m-show">
       </a>
 
       <div class="portfolio-swiper__txt">
@@ -40,7 +47,7 @@ const portfolioList = new List({
     </div>
     `;
   },
-  listLimit: 12,
+  // listLimit: 12,
 });
 
 // main 포트폴리오 영역 스와이퍼

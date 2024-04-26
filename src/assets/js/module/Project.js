@@ -4,6 +4,7 @@ export default class Project {
   constructor({ ...prop }) {
     this.data = prop.data;
     this.target = document.querySelector(prop.target);
+    this.setImgUrl = prop.setImgUrl;
     this.renderHtml = prop.renderHtml;
     this.id = getUrlParams('id');
     this.afterInit = prop.afterInit;
@@ -16,10 +17,22 @@ export default class Project {
     }
   }
 
+  setImgData() {
+    const imgUrl = this.setImgUrl(this.selectedProject.id);
+    this.selectedProject.imgUrl = {};
+
+    Object.keys(imgUrl).forEach((key) => {
+      this.selectedProject.imgUrl[key] = imgUrl[key];
+
+      return new URL(`/assets/images/${imgUrl[key]}`, import.meta.url);
+    });
+  }
+
   init() {
     if (this.id) {
       [this.selectedProject] = this.data.filter((item) => item.id === this.id);
 
+      this.setImgData();
       this.target.insertAdjacentHTML(
         'beforeend',
         this.renderHtml(this.selectedProject),
@@ -27,5 +40,7 @@ export default class Project {
     } else {
       window.location = window.location.href.replace('detail/', '');
     }
+
+    console.log(this.selectedProject);
   }
 }

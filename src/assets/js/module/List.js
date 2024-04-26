@@ -4,16 +4,16 @@ export default class List {
   constructor({ ...prop }) {
     this.originData = prop.data;
     this.target = document.getElementById(prop.id);
+    this.setImgUrl = prop.setImgUrl;
     this.renderHtml = prop.renderHtml;
     this.useCategory = { default: 'all', ...prop.useCategory };
     this.currentCategory = this.useCategory.default;
-    this.useCategoryData =
+    this.categoryData =
       this.currentCategory === 'all'
         ? this.originData
         : this.originData.filter(
             (item) => item.category === this.useCategory.default,
           );
-    this.listLimit = prop.listLimit;
     this.usePaging = {
       id: false,
       increase: 6,
@@ -33,8 +33,21 @@ export default class List {
     this.init();
   }
 
+  setImgData() {
+    for (let i = 0; i < this.originData.length; i += 1) {
+      const imgUrl = this.setImgUrl(this.originData[i].id);
+      this.originData[i].imgUrl = {};
+
+      Object.keys(imgUrl).forEach((key) => {
+        this.originData[i].imgUrl[key] = imgUrl[key];
+
+        return new URL(`/assets/images/${imgUrl[key]}`, import.meta.url);
+      });
+    }
+  }
+
   getMaxPage() {
-    const listLength = this.useCategoryData.length;
+    const listLength = this.categoryData.length;
     const initLength = this.usePaging.initNum[isMobile()];
 
     return listLength > initLength
@@ -43,13 +56,13 @@ export default class List {
   }
 
   findCategoryList(category) {
-    this.useCategoryData = this.originData.filter(
+    this.categoryData = this.originData.filter(
       (item) => item.category === category,
     );
   }
 
   findPagingList() {
-    let result = [...this.useCategoryData];
+    let result = this.categoryData;
     const initEndIdx = this.usePaging.initNum[isMobile()];
     let startIdx = 0;
     let endIdx = 0;
@@ -97,9 +110,7 @@ export default class List {
   }
 
   initList() {
-    let listArr = this.listLimit
-      ? this.useCategoryData.slice(0, this.listLimit)
-      : this.useCategoryData;
+    let listArr = this.categoryData;
 
     if (this.usePaging.id) {
       listArr = this.findPagingList();
@@ -144,7 +155,7 @@ export default class List {
 
         this.currentCategory = category;
         if (category === 'all') {
-          this.useCategoryData = this.originData;
+          this.categoryData = this.originData;
         } else {
           this.findCategoryList(category);
         }
@@ -164,6 +175,7 @@ export default class List {
   }
 
   init() {
+    this.setImgData();
     this.initList();
     this.addResizeEvt();
     if (this.useCategory.id) this.addCategoryEvt();

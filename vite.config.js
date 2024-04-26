@@ -11,27 +11,10 @@ export default defineConfig(() => {
     appType: 'mpa',
     publicDir: path.resolve(__dirname, 'public'),
     root: path.resolve(__dirname, 'src'),
-    // resolve: {
-    //   alias: [
-    //     {
-    //       find: '~pages',
-    //       replacement: path.resolve(__dirname, './pages'),
-    //     },
-    //     {
-    //       find: '~js',
-    //       replacement: path.resolve(__dirname, './js'),
-    //     },
-    //     {
-    //       find: '~styles',
-    //       replacement: path.resolve(__dirname, './styles'),
-    //     },
-    //   ],
-    // },
     build: {
       outDir: '../dist',
       assetsInlineLimit: 0,
       emptyOutDir: true,
-      // cssCodeSplit: false,
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'src/index.html'),
@@ -53,6 +36,9 @@ export default defineConfig(() => {
           entryFileNames: 'assets/js/[name].js',
         },
       },
+    },
+    preview: {
+      host: true,
     },
     plugins: [
       eslint({

@@ -8,14 +8,24 @@ const header = new StickyHeader();
 const project = new Project({
   data: dataList.result,
   target: 'main',
+  setImgUrl(id) {
+    const imgVer = {};
+
+    return {
+      pc01: `/assets/images/detail_${id}_01_pc${imgVer[id]?.pc01 ? imgVer[id].pc01 : ''}.jpg`,
+      mo01: `/assets/images/detail_${id}_01_mo${imgVer[id]?.mo01 ? imgVer[id].mo01 : ''}.jpg`,
+      pc02: `/assets/images/detail_${id}_02_pc${imgVer[id]?.pc02 ? imgVer[id].pc02 : ''}.jpg`,
+      mo02: `/assets/images/detail_${id}_02_mo${imgVer[id]?.mo02 ? imgVer[id].mo02 : ''}.jpg`,
+    };
+  },
   renderHtml(data) {
     return `<section class="width-full">
     <div class="detail pc-pb-160 mo-pb-120">
       <div class="inner-1240">
         <div class="js-scroll">
-          <div class="detail__txt-box pc-pb-60 mo-pb-55 scroll-inner scroll-inner--fade">
-            <h2 class="detail__title pc-pt-85 pc-pb-105 mo-pt-70 mo-pb-90">${data.title}</h2>
-            <dl class="detail__info scroll-inner scroll-inner--fade">
+          <div class="detail__txt-box pc-pb-60 mo-pb-55">
+            <h2 class="detail__title pc-pt-85 pc-pb-105 mo-pt-70 mo-pb-90 scroll-inner scroll-inner--fade">${data.title}</h2>
+            <dl class="detail__info scroll-inner scroll-inner--fade scroll-inner--step01">
               <dt>Date.</dt>
               <dd>${data.date}</dd>
               <dt>Brand.</dt>
@@ -30,7 +40,7 @@ const project = new Project({
   
       <div class="detail__contents">
         <div class="js-scroll">
-          <div class="img-box detail__img-box scroll-inner scroll-inner--fade">
+          <div class="img-box detail__img-box scroll-inner scroll-inner--fade scroll-inner--step02">
             <img src="/assets/images/detail_${data.id}_01_pc.jpg" alt="" class="m-hide">
             <img src="/assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show">
           </div>
