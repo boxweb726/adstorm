@@ -88,6 +88,7 @@
 
     .list {
       &__item {
+        position: relative;
         @include vw-mo(padding-left, 20);
         @include vw-mo(padding-left, 20);
       }
@@ -106,7 +107,9 @@
     }
 
     .btn-plus--recruit {
-      @include vw-mo(top, 35);
+      right: unset;
+      @include vw-mo(top, -75);
+      @include vw-mo(left, 525);
       @include vw-mo(width, 60);
       @include vw-mo(height, 60);
     }
