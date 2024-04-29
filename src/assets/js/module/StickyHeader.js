@@ -14,7 +14,6 @@ export default class StickyHeader {
       const currentScrollY = window.scrollY;
       if (currentScrollY > 0) {
         this.target.classList.add('js-fixed');
-
         if (currentScrollY < this.prevScollY) {
           this.target.classList.add('js-show');
         } else {
@@ -33,14 +32,14 @@ export default class StickyHeader {
 
     $btnOpen.addEventListener('click', (e) => {
       e.preventDefault();
+      const { body } = document;
+
       if (this.target.classList.contains('js-open')) {
         this.target.classList.remove('js-open');
-        document.body.style.cssText =
-          'height: initial; overflow: initial; position: initial;';
+        document.body.style.cssText = '';
       } else {
         this.target.classList.add('js-open');
-        document.body.style.cssText =
-          'height: 100%; overflow: hidden; position: fixed; top:0; left:0;';
+        document.body.style.cssText = `height: 100%; overflow: hidden;`;
       }
     });
   }
@@ -53,7 +52,7 @@ export default class StickyHeader {
       timer = setTimeout(() => {
         if (isMobile() === 'pc') {
           this.target.classList.remove('js-open');
-          document.body.style.cssText = 'height: initial; overflow: initial;';
+          document.body.style.cssText = '';
         }
       }, 100);
     });

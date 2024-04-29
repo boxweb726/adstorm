@@ -40,7 +40,5 @@ export default class Project {
     } else {
       window.location = window.location.href.replace('detail/', '');
     }
-
-    console.log(this.selectedProject);
   }
 }
