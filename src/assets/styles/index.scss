@@ -99,10 +99,7 @@
     }
 
     &__img {
-
-
-      &:hover {
-  
+      &:hover {  
         &::after {
           opacity: 1;
         }
