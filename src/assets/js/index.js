@@ -15,15 +15,15 @@ const portfolioList = new List({
     const imgVer = {};
 
     return {
-      pc: `/bstones/assets/images/main_thumb_${id}_pc${imgVer[id]?.pc ? imgVer[id].pc : ''}.jpg`,
-      mo: `/bstones/assets/images/main_thumb_${id}_mo${imgVer[id]?.mo ? imgVer[id].mo : ''}.jpg`,
+      pc: `./assets/images/main_thumb_${id}_pc${imgVer[id]?.pc ? imgVer[id].pc : ''}.jpg`,
+      mo: `./assets/images/main_thumb_${id}_mo${imgVer[id]?.mo ? imgVer[id].mo : ''}.jpg`,
     };
   },
   renderHtml(data) {
     const { category } = data;
 
     return `<div class="swiper-slide portfolio-swiper__item">
-      <a href="/portfolio/detail/?id=${data.id}" class="img-box portfolio-swiper__img">
+      <a href="./portfolio/detail/?id=${data.id}" class="img-box portfolio-swiper__img">
         <img src="${data.imgUrl.pc}" alt="" class="m-hide">
         <img src="${data.imgUrl.mo}" alt="" class="m-show">
       </a>

@@ -13,10 +13,10 @@ const project = new Project({
     const imgVer = {};
 
     return {
-      pc01: `/bstones/assets/images/detail_${id}_01_pc${imgVer[id]?.pc01 ? imgVer[id].pc01 : ''}.jpg`,
-      mo01: `/bstones/assets/images/detail_${id}_01_mo${imgVer[id]?.mo01 ? imgVer[id].mo01 : ''}.jpg`,
-      pc02: `/bstones/assets/images/detail_${id}_02_pc${imgVer[id]?.pc02 ? imgVer[id].pc02 : ''}.jpg`,
-      mo02: `/bstones/assets/images/detail_${id}_02_mo${imgVer[id]?.mo02 ? imgVer[id].mo02 : ''}.jpg`,
+      pc01: `../../assets/images/detail_${id}_01_pc${imgVer[id]?.pc01 ? imgVer[id].pc01 : ''}.jpg`,
+      mo01: `../../assets/images/detail_${id}_01_mo${imgVer[id]?.mo01 ? imgVer[id].mo01 : ''}.jpg`,
+      pc02: `../../assets/images/detail_${id}_02_pc${imgVer[id]?.pc02 ? imgVer[id].pc02 : ''}.jpg`,
+      mo02: `../../assets/images/detail_${id}_02_mo${imgVer[id]?.mo02 ? imgVer[id].mo02 : ''}.jpg`,
     };
   },
   renderHtml(data) {
