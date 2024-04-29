@@ -60,42 +60,40 @@
               <img src="./assets/images/main_deco_mo.png" alt="" class="m-show">
             </div>
           </div>
-
           
-          <div class="intro-video img-box">
-            <a href="javascript:;" class="intro-video__bg">
+          <div class="intro-video img-box" id="mainVideo">
+            <a href="javascript:;" class="intro-video__bg" id="btnPlay">
               <img src="./assets/images/main_video_bg_pc.jpg" alt="" class="m-hide">
               <img src="./assets/images/main_video_bg_mo.jpg" alt="" class="m-show">
             </a>
-            <div class="player">
-              <div id="ytplayer"></div>
+            <div class="intro-video__player">
+              <div id="ytPlayer"></div>
             </div>
           </div>
           
         </section>
         <script>
-          // Load the IFrame Player API code asynchronously.
-          var tag = document.createElement('script');
+          const tag = document.createElement('script');
           tag.src = "https://www.youtube.com/player_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
+          const firstScriptTag = document.getElementsByTagName('script')[0];
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-          // Replace the 'ytplayer' element with an <iframe> and
-          // YouTube player after the API code downloads.
-          var player;
+          let player;
           function onYouTubePlayerAPIReady() {
-            player = new YT.Player('ytplayer', {
+            player = new YT.Player('ytPlayer', {
+              // rel: 0,
+              // controls: 0,
               height: '990',
               width: '1760',
               videoId: '01jT6CvmxXM',
-              autoplay: 1
             });
           }
 
-          const playBtn = document.querySelector('.intro-video__bg');
-          const playerLayer = document.querySelector('.player');
-          playBtn.addEventListener('click', function(){
-            playerLayer.classList.add('active');
+          const $player = document.getElementById('mainVideo');
+          const $playBtn = document.querySelector('#btnPlay');
+          $playBtn.addEventListener('click', (e) => {
+            $player.classList.add('active');
+            player.playVideo();
           });
         </script>
 

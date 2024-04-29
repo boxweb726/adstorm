@@ -24,7 +24,7 @@ export default class Project {
     Object.keys(imgUrl).forEach((key) => {
       this.selectedProject.imgUrl[key] = imgUrl[key];
 
-      // return new URL(`/assets/images/${imgUrl[key]}`, import.meta.url);
+      return new URL(`/assets/images/${imgUrl[key]}`, import.meta.url);
     });
   }
 
