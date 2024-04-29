@@ -327,6 +327,19 @@
     @include vw-max(border-radius, 32);
   }
   /* recruit end */
+
+  .player {
+    display: none;
+    @include vw-max(width, 1760);
+    @include vw-max(height, 990);
+    
+    &.active {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 

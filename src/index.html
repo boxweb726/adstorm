@@ -11,11 +11,6 @@
   </head>
 
   <body>
-    <!-- <div class="compare-img img-box">
-      <img src="./assets/images/test_main_pc.png" class="m-hide" style="position: absolute; top: 0px; left: 0px; opacity: 0.5; z-index: -1; pointer-event:none;">
-      <img src="./assets/images/test_main_mo.png" class="m-show" style="position: absolute; top: 0px; left: 0px; opacity: 0.5; z-index: -1; pointer-event:none;">
-    </div> -->
-
     <div class="wrapper bs-home">
       {{> header }}
       <!-- header.html -->
@@ -68,12 +63,41 @@
 
           
           <div class="intro-video img-box">
-            <a href="https://www.youtube.com/embed/01jT6CvmxXM?si=PT2f1TgESr82xyGh" class="intro-video__bg" target="_blank">
+            <a href="javascript:;" class="intro-video__bg">
               <img src="./assets/images/main_video_bg_pc.jpg" alt="" class="m-hide">
               <img src="./assets/images/main_video_bg_mo.jpg" alt="" class="m-show">
             </a>
-          </div>       
+            <div class="player">
+              <iframe id="ytplayer" width="1760" height="990" src="https://www.youtube.com/embed/01jT6CvmxXM?si=v2Rwvd3kJE6Hx81D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          
         </section>
+        <script>
+          // Load the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/player_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          // Replace the 'ytplayer' element with an <iframe> and
+          // YouTube player after the API code downloads.
+          var player;
+          function onYouTubePlayerAPIReady() {
+            player = new YT.Player('ytplayer', {
+              height: '990',
+              width: '1760',
+              videoId: '01jT6CvmxXM',
+              autoplay: 1
+            });
+          }
+
+          const playBtn = document.querySelector('.intro-video__bg');
+          const playerLayer = document.querySelector('.player');
+          playBtn.addEventListener('click', function(){
+            playerLayer.classList.add('active');
+          });
+        </script>
 
         <!-- Portfolio -->
         <section class="pc-pt-135 pc-pb-240 mo-pt-90 mo-pb-100">
