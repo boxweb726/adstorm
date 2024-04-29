@@ -414,7 +414,7 @@
       
       &__img {
         @include vw-mo(margin-bottom, 60);
-  
+
         &:hover {
           img {
             opacity: .3;
@@ -426,6 +426,10 @@
           @include vw-mo(width, 160);
           @include vw-mo(height, 161);
           @include vw-mo(font-size, 26);
+        }
+
+        img {
+          opacity: 1;
         }
       }
 
@@ -458,7 +462,22 @@
           @include vw-mo(font-size, 40);
         }
       }
+      .swiper-slide-active {
+        position: relative;
+  
+        .portfolio-swiper__img {
+          img {
+            opacity: 1;
+            // transition: .3s;
+          }
 
+          &:hover {
+            img {
+            opacity: .3;
+            }
+          }
+        }
+      }
       .swiper-slide-prev,
       .swiper-slide-active {
         left: 0;
