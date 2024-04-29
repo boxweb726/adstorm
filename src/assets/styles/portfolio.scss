@@ -161,8 +161,15 @@
           @include vw-mo(height, 370);
         }
       
-        &__text:hover {
-          @include vw-mo(gap, 20);
+        &__link::after {
+          display: none;
+        }
+        
+        &__text {
+          &:hover {
+            display: none;
+            @include vw-mo(gap, 20);
+          }
         }
     
         &__title {
