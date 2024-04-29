@@ -99,11 +99,9 @@
     }
 
     &__img {
+
+
       &:hover {
-        img {
-          opacity: .3;
-          transition: .3s;
-        }
   
         &::after {
           opacity: 1;
@@ -225,6 +223,14 @@
       position: relative;
       @include vw-max(left, -200);
 
+      .portfolio-swiper__img {
+        img {
+          opacity: .3;
+          transition: .3s;
+        }
+      }
+
+
       .portfolio-swiper__txt {
         .fade-in-up { 
           transform: translateY(0);
@@ -332,7 +338,7 @@
     display: none;
     @include vw-max(width, 1760);
     @include vw-max(height, 990);
-    
+
     &.active {
       display: block;
       position: absolute;
