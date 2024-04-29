@@ -1,4 +1,5 @@
-import dataList from './data.json';
+// import dataList from './data.json';
+import dataList from './dataList';
 import Project from './module/Project';
 import StickyHeader from './module/StickyHeader';
 import Scroll from './module/Scroll';
@@ -12,10 +13,10 @@ const project = new Project({
     const imgVer = {};
 
     return {
-      pc01: `/assets/images/detail_${id}_01_pc${imgVer[id]?.pc01 ? imgVer[id].pc01 : ''}.jpg`,
-      mo01: `/assets/images/detail_${id}_01_mo${imgVer[id]?.mo01 ? imgVer[id].mo01 : ''}.jpg`,
-      pc02: `/assets/images/detail_${id}_02_pc${imgVer[id]?.pc02 ? imgVer[id].pc02 : ''}.jpg`,
-      mo02: `/assets/images/detail_${id}_02_mo${imgVer[id]?.mo02 ? imgVer[id].mo02 : ''}.jpg`,
+      pc01: `/bstones/assets/images/detail_${id}_01_pc${imgVer[id]?.pc01 ? imgVer[id].pc01 : ''}.jpg`,
+      mo01: `/bstones/assets/images/detail_${id}_01_mo${imgVer[id]?.mo01 ? imgVer[id].mo01 : ''}.jpg`,
+      pc02: `/bstones/assets/images/detail_${id}_02_pc${imgVer[id]?.pc02 ? imgVer[id].pc02 : ''}.jpg`,
+      mo02: `/bstones/assets/images/detail_${id}_02_mo${imgVer[id]?.mo02 ? imgVer[id].mo02 : ''}.jpg`,
     };
   },
   renderHtml(data) {
@@ -41,8 +42,8 @@ const project = new Project({
       <div class="detail__contents">
         <div class="js-scroll">
           <div class="img-box detail__img-box scroll-inner scroll-inner--fade scroll-inner--step02">
-            <img src="/assets/images/detail_${data.id}_01_pc.jpg" alt="" class="m-hide">
-            <img src="/assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show">
+            <img src="/bstones/assets/images/detail_${data.id}_01_pc.jpg" alt="" class="m-hide">
+            <img src="/bstones/assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show">
           </div>
         </div>
         <!-- overview -->
@@ -55,8 +56,8 @@ const project = new Project({
         <!--// overview -->
         <div class="js-scroll">
           <div class="img-box detail__img-box scroll-inner scroll-inner--fade">
-            <img src="/assets/images/detail_${data.id}_02_pc.jpg" alt="" class="m-hide">
-            <img src="/assets/images/detail_${data.id}_02_mo.jpg" alt="" class="m-show">
+            <img src="/bstones/assets/images/detail_${data.id}_02_pc.jpg" alt="" class="m-hide">
+            <img src="/bstones/assets/images/detail_${data.id}_02_mo.jpg" alt="" class="m-show">
           </div>
         </div>
       </div>

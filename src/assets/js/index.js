@@ -1,6 +1,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import dataList from './data.json';
+// import dataList from './data.json';
+import dataList from './dataList';
 import StickyHeader from './module/StickyHeader';
 import List from './module/List';
 import Scroll from './module/Scroll';
@@ -14,8 +15,8 @@ const portfolioList = new List({
     const imgVer = {};
 
     return {
-      pc: `/assets/images/main_thumb_${id}_pc${imgVer[id]?.pc ? imgVer[id].pc : ''}.jpg`,
-      mo: `/assets/images/main_thumb_${id}_mo${imgVer[id]?.mo ? imgVer[id].mo : ''}.jpg`,
+      pc: `/bstones/assets/images/main_thumb_${id}_pc${imgVer[id]?.pc ? imgVer[id].pc : ''}.jpg`,
+      mo: `/bstones/assets/images/main_thumb_${id}_mo${imgVer[id]?.mo ? imgVer[id].mo : ''}.jpg`,
     };
   },
   renderHtml(data) {

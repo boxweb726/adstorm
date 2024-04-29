@@ -1,4 +1,4 @@
-{"result":[
+const dataList = {"result":[
   {"id":"2402","title":"갤럭시 선물상담소 <br>프로모션","date":"2024.02","brand":"삼성전자","category":"PROMOTION","overview":"삼성닷컴에서 운영하고 있는 <br class=\"m-show\">참여형/고지형 프로모션 페이지를 월마다 <br class=\"m-show\">제작 및 운영."},
   {"id":"2309","title":"스파크플러스 <br>사이트 리뉴얼","date":"2023.09","brand":"스파크플러스","category":"DEVELOPMENT","overview":"공유오피스 사이트 UIUX 개선 프로젝트로 <br class=\"m-show\">기존의 불편하고 텍스트 위주의 UI를 걷어내고, <br class=\"m-show\">사진 등 미디어를 다수 활용한 브로셔 느낌의 <br class=\"m-show\">사이트로 신규 구축하였으며, API를 활용한 <br class=\"m-show\">매장 지도 서비스로 쉬운 UI 제공."},
   {"id":"230301","title":"THE iD 삼성카드 <br>프로모션","date":"2023.03","brand":"삼성카드","category":"PROMOTION","overview":"삼성카드에서 신규 런칭한 THE iD 카드 <br class=\"m-show\">프로모션으로 프리미엄 라인 카드에 어울리는 <br class=\"m-show\">블랙&화이트의 조합으로 품격 있게  제작."},
@@ -37,3 +37,5 @@
   {"id":"0002","title":"삼성카드 <br>배너 제작 및 운영","date":"상시제작","brand":"삼성카드","category":"SNS & BANNER","overview":"사이트에 전시하는 배너 포함하여 <br class=\"m-show\">다양한 미디어 소재에 해당되는 배너 제작 및 <br class=\"m-show\">상시 운영."},
   {"id":"0003","title":"그 외 배너 <br>배너제작 및 운영","date":"수시제작","brand":"아이더/동아제약/대한항공..","category":"SNS & BANNER","overview":"사이트에 전시하는 배너 포함하여 <br class=\"m-show\">다양한 미디어 소재에 해당되는 배너 제작 및 <br class=\"m-show\">상시 운영."}
 ]}
+
+export default dataList;
