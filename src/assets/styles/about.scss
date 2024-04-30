@@ -42,9 +42,12 @@
       @include vw-max(gap, 230);
     }
 
+    &__link {
+      order: 2;
+    }
+
     &__img {
       position: relative;
-      order: 2;
       right: 0;
       @include vw-max(margin-left, -336);
       @include vw-max(width, 505);
@@ -113,9 +116,11 @@
     }
 
     &__item.about__item--odd {
+      .about__link {
+        order: 1;
+      }
       .about__img {
         position: relative;
-        order: 1;
         right: none;
         margin-left: 0;
       }
@@ -130,6 +135,9 @@
     }
 
     .about__item.about__item--even {
+      .about__link {
+        order: 2;
+      }
       .about__img {
         @include vw-max(margin-left, -407)
       }
