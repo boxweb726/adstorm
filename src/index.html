@@ -8,6 +8,7 @@
     <title>BSTONES l 비스톤스 - We make the Next Digital eXperience</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="./assets/styles/index.scss" />
+    <script src="https://www.youtube.com/player_api"></script>
   </head>
 
   <body>
@@ -72,30 +73,6 @@
           </div>
           
         </section>
-        <script>
-          const tag = document.createElement('script');
-          tag.src = "https://www.youtube.com/player_api";
-          const firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-          let player;
-          function onYouTubePlayerAPIReady() {
-            player = new YT.Player('ytPlayer', {
-              // rel: 0,
-              // controls: 0,
-              height: '990',
-              width: '1760',
-              videoId: '01jT6CvmxXM',
-            });
-          }
-
-          const $player = document.getElementById('mainVideo');
-          const $playBtn = document.querySelector('#btnPlay');
-          $playBtn.addEventListener('click', (e) => {
-            $player.classList.add('active');
-            player.playVideo();
-          });
-        </script>
 
         <!-- Portfolio -->
         <section class="pc-pt-135 pc-pb-240 mo-pt-90 mo-pb-100">
