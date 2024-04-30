@@ -12,15 +12,15 @@
     width: 100%;
     margin: 0 auto;
     // background-color: $color-black;
-    // backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     transition: opacity 0.3s ease-in;
     z-index: 50;
     @include vw-max(height, 200);
     @include vw-max(padding, 0 80 0 89);
-    
+
     &.js-fixed {
       position: fixed;
-      top: 0; 
+      top: 0;
       left: 50%;
       transform: translateX(-50%);
       opacity: 0;
@@ -31,12 +31,12 @@
       pointer-events: auto;
       opacity: 1;
     }
-  
+
     &__logo {
       @include vw-max(width, 186);
       @include vw-max(height, 41);
     }
-  
+
     &__nav {
       display: flex;
       flex-wrap: wrap;
@@ -48,6 +48,7 @@
       font-weight: bold;
       color: #fff;
       text-transform: uppercase;
+      text-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.2);
       @include vw-max(font-size, 28);
       @include vw-max(line-height, 43);
 
@@ -76,7 +77,9 @@
         border-radius: 50%;
         background: #f84525;
         transform: translate(50%, -50%);
-        transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+        transition:
+          width 0.5s ease-in-out,
+          height 0.5s ease-in-out;
         @include vw-mo(top, 75);
         @include vw-mo(right, 67);
       }
@@ -95,7 +98,7 @@
           width: 250vmax;
           height: 250vmax;
         }
-        
+
         .header__open {
           .bar {
             &:nth-child(1) {
@@ -142,7 +145,9 @@
           width: 100%;
           @include vw-mo(height, 5);
           background: #fff;
-          transition: transform 0.35s, top 0.35s;
+          transition:
+            transform 0.35s,
+            top 0.35s;
 
           &:nth-child(1) {
             top: 0;
@@ -154,15 +159,15 @@
           &:nth-child(3) {
             bottom: 0;
           }
-
         }
-
       }
-  
+
       &__nav {
         position: absolute;
         transform: translateY(10%);
-        transition: opacity 0.3s, transform 0.3s;
+        transition:
+          opacity 0.3s,
+          transform 0.3s;
         opacity: 0;
         pointer-events: none;
         @include vw-mo(top, 315);
@@ -180,7 +185,6 @@
           transition: 0.4s;
         }
       }
-
     }
   }
 }

@@ -24,24 +24,24 @@
     }
 
     &__link {
-      position: relative;
       width: 100%;
       @include vw-max(height, 105);
 
-      &:hover .list__txt,
-      &:hover .list__desc {
-        color: $color-red;
-      }
+      &:hover {
+        .list__txt,
+        .list__desc {
+          color: $color-red;
+        }
 
-      &:hover .btn-plus--recruit {
-        transform: rotate(90deg);
-        transition: transform 0.3s;
-      }
+        .btn-plus--recruit {
+          transform: translateY(-50%) rotate(90deg);
 
-      &:hover .btn-plus--recruit::before,
-      &:hover .btn-plus--recruit::after {
-        // transform: rotate(90deg);
-        background-color: $color-red;
+          &::before,
+          &::after {
+            background-color: $color-red;
+          }
+
+        }
       }
     }
 
@@ -65,15 +65,11 @@
 
   .btn-plus--recruit {
     position: absolute;
-    @include vw-max(top, 33);
+    top: 50%;
+    transform: translateY(-50%);
     @include vw-max(right, 10);
     @include vw-max(width, 60);
     @include vw-max(height, 60);
-
-    &::before,
-    &::after {
-      background-color: $color-white;
-    }
   }
 }
 
@@ -94,7 +90,22 @@
       
       &__link {
         position: static;
-        @include vw-mo(height, 222);
+        height: auto;
+
+        &:hover {
+          .list__txt,
+          .list__desc {
+            color: $color-white;
+          }
+  
+          .btn-plus--recruit {
+            &::before,
+            &::after {
+              background-color: $color-white;
+            }
+  
+          }
+        }
       }
 
       &__txt {
@@ -107,7 +118,6 @@
     }
 
     .btn-plus--recruit {
-      @include vw-mo(top, 87);
       @include vw-mo(right, 20);
       @include vw-mo(width, 60);
       @include vw-mo(height, 60);

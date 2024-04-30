@@ -10,14 +10,6 @@ body {
   font-family: $kr;
 }
 
-.m-hide {
-  display: block !important;
-}
-
-.m-show {
-  display: none !important;
-}
-
 .wrapper {
   max-width: 1920px; 
   margin: 0 auto;
@@ -65,6 +57,18 @@ section.width-full {
   font-size: 0;
 }
 
+.m-hide {
+  display: block !important;
+}
+
+.m-show {
+  display: none !important;
+}
+
+.color-red {
+  color: $color-red;
+}
+
 .img-box {
   display: block;
   position:relative; 
@@ -87,7 +91,6 @@ section.width-full {
     background-color: #60605f;
   }
 }
-
 
 // 페이지 타이틀
 .page-title {
@@ -123,19 +126,39 @@ section.width-full {
   @include vw-max(line-height, 38);
 }
 
-.color-red {
-  color: $color-red;
+
+.btn-plus {
+  display: block;
+  position: relative; 
+  transition: transform .3s; 
+
+  &::before {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 100%;
+    background-color: $color-white;
+    @include vw-pc(height, 2);
+  }
+  &::after {
+    content: ''; 
+    position: absolute; 
+    left: 50%; 
+    top: 0; 
+    transform: translateX(-50%); 
+    height: 100%;
+    background-color: $color-white;
+    @include vw-pc(width, 2);
+  }
+
+  &:hover{
+    transform: rotate(90deg);
+  }
 }
 
 @media all and (max-width: 768px) {
-  .m-hide {
-    display: none !important;
-  }
-
-  .m-show {
-    display: block !important;
-  }
-
   section {
     max-width: none;
   }
@@ -143,6 +166,14 @@ section.width-full {
   .inner-1240 {
     max-width: none;
     @include vw-mo(width, 624);
+  }
+
+  .m-hide {
+    display: none !important;
+  }
+
+  .m-show {
+    display: block !important;
   }
 
   //section-top-line
@@ -167,6 +198,16 @@ section.width-full {
   // 각 영역 시작부분 붉은색 타이틀
   .page-sub {
     @include vw-mo(letter-spacing, 16);
+  }
+
+  .btn-plus {
+    &::before {
+      @include vw-mo(height, 4);
+    }
+
+    &::after {
+      @include vw-mo(width, 4);
+    }
   }
 }
 
