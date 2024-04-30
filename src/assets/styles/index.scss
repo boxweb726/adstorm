@@ -83,22 +83,24 @@
   }
 
   /* portfolio start */
-  .page-sub--portfolio {
-    letter-spacing: 0.24em;
-    @include vw-max(font-size, 28);
-
-    .page-sub__arrow {
-      position: relative;
+  .page-sub {
+    &--portfolio {
+      letter-spacing: 0.24em;
+      @include vw-max(font-size, 28);
+    }
+    &__link {
+      display: inline-flex;
+      align-items: center;
 
       &::after {
         content: '';
-        display: block;
-        position: absolute;
+        position: relative;
+        display: inline-block;
         transform: rotate(45deg);
         border-top: 2px solid $color-red;
         border-right: 2px solid $color-red;
-        @include vw-max(left, 14);
-        @include vw-max(top, 13);
+        @include vw-max(border-width, 2);
+        @include vw-max(left, 15);
         @include vw-max(width, 14);
         @include vw-max(height, 14);
       }
@@ -158,6 +160,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      pointer-events: none;
       @include vw-max(width, 310);
       @include vw-max(right, -190);
       @include vw-max(bottom, 60);
@@ -405,18 +408,17 @@
     }
 
     /* portfolio start */
-    .page-sub--portfolio {
-      @include vw-mo(font-size, 40);
-      @include vw-mo(letter-spacing, 10);
+    .page-sub {
+      &--portfolio {
+        @include vw-mo(font-size, 40);
+        @include vw-mo(letter-spacing, 10);
+      }
 
-      .page-sub__arrow::after {
-        transform: rotate(45deg);
-        border-top: 3px solid $color-red;
-        border-right: 3px solid $color-red;
+      &__link::after {
         @include vw-mo(left, 23);
-        @include vw-mo(top, 13);
         @include vw-mo(width, 20);
         @include vw-mo(height, 19);
+        @include vw-mo(border-width, 4);
       }
     }
 
@@ -452,6 +454,7 @@
         }
 
         &::after {
+          display: none;
           @include vw-mo(width, 160);
           @include vw-mo(height, 161);
           @include vw-mo(font-size, 26);
