@@ -1,12 +1,14 @@
 import Scroll from './module/Scroll';
 import StickyHeader from './module/StickyHeader';
 
-const header = new StickyHeader();
+window.addEventListener('load', () => {
+  const header = new StickyHeader();
 
-const $scrollBox = document.querySelectorAll('.js-scroll');
+  const $scrollBox = document.querySelectorAll('.js-scroll');
 
-Array.from($scrollBox).forEach((item) => {
-  const scroll = new Scroll({
-    target: item,
+  Array.from($scrollBox).forEach((item) => {
+    const scroll = new Scroll({
+      target: item,
+    });
   });
 });
