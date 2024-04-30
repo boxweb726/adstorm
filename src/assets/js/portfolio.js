@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-// import dataList from './data.json';
 import dataList from './module/dataList';
 import StickyHeader from './module/StickyHeader';
 import List from './module/List';

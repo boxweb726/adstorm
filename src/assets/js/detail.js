@@ -1,4 +1,3 @@
-// import dataList from './data.json';
 import dataList from './module/dataList';
 import Project from './module/Project';
 import StickyHeader from './module/StickyHeader';
