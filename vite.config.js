@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'node:path';
 import eslint from 'vite-plugin-eslint';
+import legacy from '@vitejs/plugin-legacy'
 import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig(() => {
@@ -11,7 +12,7 @@ export default defineConfig(() => {
     appType: 'mpa',
     publicDir: path.resolve(__dirname, 'public'),
     root: path.resolve(__dirname, 'src'),
-    base: '/bstones/',
+    // base: '/bstones/',
     build: {
       outDir: '../dist',
       assetsInlineLimit: 0,
@@ -42,13 +43,17 @@ export default defineConfig(() => {
       host: true,
     },
     plugins: [
+      handlebars({
+        partialDirectory: path.resolve(__dirname, './src/partials'),
+        enforce: 'pre'
+      }),
       eslint({
         cache: false,
         fix: true,
       }),
-      handlebars({
-        partialDirectory: path.resolve(__dirname, './src/partials'),
-      }),
+      // legacy({
+      //   targets: ['> 0.1% and not dead'],
+      // }),
     ],
   };
 });

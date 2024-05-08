@@ -42,8 +42,8 @@ window.addEventListener('load', () => {
         <div class="detail__contents">
           <div class="js-scroll">
             <div class="img-box detail__img-box scroll-inner scroll-inner--fade scroll-inner--step01">
-              <img src="/bstones/assets/images/detail_${data.id}_01_pc.jpg" alt="" class="m-hide">
-              <img src="/bstones/assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show">
+              <img src="../../assets/images/detail_${data.id}_01_pc.jpg" alt="" class="m-hide">
+              <img src="../../assets/images/detail_${data.id}_01_mo.jpg" alt="" class="m-show">
             </div>
           </div>
           <!-- overview -->
@@ -56,8 +56,8 @@ window.addEventListener('load', () => {
           <!--// overview -->
           <div class="js-scroll">
             <div class="img-box detail__img-box scroll-inner scroll-inner--fade">
-              <img src="/bstones/assets/images/detail_${data.id}_02_pc.jpg" alt="" class="m-hide">
-              <img src="/bstones/assets/images/detail_${data.id}_02_mo.jpg" alt="" class="m-show">
+              <img src="../../assets/images/detail_${data.id}_02_pc.jpg" alt="" class="m-hide">
+              <img src="../../assets/images/detail_${data.id}_02_mo.jpg" alt="" class="m-show">
             </div>
           </div>
         </div>
