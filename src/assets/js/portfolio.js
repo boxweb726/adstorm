@@ -12,7 +12,12 @@ window.addEventListener('load', () => {
     data: dataList.result,
     id: 'portfolioList',
     setImgUrl(id) {
-      const imgVer = {};
+      const imgVer = {
+        // 2402: {
+        //   pc: '_v1',
+        //   mo: '_v2',
+        // },
+      };
 
       return {
         pc: `../assets/images/portfolio_thumb_${id}_pc${imgVer[id]?.pc ? imgVer[id].pc : ''}.jpg`,
