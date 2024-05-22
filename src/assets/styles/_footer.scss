@@ -1,6 +1,7 @@
 .sec_footer {
   display: flex;
   justify-content: space-between;
+  position: relative;
   align-items: center;
   @include vw-pc(padding, 38 0);
   @include vw-pc(margin, 0 80);
@@ -9,12 +10,12 @@
   .footer {
     &__ego {
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
 
-    &__info {
+    &__list {
       display: flex;
+      justify-content: space-between;
     }
 
     &__logo {
@@ -24,7 +25,7 @@
 
     &__copyright {
       @include vw-pc(margin-left, 40);
-      @include vw-pc(font-size, 20);
+      @include vw-pc(font-size, 15);
       color: #bbb;
     }
 
@@ -49,17 +50,10 @@
     border-top: 2px solid #60605f;
 
     .footer {
-      &__info {
+      &__list {
         display: flex;
-        align-items: baseline;
         justify-content: space-between;
         width: 100%;
-      }
-
-      &__inner {
-        display: flex;
-        flex-direction: column;
-        @include vw-mo(gap, 7);
       }
 
       &__logo {
@@ -67,9 +61,12 @@
       }
 
       &__copyright {
+        position: absolute;
+        @include vw-mo(right, 10);
+        @include vw-mo(bottom, 10);
         display: block;
         margin: 0;
-        @include vw-mo(font-size, 20);
+        @include vw-mo(font-size, 10);
       }
 
       &__contact {
