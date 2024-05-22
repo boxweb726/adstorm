@@ -25,7 +25,7 @@
 
     &__copyright {
       @include vw-pc(margin-left, 40);
-      @include vw-pc(font-size, 15);
+      @include vw-pc(font-size, 17);
       color: #bbb;
     }
 
@@ -66,7 +66,7 @@
         @include vw-mo(bottom, 12);
         display: block;
         margin: 0;
-        @include vw-mo(font-size, 13);
+        @include vw-mo(font-size, 15);
       }
 
       &__contact {
