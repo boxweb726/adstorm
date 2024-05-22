@@ -62,11 +62,11 @@
 
       &__copyright {
         position: absolute;
-        @include vw-mo(right, 10);
-        @include vw-mo(bottom, 10);
+        @include vw-mo(right, 45);
+        @include vw-mo(bottom, 12);
         display: block;
         margin: 0;
-        @include vw-mo(font-size, 10);
+        @include vw-mo(font-size, 13);
       }
 
       &__contact {
