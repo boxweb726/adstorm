@@ -20,7 +20,6 @@ export default defineConfig(() => {
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'src/index.html'),
-          about: path.resolve(__dirname, 'src/about/index.html'),
           portfolio: path.resolve(__dirname, 'src/portfolio/index.html'),
           detail: path.resolve(__dirname, 'src/portfolio/detail/index.html'),
           recruit: path.resolve(__dirname, 'src/recruit/index.html'),
